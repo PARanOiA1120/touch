@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 https://github.com/icepat/ICETutorial. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface ICETutorialLabelStyle : NSObject
 
@@ -42,4 +42,3 @@
 - (void)setSubTitleStyle:(ICETutorialLabelStyle *)style;
 
 @end
-

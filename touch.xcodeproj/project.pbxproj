@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B016F0AB1A63303B000291FB /* IntroViewController.m */; };
+		B016F0B01A633E6F000291FB /* study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B016F0AF1A633E6F000291FB /* study@2x.png */; };
+		B016F0B41A6342A6000291FB /* appointment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B016F0B31A6342A6000291FB /* appointment@2x.png */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
 		B038E2161A62017D00E660ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2151A62017D00E660ED /* ViewController.m */; };
@@ -30,6 +33,10 @@
 /* Begin PBXFileReference section */
 		091258C1AC96E7FF03934F2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B016F0AA1A63303B000291FB /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		B016F0AB1A63303B000291FB /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		B016F0AF1A633E6F000291FB /* study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "study@2x.png"; sourceTree = "<group>"; };
+		B016F0B31A6342A6000291FB /* appointment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appointment@2x.png"; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038E20E1A62017D00E660ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038E20F1A62017D00E660ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,6 +114,8 @@
 			children = (
 				B038E2111A62017D00E660ED /* AppDelegate.h */,
 				B038E2121A62017D00E660ED /* AppDelegate.m */,
+				B038E2141A62017D00E660ED /* ViewController.h */,
+				B038E2151A62017D00E660ED /* ViewController.m */,
 				B038E2341A6238AE00E660ED /* Resources */,
 				B038E2351A6238B600E660ED /* Model */,
 				B038E2381A6238D000E660ED /* Controller */,
@@ -147,6 +156,8 @@
 		B038E2341A6238AE00E660ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B016F0AF1A633E6F000291FB /* study@2x.png */,
+				B016F0B31A6342A6000291FB /* appointment@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -161,8 +172,8 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B038E2141A62017D00E660ED /* ViewController.h */,
-				B038E2151A62017D00E660ED /* ViewController.m */,
+				B016F0AA1A63303B000291FB /* IntroViewController.h */,
+				B016F0AB1A63303B000291FB /* IntroViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -249,8 +260,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B016F0B41A6342A6000291FB /* appointment@2x.png in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
+				B016F0B01A633E6F000291FB /* study@2x.png in Resources */,
 				B038E21B1A62017D00E660ED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +318,7 @@
 				B038E2161A62017D00E660ED /* ViewController.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
+				B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

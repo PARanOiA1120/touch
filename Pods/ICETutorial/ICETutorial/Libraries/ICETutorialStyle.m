@@ -72,7 +72,7 @@
 
 - (NSUInteger)subTitleOffset {
     if (_subTitleOffset != NSNotFound) {
-        return _subTitleOffset;
+        return 150;
     }
     return TUTORIAL_SUB_TITLE_OFFSET;
 }

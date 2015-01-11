@@ -23,7 +23,7 @@
                    textColor:(UIColor *)color
                  linesNumber:(NSUInteger)linesNumber
                       offset:(NSUInteger)offset {
-    self = [self init];
+    self = [super init];
     if (self){
         _font = font;
         _textColor = color;
@@ -43,6 +43,7 @@
                   pictureName:(NSString *)pictureName
                      duration:(NSTimeInterval)duration {
     self = [super init];
+    //NSLog(@"1");
     if (self){
         _title = [[ICETutorialLabelStyle alloc] initWithText:title];
         _subTitle = [[ICETutorialLabelStyle alloc] initWithText:subTitle];

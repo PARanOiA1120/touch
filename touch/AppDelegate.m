@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "IntroViewController.h"
 
-@interface AppDelegate ()
 
+@interface AppDelegate () <ICETutorialControllerDelegate>
+@property (strong, nonatomic) ICETutorialController *introController;
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self goToIntro];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -42,4 +47,20 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
++ (AppDelegate *)delegate {
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+
+- (void)goToIntro
+{
+    IntroViewController *introView = [[IntroViewController alloc] init];
+    //NSLog(@"5");
+    self.window.rootViewController = introView;
+    [self.window makeKeyAndVisible];
+}
+
 @end
+
+
