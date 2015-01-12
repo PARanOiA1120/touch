@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IntroViewController.h"
+#import <Parse/Parse.h>
 
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
@@ -19,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"8428ZqzEOt8YKpxnyfUtNJIF7wjWoGmGSBzDTGyV"
+                  clientKey:@"zOgywuFz7u9YAXWgpkPJsPlhKbBvGDYwyg5YuKSe"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+ 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self goToIntro];
     [self.window makeKeyAndVisible];
