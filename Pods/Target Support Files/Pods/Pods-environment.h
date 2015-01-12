@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_ICETutorial 1
 #define COCOAPODS_VERSION_PATCH_ICETutorial 1
 
+// IHKeyboardAvoiding
+#define COCOAPODS_POD_AVAILABLE_IHKeyboardAvoiding
+#define COCOAPODS_VERSION_MAJOR_IHKeyboardAvoiding 2
+#define COCOAPODS_VERSION_MINOR_IHKeyboardAvoiding 0
+#define COCOAPODS_VERSION_PATCH_IHKeyboardAvoiding 0
+
