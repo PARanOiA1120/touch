@@ -1,10 +1,13 @@
 PODS:
   - ICETutorial (1.1.1)
+  - IHKeyboardAvoiding (2.0)
 
 DEPENDENCIES:
   - ICETutorial
+  - IHKeyboardAvoiding
 
 SPEC CHECKSUMS:
   ICETutorial: 785f7ea764f7d4f3702d7561497fd3c286134431
+  IHKeyboardAvoiding: d2c7cd9ce5ca7bf566877dc527706b0a7d6cdcf0
 
 COCOAPODS: 0.35.0

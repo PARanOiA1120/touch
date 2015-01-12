@@ -20,7 +20,7 @@
     // Init the pages texts, and pictures.
     ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithTitle:@"How to meet instructors?"
                                                             subTitle:@"Use touch to make appointments!"
-                                                         pictureName:@"appointment@2x.png"
+                                                         pictureName:@"1"
                                                             duration:3.5];
     ICETutorialPage *layer2 = [[ICETutorialPage alloc] initWithTitle:@"Stuck with homework?"
                                                             subTitle:@"Invite classmates to study together!"
