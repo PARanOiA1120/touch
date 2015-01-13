@@ -7,6 +7,7 @@
 //
 
 #import "IntroViewController.h"
+#import "LoginViewController.h"
 
 @interface IntroViewController () <ICETutorialControllerDelegate>
 
@@ -83,20 +84,30 @@
 }
 
 - (void)tutorialController:(ICETutorialController *)tutorialController didClickOnLeftButton:(UIButton *)sender {
+    //NSLog(@"Button 1 pressed.");
+    //[self stopScrolling];
     [self toLogin];
 }
 
 - (void)tutorialController:(ICETutorialController *)tutorialController didClickOnRightButton:(UIButton *)sender {
+    //NSLog(@"Button 2 pressed.");
+    //NSLog(@"Auto-scrolling stopped.");
+    //[self stopScrolling];
     [self toRegister];
 }
 
 - (void)toLogin
 {
-
+    [self stopScrolling];
+    LoginViewController *loginController = [[LoginViewController alloc] init];
+    //[(AppDelegate *)[[UIApplication sharedApplication] delegate]hideTabBar];
+    [self presentViewController:loginController animated:YES completion:^{
+    }];
 }
 
 - (void)toRegister
 {
+    
     
 }
 
