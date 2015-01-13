@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "IntroViewController.h"
 #import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
@@ -20,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [Parse enableLocalDatastore];
     
     // Initialize Parse.
@@ -29,8 +31,14 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
  
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    NSLog(@" window frame  %@",NSStringFromCGRect([[UIScreen mainScreen]bounds]));
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f]];
+    
     [self goToIntro];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
