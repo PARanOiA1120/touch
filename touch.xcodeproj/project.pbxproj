@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B016F0AB1A63303B000291FB /* IntroViewController.m */; };
 		B016F0B01A633E6F000291FB /* study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B016F0AF1A633E6F000291FB /* study@2x.png */; };
+		B02490531A65A2FC0078AAD4 /* platform2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490521A65A2FC0078AAD4 /* platform2@2x.png */; };
+		B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490541A65CFA20078AAD4 /* loginBackground@2x.png */; };
+		B02490571A65CFAB0078AAD4 /* logoTemp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */; };
+		B02490591A65CFB80078AAD4 /* personal_icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */; };
+		B024905B1A65D05B0078AAD4 /* fb_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B024905A1A65D05B0078AAD4 /* fb_icon@2x.png */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
 		B038E2191A62017D00E660ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038E2171A62017D00E660ED /* Main.storyboard */; };
@@ -19,12 +24,8 @@
 		B048AC5E1A647214000C1D71 /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC5D1A647214000C1D71 /* InsetTextField.m */; };
 		B048AC631A64CDCB000C1D71 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC611A64CDCB000C1D71 /* RegisterViewController.m */; };
 		B048AC641A64CDCB000C1D71 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B048AC621A64CDCB000C1D71 /* RegisterViewController.xib */; };
-		B048AC6B1A64D408000C1D71 /* loginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B048AC6A1A64D408000C1D71 /* loginBackground@2x.png */; };
-		B048AC6D1A64D40C000C1D71 /* logoTemp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B048AC6C1A64D40C000C1D71 /* logoTemp@2x.png */; };
 		B048AC7B1A650765000C1D71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC791A650765000C1D71 /* LoginViewController.m */; };
 		B048AC7C1A650765000C1D71 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B048AC7A1A650765000C1D71 /* LoginViewController.xib */; };
-		B048AC7E1A650A7A000C1D71 /* personal_icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B048AC7D1A650A7A000C1D71 /* personal_icon_back@2x.png */; };
-		B048AC821A650FF0000C1D71 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B048AC811A650FF0000C1D71 /* facebook.png */; };
 		B0BE54601A63C00D000DF8FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE545B1A63C00D000DF8FE /* Parse.framework */; };
 		B0BE54651A63C098000DF8FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54641A63C098000DF8FE /* AudioToolbox.framework */; };
 		B0BE54671A63C0A0000DF8FE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54661A63C0A0000DF8FE /* CFNetwork.framework */; };
@@ -61,6 +62,11 @@
 		B016F0AA1A63303B000291FB /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		B016F0AB1A63303B000291FB /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		B016F0AF1A633E6F000291FB /* study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "study@2x.png"; sourceTree = "<group>"; };
+		B02490521A65A2FC0078AAD4 /* platform2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "platform2@2x.png"; path = "../../Desktop/platform2@2x.png"; sourceTree = "<group>"; };
+		B02490541A65CFA20078AAD4 /* loginBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBackground@2x.png"; sourceTree = "<group>"; };
+		B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoTemp@2x.png"; sourceTree = "<group>"; };
+		B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal_icon_back@2x.png"; sourceTree = "<group>"; };
+		B024905A1A65D05B0078AAD4 /* fb_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb_icon@2x.png"; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038E20E1A62017D00E660ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038E20F1A62017D00E660ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,13 +87,9 @@
 		B048AC611A64CDCB000C1D71 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		B048AC621A64CDCB000C1D71 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		B048AC671A64D28F000C1D71 /* PFDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFDefine.h; sourceTree = "<group>"; };
-		B048AC6A1A64D408000C1D71 /* loginBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginBackground@2x.png"; path = "../../Desktop/loginBackground@2x.png"; sourceTree = "<group>"; };
-		B048AC6C1A64D40C000C1D71 /* logoTemp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logoTemp@2x.png"; path = "../../Desktop/logoTemp@2x.png"; sourceTree = "<group>"; };
 		B048AC781A650765000C1D71 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B048AC791A650765000C1D71 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B048AC7A1A650765000C1D71 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		B048AC7D1A650A7A000C1D71 /* personal_icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "personal_icon_back@2x.png"; path = "../../Desktop/personal_icon_back@2x.png"; sourceTree = "<group>"; };
-		B048AC811A650FF0000C1D71 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = ../../Desktop/facebook.png; sourceTree = "<group>"; };
 		B0BE545B1A63C00D000DF8FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B0BE54641A63C098000DF8FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B0BE54661A63C0A0000DF8FE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -288,10 +290,11 @@
 		B048AC691A64D3ED000C1D71 /* Login&Signup */ = {
 			isa = PBXGroup;
 			children = (
-				B048AC6C1A64D40C000C1D71 /* logoTemp@2x.png */,
-				B048AC7D1A650A7A000C1D71 /* personal_icon_back@2x.png */,
-				B048AC6A1A64D408000C1D71 /* loginBackground@2x.png */,
-				B048AC811A650FF0000C1D71 /* facebook.png */,
+				B02490541A65CFA20078AAD4 /* loginBackground@2x.png */,
+				B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */,
+				B024905A1A65D05B0078AAD4 /* fb_icon@2x.png */,
+				B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */,
+				B02490521A65A2FC0078AAD4 /* platform2@2x.png */,
 			);
 			name = "Login&Signup";
 			sourceTree = "<group>";
@@ -379,12 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B048AC7C1A650765000C1D71 /* LoginViewController.xib in Resources */,
-				B048AC6B1A64D408000C1D71 /* loginBackground@2x.png in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
-				B048AC821A650FF0000C1D71 /* facebook.png in Resources */,
-				B048AC7E1A650A7A000C1D71 /* personal_icon_back@2x.png in Resources */,
-				B048AC6D1A64D40C000C1D71 /* logoTemp@2x.png in Resources */,
+				B02490571A65CFAB0078AAD4 /* logoTemp@2x.png in Resources */,
+				B02490591A65CFB80078AAD4 /* personal_icon_back@2x.png in Resources */,
+				B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */,
+				B024905B1A65D05B0078AAD4 /* fb_icon@2x.png in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
+				B02490531A65A2FC0078AAD4 /* platform2@2x.png in Resources */,
 				B016F0B01A633E6F000291FB /* study@2x.png in Resources */,
 				B038E21B1A62017D00E660ED /* Images.xcassets in Resources */,
 				B048AC641A64CDCB000C1D71 /* RegisterViewController.xib in Resources */,
