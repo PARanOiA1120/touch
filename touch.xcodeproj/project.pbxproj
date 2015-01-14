@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B016F0AB1A63303B000291FB /* IntroViewController.m */; };
 		B016F0B01A633E6F000291FB /* study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B016F0AF1A633E6F000291FB /* study@2x.png */; };
-		B02490531A65A2FC0078AAD4 /* platform2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490521A65A2FC0078AAD4 /* platform2@2x.png */; };
 		B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490541A65CFA20078AAD4 /* loginBackground@2x.png */; };
 		B02490571A65CFAB0078AAD4 /* logoTemp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */; };
 		B02490591A65CFB80078AAD4 /* personal_icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */; };
@@ -62,7 +61,6 @@
 		B016F0AA1A63303B000291FB /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		B016F0AB1A63303B000291FB /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		B016F0AF1A633E6F000291FB /* study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "study@2x.png"; sourceTree = "<group>"; };
-		B02490521A65A2FC0078AAD4 /* platform2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "platform2@2x.png"; path = "../../Desktop/platform2@2x.png"; sourceTree = "<group>"; };
 		B02490541A65CFA20078AAD4 /* loginBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBackground@2x.png"; sourceTree = "<group>"; };
 		B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoTemp@2x.png"; sourceTree = "<group>"; };
 		B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal_icon_back@2x.png"; sourceTree = "<group>"; };
@@ -294,7 +292,6 @@
 				B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */,
 				B024905A1A65D05B0078AAD4 /* fb_icon@2x.png */,
 				B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */,
-				B02490521A65A2FC0078AAD4 /* platform2@2x.png */,
 			);
 			name = "Login&Signup";
 			sourceTree = "<group>";
@@ -388,7 +385,6 @@
 				B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */,
 				B024905B1A65D05B0078AAD4 /* fb_icon@2x.png in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
-				B02490531A65A2FC0078AAD4 /* platform2@2x.png in Resources */,
 				B016F0B01A633E6F000291FB /* study@2x.png in Resources */,
 				B038E21B1A62017D00E660ED /* Images.xcassets in Resources */,
 				B048AC641A64CDCB000C1D71 /* RegisterViewController.xib in Resources */,
