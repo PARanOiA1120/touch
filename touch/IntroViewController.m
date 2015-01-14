@@ -21,7 +21,7 @@
     // Init the pages texts, and pictures.
     ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithTitle:@"How to meet instructors?"
                                                             subTitle:@"Use touch to make appointments!"
-                                                         pictureName:@"1"
+                                                         pictureName:@"meet@2x.png"
                                                             duration:3.5];
     ICETutorialPage *layer2 = [[ICETutorialPage alloc] initWithTitle:@"Stuck with homework?"
                                                             subTitle:@"Invite classmates to study together!"
@@ -29,15 +29,15 @@
                                                             duration:3.5];
     ICETutorialPage *layer3 = [[ICETutorialPage alloc] initWithTitle:@"When to hold review session?"
                                                             subTitle:@"Ask students when they are available!"
-                                                         pictureName:@"3"
+                                                         pictureName:@"review@2x.png"
                                                             duration:3.5];
     ICETutorialPage *layer4 = [[ICETutorialPage alloc] initWithTitle:@"Partners recruiting?"
                                                             subTitle:@"Ask who is intrested!"
-                                                         pictureName:@"4"
+                                                         pictureName:@"partner@2x.png"
                                                             duration:3.5];
     ICETutorialPage *layer5 = [[ICETutorialPage alloc] initWithTitle:@"Touch"
                                                             subTitle:@"Best way to get in touch with\n people when you are in need!"
-                                                         pictureName:@"5"
+                                                         pictureName:@"touch@2x.png"
                                                             duration:3.5];
     //NSLog(@"%@",layer1);
     ICETutorialLabelStyle *titleStyle = [[ICETutorialLabelStyle alloc] init];
