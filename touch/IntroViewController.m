@@ -8,6 +8,7 @@
 
 #import "IntroViewController.h"
 #import "LoginViewController.h"
+#import "StepOneViewController.h"
 
 @interface IntroViewController () <ICETutorialControllerDelegate>
 
@@ -17,7 +18,6 @@
 
 -(instancetype)init
 {
-    //NSLog(@"0");
     // Init the pages texts, and pictures.
     ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithTitle:@"How to meet instructors?"
                                                             subTitle:@"Use touch to make appointments!"
@@ -39,7 +39,7 @@
                                                             subTitle:@"Best way to get in touch with\n people when you are in need!"
                                                          pictureName:@"touch@2x.png"
                                                             duration:3.5];
-    //NSLog(@"%@",layer1);
+
     ICETutorialLabelStyle *titleStyle = [[ICETutorialLabelStyle alloc] init];
     [titleStyle setFont:[UIFont fontWithName:@"CourierNewPS-BoldMT" size:19.0f]];
     [titleStyle setTextColor:[UIColor whiteColor]];
@@ -60,7 +60,6 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    //NSLog(@"appeared!");
     [self startScrolling];
 }
 
@@ -76,23 +75,16 @@
 
 #pragma mark - ICETutorialController delegate
 - (void)tutorialController:(ICETutorialController *)tutorialController scrollingFromPageIndex:(NSUInteger)fromIndex toPageIndex:(NSUInteger)toIndex {
-    //NSLog(@"Scrolling from page %lu to page %lu.", (unsigned long)fromIndex, (unsigned long)toIndex);
 }
 
 - (void)tutorialControllerDidReachLastPage:(ICETutorialController *)tutorialController {
-    //NSLog(@"Tutorial reached the last page.");
 }
 
 - (void)tutorialController:(ICETutorialController *)tutorialController didClickOnLeftButton:(UIButton *)sender {
-    //NSLog(@"Button 1 pressed.");
-    //[self stopScrolling];
     [self toLogin];
 }
 
 - (void)tutorialController:(ICETutorialController *)tutorialController didClickOnRightButton:(UIButton *)sender {
-    //NSLog(@"Button 2 pressed.");
-    //NSLog(@"Auto-scrolling stopped.");
-    //[self stopScrolling];
     [self toRegister];
 }
 
@@ -100,15 +92,18 @@
 {
     [self stopScrolling];
     LoginViewController *loginController = [[LoginViewController alloc] init];
-    //[(AppDelegate *)[[UIApplication sharedApplication] delegate]hideTabBar];
     [self presentViewController:loginController animated:YES completion:^{
     }];
 }
 
 - (void)toRegister
 {
-    
-    
+    [self stopScrolling];
+    StepOneViewController *registerController = [[StepOneViewController alloc] init];
+    UINavigationController *registerNav = [[UINavigationController alloc] initWithRootViewController:registerController];
+    [self presentViewController:registerNav animated:YES completion:^{
+    }];
+    registerController.title=@"Registration 1/2";
 }
 
 /*
