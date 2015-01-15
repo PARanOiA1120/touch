@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepOneViewController">
             <connections>
+                <outlet property="cancel" destination="gkI-Ir-ryq" id="0Fo-xk-4VW"/>
                 <outlet property="confirmPW" destination="gde-G3-TaQ" id="lP7-mL-4aU"/>
                 <outlet property="next" destination="Ic4-lI-W2D" id="Ka7-Fm-yd7"/>
                 <outlet property="password" destination="Sv9-d3-Uqc" id="cR4-wd-Jk6"/>
@@ -36,13 +37,17 @@
                             <exclude reference="gm9-qY-F6S"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="80" y="383" width="243" height="34"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="ODy-p6-dwN"/>
                             <include reference="gm9-qY-F6S"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="AEg-9B-n7e"/>
+                        <action selector="nextStep:" destination="-1" eventType="touchDown" id="lND-ab-OGE"/>
+                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="nLC-OF-4sT"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beU-VL-69k">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -185,13 +190,15 @@
                             <exclude reference="tTB-Q1-7qv"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="80" y="438" width="243" height="35"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="aGF-NI-yvx"/>
                             <include reference="tTB-Q1-7qv"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="cancelRegister:" destination="-1" eventType="touchUpInside" id="vj2-g7-hM5"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -228,21 +235,21 @@
                     <exclude reference="gkI-Ir-ryq"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="04Q-kJ-6Es"/>
-                    <exclude reference="eBP-bn-DVB"/>
                     <exclude reference="1lb-uG-4Sg"/>
                     <exclude reference="AE8-0o-wpp"/>
                     <exclude reference="dZe-aX-ceo"/>
-                    <exclude reference="1ZW-ar-hIi"/>
-                    <exclude reference="8FK-ln-kgp"/>
                     <exclude reference="HnP-sD-aTs"/>
                     <exclude reference="YUq-hh-9ke"/>
                     <exclude reference="hvZ-Tc-w5z"/>
-                    <exclude reference="3kW-ck-6s6"/>
-                    <exclude reference="KFq-q2-6nY"/>
+                    <exclude reference="04Q-kJ-6Es"/>
+                    <exclude reference="eBP-bn-DVB"/>
                     <exclude reference="Hc5-2c-CdK"/>
                     <exclude reference="YY2-ge-dKx"/>
                     <exclude reference="gLS-Tv-blv"/>
+                    <exclude reference="3kW-ck-6s6"/>
+                    <exclude reference="KFq-q2-6nY"/>
+                    <exclude reference="1ZW-ar-hIi"/>
+                    <exclude reference="8FK-ln-kgp"/>
                     <exclude reference="fFI-ww-dOw"/>
                     <exclude reference="tGq-77-tAk"/>
                     <exclude reference="YNx-i7-PUf"/>
@@ -261,21 +268,21 @@
                     <include reference="gkI-Ir-ryq"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="04Q-kJ-6Es"/>
-                    <include reference="eBP-bn-DVB"/>
                     <include reference="1lb-uG-4Sg"/>
                     <include reference="AE8-0o-wpp"/>
                     <include reference="dZe-aX-ceo"/>
-                    <include reference="1ZW-ar-hIi"/>
-                    <include reference="8FK-ln-kgp"/>
                     <include reference="HnP-sD-aTs"/>
                     <include reference="YUq-hh-9ke"/>
                     <include reference="hvZ-Tc-w5z"/>
-                    <include reference="3kW-ck-6s6"/>
-                    <include reference="KFq-q2-6nY"/>
+                    <include reference="04Q-kJ-6Es"/>
+                    <include reference="eBP-bn-DVB"/>
                     <include reference="Hc5-2c-CdK"/>
                     <include reference="YY2-ge-dKx"/>
                     <include reference="gLS-Tv-blv"/>
+                    <include reference="3kW-ck-6s6"/>
+                    <include reference="KFq-q2-6nY"/>
+                    <include reference="1ZW-ar-hIi"/>
+                    <include reference="8FK-ln-kgp"/>
                     <include reference="fFI-ww-dOw"/>
                     <include reference="tGq-77-tAk"/>
                     <include reference="YNx-i7-PUf"/>

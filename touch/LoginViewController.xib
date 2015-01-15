@@ -47,6 +47,11 @@
                             <include reference="hPm-0O-YjR"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchDown" id="55T-8n-HoZ"/>
+                        <action selector="back:" destination="-1" eventType="touchCancel" id="Ebg-nh-wYR"/>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="6IW-QA-W80"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoTemp.png" translatesAutoresizingMaskIntoConstraints="NO" id="634-Ao-dov">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

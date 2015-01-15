@@ -9,6 +9,7 @@
 #import "IntroViewController.h"
 #import "LoginViewController.h"
 #import "StepOneViewController.h"
+#import "StepTwoViewController.h"
 
 @interface IntroViewController () <ICETutorialControllerDelegate>
 
@@ -103,7 +104,8 @@
     UINavigationController *registerNav = [[UINavigationController alloc] initWithRootViewController:registerController];
     [self presentViewController:registerNav animated:YES completion:^{
     }];
-    registerController.title=@"Registration 1/2";
+   // registerController.title=@"Registration 1/2";
+        
 }
 
 /*

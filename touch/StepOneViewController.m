@@ -11,12 +11,15 @@
 #import "InsetTextField.h"
 #import <QuartzCore/QuartzCore.h>
 #import "StepTwoViewController.h"
+#import "RegisterViewController.h"
+#import "IntroViewController.h"
 
 @interface StepOneViewController ()
 @property (weak, nonatomic) IBOutlet InsetTextField *username;
 @property (weak, nonatomic) IBOutlet InsetTextField *password;
 @property (weak, nonatomic) IBOutlet InsetTextField *confirmPW;
 @property (weak, nonatomic) IBOutlet UIButton *next;
+@property (weak, nonatomic) IBOutlet UIButton *cancel;
 
 @end
 
@@ -32,6 +35,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)cancelRegister:(id)sender {
+    [self.username resignFirstResponder];
+    [self.password resignFirstResponder];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)nextStep:(id)sender {
+    StepTwoViewController *registerController = [[StepTwoViewController alloc] init];
+    [self.navigationController pushViewController:registerController animated:YES];
+    //registerController.title=@"Registration 2/2";
+}
+
+
+
 
 /*
 #pragma mark - Navigation

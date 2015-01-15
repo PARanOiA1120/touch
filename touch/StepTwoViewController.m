@@ -2,13 +2,19 @@
 //  StepTwoViewController.m
 //  touch
 //
-//  Created by Ariel Xin on 1/13/15.
+//  Created by Ariel Xin on 1/15/15.
 //  Copyright (c) 2015 cs48. All rights reserved.
 //
 
 #import "StepTwoViewController.h"
+#import "IHKeyboardAvoiding.h"
+#import "CommonDefine.h"
+#import "InsetTextField.h"
 
-@interface StepTwoViewController ()
+@interface StepTwoViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *userPic;
+@property (weak, nonatomic) IBOutlet InsetTextField *major;
+
 
 @end
 
@@ -23,6 +29,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation
