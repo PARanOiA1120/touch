@@ -35,7 +35,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     NSLog(@" window frame  %@",NSStringFromCGRect([[UIScreen mainScreen]bounds]));
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f]];
+   [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f]];
     
     [self goToIntro];
     

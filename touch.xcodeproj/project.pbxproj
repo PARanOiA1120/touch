@@ -13,6 +13,8 @@
 		B02490571A65CFAB0078AAD4 /* logoTemp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */; };
 		B02490591A65CFB80078AAD4 /* personal_icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */; };
 		B024905B1A65D05B0078AAD4 /* fb_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B024905A1A65D05B0078AAD4 /* fb_icon@2x.png */; };
+		B024905F1A664D3E0078AAD4 /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B024905D1A664D3E0078AAD4 /* StepOneViewController.m */; };
+		B02490601A664D3E0078AAD4 /* StepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B024905E1A664D3E0078AAD4 /* StepOneViewController.xib */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
 		B038E2191A62017D00E660ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038E2171A62017D00E660ED /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		B0BE54731A63C0CD000DF8FE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54721A63C0CD000DF8FE /* StoreKit.framework */; };
 		B0BE54751A63C0D5000DF8FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54741A63C0D5000DF8FE /* SystemConfiguration.framework */; };
 		B0BE54771A63C0DE000DF8FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54761A63C0DE000DF8FE /* libz.dylib */; };
+		B0CCEF411A684A480013A17E /* StepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CCEF3F1A684A480013A17E /* StepTwoViewController.m */; };
+		B0CCEF421A684A480013A17E /* StepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CCEF401A684A480013A17E /* StepTwoViewController.xib */; };
 		B0E911951A63C35100AA8B7E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911941A63C35100AA8B7E /* Social.framework */; };
 		B0E911971A63C38B00AA8B7E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911961A63C38B00AA8B7E /* Accounts.framework */; };
 		B0E911A91A63D0C900AA8B7E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911A81A63D0C900AA8B7E /* FacebookSDK.framework */; };
@@ -65,6 +69,9 @@
 		B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoTemp@2x.png"; sourceTree = "<group>"; };
 		B02490581A65CFB80078AAD4 /* personal_icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal_icon_back@2x.png"; sourceTree = "<group>"; };
 		B024905A1A65D05B0078AAD4 /* fb_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb_icon@2x.png"; sourceTree = "<group>"; };
+		B024905C1A664D3E0078AAD4 /* StepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepOneViewController.h; sourceTree = "<group>"; };
+		B024905D1A664D3E0078AAD4 /* StepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepOneViewController.m; sourceTree = "<group>"; };
+		B024905E1A664D3E0078AAD4 /* StepOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepOneViewController.xib; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038E20E1A62017D00E660ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038E20F1A62017D00E660ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +106,9 @@
 		B0BE54721A63C0CD000DF8FE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B0BE54741A63C0D5000DF8FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B0BE54761A63C0DE000DF8FE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B0CCEF3E1A684A480013A17E /* StepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTwoViewController.h; sourceTree = "<group>"; };
+		B0CCEF3F1A684A480013A17E /* StepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTwoViewController.m; sourceTree = "<group>"; };
+		B0CCEF401A684A480013A17E /* StepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepTwoViewController.xib; sourceTree = "<group>"; };
 		B0E911941A63C35100AA8B7E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B0E911961A63C38B00AA8B7E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B0E911A81A63D0C900AA8B7E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -270,6 +280,12 @@
 				B048AC601A64CDCB000C1D71 /* RegisterViewController.h */,
 				B048AC611A64CDCB000C1D71 /* RegisterViewController.m */,
 				B048AC621A64CDCB000C1D71 /* RegisterViewController.xib */,
+				B024905C1A664D3E0078AAD4 /* StepOneViewController.h */,
+				B024905D1A664D3E0078AAD4 /* StepOneViewController.m */,
+				B024905E1A664D3E0078AAD4 /* StepOneViewController.xib */,
+				B0CCEF3E1A684A480013A17E /* StepTwoViewController.h */,
+				B0CCEF3F1A684A480013A17E /* StepTwoViewController.m */,
+				B0CCEF401A684A480013A17E /* StepTwoViewController.xib */,
 				B048AC5C1A647214000C1D71 /* InsetTextField.h */,
 				B048AC5D1A647214000C1D71 /* InsetTextField.m */,
 				B048AC5F1A6472B2000C1D71 /* CommonDefine.h */,
@@ -378,12 +394,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02490601A664D3E0078AAD4 /* StepOneViewController.xib in Resources */,
 				B048AC7C1A650765000C1D71 /* LoginViewController.xib in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
 				B02490571A65CFAB0078AAD4 /* logoTemp@2x.png in Resources */,
 				B02490591A65CFB80078AAD4 /* personal_icon_back@2x.png in Resources */,
 				B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */,
 				B024905B1A65D05B0078AAD4 /* fb_icon@2x.png in Resources */,
+				B0CCEF421A684A480013A17E /* StepTwoViewController.xib in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
 				B016F0B01A633E6F000291FB /* study@2x.png in Resources */,
 				B038E21B1A62017D00E660ED /* Images.xcassets in Resources */,
@@ -444,7 +462,9 @@
 				B038E2101A62017D00E660ED /* main.m in Sources */,
 				B048AC7B1A650765000C1D71 /* LoginViewController.m in Sources */,
 				B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */,
+				B0CCEF411A684A480013A17E /* StepTwoViewController.m in Sources */,
 				B048AC631A64CDCB000C1D71 /* RegisterViewController.m in Sources */,
+				B024905F1A664D3E0078AAD4 /* StepOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,12 +57,14 @@
 }
 
 
-- (IBAction)backButtonCliced:(id)sender {
+- (IBAction)back:(id)sender {
     NSLog(@"back clicked");
     [self.userNameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 - (IBAction)forgotPassword:(id)sender {
 }
@@ -143,7 +145,6 @@
     [self.userNameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
 }
-
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldClear:(UITextField *)textField{
