@@ -7,7 +7,10 @@
 //
 
 #import "User.h"
+#import "ProgressHUD.h"
 
-@implementation User
+@implementation User: NSObject
+
+BOOL fullInfoReturned=NO;
 
 @end

@@ -239,6 +239,9 @@
                             <include reference="fEG-FP-Mu6"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="Dpe-ex-NeK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-fg-2YZ">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>

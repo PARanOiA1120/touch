@@ -27,6 +27,7 @@
 		B048AC641A64CDCB000C1D71 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B048AC621A64CDCB000C1D71 /* RegisterViewController.xib */; };
 		B048AC7B1A650765000C1D71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC791A650765000C1D71 /* LoginViewController.m */; };
 		B048AC7C1A650765000C1D71 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B048AC7A1A650765000C1D71 /* LoginViewController.xib */; };
+		B074B74B1A68DE6200EF304E /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B074B74A1A68DE6200EF304E /* ProgressHUD.m */; };
 		B0BE54601A63C00D000DF8FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE545B1A63C00D000DF8FE /* Parse.framework */; };
 		B0BE54651A63C098000DF8FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54641A63C098000DF8FE /* AudioToolbox.framework */; };
 		B0BE54671A63C0A0000DF8FE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54661A63C0A0000DF8FE /* CFNetwork.framework */; };
@@ -95,6 +96,8 @@
 		B048AC781A650765000C1D71 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B048AC791A650765000C1D71 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B048AC7A1A650765000C1D71 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B074B7491A68DE4800EF304E /* ProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		B074B74A1A68DE6200EF304E /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		B0BE545B1A63C00D000DF8FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B0BE54641A63C098000DF8FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B0BE54661A63C0A0000DF8FE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -213,6 +216,7 @@
 			children = (
 				B038E2111A62017D00E660ED /* AppDelegate.h */,
 				B038E2121A62017D00E660ED /* AppDelegate.m */,
+				B074B7461A68DE0000EF304E /* Util */,
 				B038E2341A6238AE00E660ED /* Resources */,
 				B038E2351A6238B600E660ED /* Model */,
 				B038E2381A6238D000E660ED /* Controller */,
@@ -310,6 +314,16 @@
 				B02490561A65CFAB0078AAD4 /* logoTemp@2x.png */,
 			);
 			name = "Login&Signup";
+			sourceTree = "<group>";
+		};
+		B074B7461A68DE0000EF304E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B074B7491A68DE4800EF304E /* ProgressHUD.h */,
+				B074B74A1A68DE6200EF304E /* ProgressHUD.m */,
+			);
+			name = Util;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +472,7 @@
 			files = (
 				B048AC5E1A647214000C1D71 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
+				B074B74B1A68DE6200EF304E /* ProgressHUD.m in Sources */,
 				B048AC5B1A6452DA000C1D71 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
 				B048AC7B1A650765000C1D71 /* LoginViewController.m in Sources */,
