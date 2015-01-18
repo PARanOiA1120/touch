@@ -150,6 +150,9 @@
                             <include reference="rpW-Ut-oOA"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="forgotPassword:" destination="-1" eventType="touchUpInside" id="BNt-fX-Hfa"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWD-oB-QDn">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -173,6 +176,9 @@
                             <include reference="xU9-8h-Quv"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="loginToPlatform1:" destination="-1" eventType="touchUpInside" id="d50-0I-WZc"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqD-it-Fu6">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -195,6 +201,9 @@
                             <include reference="tGh-yA-k22"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="loginToPlatform2:" destination="-1" eventType="touchUpInside" id="zgU-QA-SsN"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSN-SC-cQa">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -217,6 +226,9 @@
                             <include reference="ZyD-fr-Cik"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="loginToPlatform3:" destination="-1" eventType="touchUpInside" id="HbZ-TC-YEg"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-vZ-SPm">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -241,6 +253,7 @@
                     </variation>
                     <connections>
                         <action selector="login:" destination="-1" eventType="touchUpInside" id="Dpe-ex-NeK"/>
+                        <action selector="loginSecess:" destination="-1" eventType="touchDown" id="dyt-4t-Z2R"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-fg-2YZ">

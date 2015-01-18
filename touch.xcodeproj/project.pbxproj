@@ -21,6 +21,7 @@
 		B038E21B1A62017D00E660ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B038E21A1A62017D00E660ED /* Images.xcassets */; };
 		B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B038E21C1A62017D00E660ED /* LaunchScreen.xib */; };
 		B038E22A1A62017D00E660ED /* touchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2291A62017D00E660ED /* touchTests.m */; };
+		B04081B11A6B0ADE002DC1AD /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = B04081B01A6B0ADE002DC1AD /* Image.m */; };
 		B048AC5B1A6452DA000C1D71 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC5A1A6452DA000C1D71 /* User.m */; };
 		B048AC5E1A647214000C1D71 /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC5D1A647214000C1D71 /* InsetTextField.m */; };
 		B048AC631A64CDCB000C1D71 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC611A64CDCB000C1D71 /* RegisterViewController.m */; };
@@ -84,6 +85,8 @@
 		B038E2231A62017D00E660ED /* touchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038E2281A62017D00E660ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038E2291A62017D00E660ED /* touchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchTests.m; sourceTree = "<group>"; };
+		B04081AF1A6B0ADE002DC1AD /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		B04081B01A6B0ADE002DC1AD /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		B048AC591A6452DA000C1D71 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B048AC5A1A6452DA000C1D71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B048AC5C1A647214000C1D71 /* InsetTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsetTextField.h; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 			children = (
 				B048AC591A6452DA000C1D71 /* User.h */,
 				B048AC5A1A6452DA000C1D71 /* User.m */,
+				B04081AF1A6B0ADE002DC1AD /* Image.h */,
+				B04081B01A6B0ADE002DC1AD /* Image.m */,
 				B048AC671A64D28F000C1D71 /* PFDefine.h */,
 			);
 			name = Model;
@@ -470,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04081B11A6B0ADE002DC1AD /* Image.m in Sources */,
 				B048AC5E1A647214000C1D71 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B074B74B1A68DE6200EF304E /* ProgressHUD.m in Sources */,

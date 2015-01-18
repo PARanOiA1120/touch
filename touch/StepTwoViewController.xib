@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepTwoViewController">
             <connections>
+                <outlet property="birthday" destination="2ud-u9-ZhK" id="Huy-pC-Wk8"/>
+                <outlet property="gender" destination="bnQ-i3-YzQ" id="zgt-hr-BSE"/>
                 <outlet property="major" destination="IhL-uX-Fgc" id="1ll-yT-dXI"/>
                 <outlet property="userPic" destination="IdV-MR-GRz" id="uV2-9N-71k"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

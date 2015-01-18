@@ -28,7 +28,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard:)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tap];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard:)];
+    [self.view addGestureRecognizer:pan];
 
+
+}
+
+- (void)closeKeyboard:(id)sender {
+    [self.username resignFirstResponder];
+    [self.password resignFirstResponder];
+    [self.confirmPW resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

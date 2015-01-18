@@ -68,15 +68,6 @@
  */
 
 - (void) configView {
-    //UIImage *image = [UIImage imageNamed:@"cancel"];
-    //UIImage *selectedImage = [UIImage imageNamed:@"cancel_selected"];
-    //UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    //button.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-    //[button setTitle:@"取消" forState:UIControlStateNormal];
-    //[button setImage:image forState:UIControlStateNormal];
-    //[button setImage:selectedImage forState:UIControlStateHighlighted];
-    //[button addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-    //UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle: @"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
     
     self.navigationItem.leftBarButtonItem = item;
@@ -93,20 +84,14 @@
     CGFloat originY = 0;
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
-    //UIImage *image = [[UIImage imageNamed:@"loginBackgorund"] resizableImageWithCapInsets:UIEdgeInsetsMake(100, 0, 285, 0)];
-    //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    //imageView.frame = CGRectMake(originX, originY, width, height);
-    //[self.view addSubview:imageView];
     
     originX = 15;
     originY = (SCREEN_HEIGHT<=480)?100:130;
     width = SCREEN_WIDTH - originX*2;
-    //image = [UIImage imageNamed:@"input_bg_top"];
+
     height = 50;
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(originX, originY, width, height)];
-    //textField.background = image;
-    //textField.horizontalPadding = 10;
-    //textField.verticalPadding = 10;
+
     textField.borderStyle=UITextBorderStyleRoundedRect;
     textField.backgroundColor=RGBACOLOR(236, 240, 241, 0.5);
     textField.placeholder = @"用户名";
@@ -118,12 +103,10 @@
     self.usernameField = textField;
     
     originY += height+7;
-    //image = [UIImage imageNamed:@"input_bg_bottom"];
+
     height = 50;
     textField = [[UITextField alloc] initWithFrame:CGRectMake(originX, originY, width, height)];
-    //textField.background = image;
-    //textField.horizontalPadding = 10;
-    //textField.verticalPadding = 10;
+
     textField.borderStyle=UITextBorderStyleRoundedRect;
     textField.backgroundColor=RGBACOLOR(236, 240, 241, 0.5);
     textField.placeholder = @"密码";
@@ -136,20 +119,16 @@
     self.passwordField = textField;
     
     originY += height + 7;
-    //image = [[UIImage imageNamed:@"blue_expand_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(originX, originY, width, height);
     [button setBackgroundColor:RGBACOLOR(184, 150, 101, 1)];
-    //[button setBackgroundImage:image forState:UIControlStateNormal];
-    //image = [[UIImage imageNamed:@"blue_expand_highlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
-    //[button setBackgroundImage:image forState:UIControlStateHighlighted];
-    //image = [[UIImage imageNamed:@"blue_expand_highlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
-    //[button setBackgroundImage:image forState:UIControlStateDisabled];
+
     button.enabled = NO;
     [button setTitle:@"注册" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //    button.userInteractionEnabled = YES;
+
     [button addTarget:self action:@selector(registerUser:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     self.registerButton = button;
@@ -168,9 +147,6 @@
 -(IBAction)registerUser:(id)sender
 {
     NSLog(@"now registering");
-    /*JCUser *user = [JCUser currentUser];
-    user.phoneNumber = self.usernameField.text;
-    user.password = self.passwordField.text;*/
 }
 
 - (void)closeKeyboard:(id)sender {

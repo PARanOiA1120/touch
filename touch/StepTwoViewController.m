@@ -14,6 +14,8 @@
 @interface StepTwoViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *userPic;
 @property (weak, nonatomic) IBOutlet InsetTextField *major;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gender;
+@property (weak, nonatomic) IBOutlet InsetTextField *birthday;
 
 
 @end
@@ -23,6 +25,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard:)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tap];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard:)];
+    [self.view addGestureRecognizer:pan];
+}
+
+- (void)closeKeyboard:(id)sender {
+    [self.major resignFirstResponder];
+    [self.gender resignFirstResponder];
+    [self.birthday resignFirstResponder];
+
 }
 
 - (void)didReceiveMemoryWarning {
