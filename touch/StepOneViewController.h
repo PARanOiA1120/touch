@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "InsetTextField.h"
 
 @interface StepOneViewController : UIViewController
 

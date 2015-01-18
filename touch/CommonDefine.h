@@ -9,6 +9,8 @@
 #ifndef touch_CommonDefine_h
 #define touch_CommonDefine_h
 
+#import <Parse/Parse.h>
+
 #define IOS7_UP                ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0 ? YES : NO )
 #define IOS8_UP                ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0 ? YES : NO )
 
@@ -44,5 +46,6 @@
 
 #pragma mark Notification define
 #define UIActivityCircleNeedRefreshDataNotification @"UIActivityCircleNeedRefreshDataNotification"
+
 
 #endif

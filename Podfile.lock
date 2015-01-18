@@ -1,13 +1,19 @@
 PODS:
+  - ActionSheetPicker-3.0 (1.3.11)
   - ICETutorial (1.1.1)
   - IHKeyboardAvoiding (2.0)
+  - SGNavigationProgress (1.2)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 1.3.9)
   - ICETutorial
   - IHKeyboardAvoiding
+  - SGNavigationProgress
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 4f48f8ca46f981effd10ba59a73401d4ae9d6a2e
   ICETutorial: 785f7ea764f7d4f3702d7561497fd3c286134431
   IHKeyboardAvoiding: d2c7cd9ce5ca7bf566877dc527706b0a7d6cdcf0
+  SGNavigationProgress: 6c38006ca3c652618411c67d493b263343d5aece
 
 COCOAPODS: 0.35.0

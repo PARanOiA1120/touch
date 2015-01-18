@@ -66,6 +66,11 @@
 }
 
 
+-(void)createTabBar{
+
+    
+}
+
 + (AppDelegate *)delegate {
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
@@ -74,7 +79,6 @@
 - (void)goToIntro
 {
     IntroViewController *introView = [[IntroViewController alloc] init];
-    //NSLog(@"5");
     self.window.rootViewController = introView;
     [self.window makeKeyAndVisible];
 }

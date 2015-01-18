@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "IHKeyboardAvoiding.h"
 #import "CommonDefine.h"
+#import "ProgressHUD.h"
+#import "User.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -129,16 +131,28 @@
         self.iconImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
         self.iconImageView.layer.masksToBounds = YES;
         self.iconImageView.layer.cornerRadius = self.iconImageView.frame.size.height/2;;
-        
-        
     };
     
 }
 
 #pragma model
-
--(IBAction)login:(id)sender {
+- (IBAction)login:(id)sender {
+    if(self.userNameField.text.length<=3){
+        [ProgressHUD showError:@"Please enter username"];
+        [self.userNameField becomeFirstResponder];
+        return;
+    }
+    if (self.passwordField.text.length <= 6)
+    {
+        [ProgressHUD showError:@"Please enter password"];
+        [self.passwordField becomeFirstResponder];
+        return;
+    }
+    [ProgressHUD show:@"login" Interaction:NO];
+    
 }
+
+
 
 
 - (void)closeKeyboard {

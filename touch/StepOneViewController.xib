@@ -289,6 +289,7 @@
                     <include reference="k8o-uG-0D0"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="282" y="223"/>
         </view>
     </objects>
 </document>
