@@ -253,6 +253,7 @@
                     </variation>
                     <connections>
                         <action selector="login:" destination="-1" eventType="touchUpInside" id="Dpe-ex-NeK"/>
+                        <action selector="login:" destination="-1" eventType="touchDown" id="wQt-ch-Wf6"/>
                         <action selector="loginSecess:" destination="-1" eventType="touchDown" id="dyt-4t-Z2R"/>
                     </connections>
                 </button>

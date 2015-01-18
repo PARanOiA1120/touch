@@ -57,9 +57,18 @@
 
 - (IBAction)nextStep:(id)sender {
     [ProgressHUD show:@"Signing Up" Interaction:NO];
+    
     User *user=[User currentUser];
     user.major=self.major.text;
     user.classlevel=self.classlevel.text;
+    
+    if (self.gender.selectedSegmentIndex == 0)
+    {
+        user.gender=@"female";
+    }
+    else {
+        user.gender=@"male";
+    }
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {

@@ -60,6 +60,7 @@ BOOL fullInfoReturned=NO;
         
         if (user) {
             self.recordID=user.objectId;
+            self.username=user.username;
             self.password=user.password;
             
             CGFloat length = 0.0;
@@ -89,7 +90,7 @@ BOOL fullInfoReturned=NO;
                     [[NSUserDefaults standardUserDefaults] synchronize];
                 }
             }];*/
-            //block(YES,error);
+            block(YES,error);
         } else {
             block(NO,error);
         }
@@ -106,7 +107,7 @@ BOOL fullInfoReturned=NO;
     [user setObject:self.gender forKey:@"gender"];
     [user setObject:self.classlevel forKey:@"classlevel"];
     
-    
+    /*
     [ProgressHUD show:@"Uploading portrait" Interaction:NO];
     NSData *imageData=UIImagePNGRepresentation(self.largeImage);
     PFFile *imageFile=[PFFile fileWithData:imageData];
@@ -140,7 +141,7 @@ BOOL fullInfoReturned=NO;
         }
     } progressBlock:^(NSInteger percentDone) {
         percent(percentDone);
-    }];
+    }];*/
 }
 
 - (void) getFullInformation:(PFBlock)block {

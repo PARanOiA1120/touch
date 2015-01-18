@@ -10,6 +10,7 @@
 #import "IHKeyboardAvoiding.h"
 #import "CommonDefine.h"
 #import "ProgressHUD.h"
+#import "User.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -135,16 +136,23 @@
 }
 
 #pragma model
-
--(IBAction)login:(id)sender {
-    if (!self.passwordField.text || (self.passwordField.text.length == 0))
+- (IBAction)login:(id)sender {
+    if(self.userNameField.text.length<=3){
+        [ProgressHUD showError:@"Please enter username"];
+        [self.userNameField becomeFirstResponder];
+        return;
+    }
+    if (self.passwordField.text.length <= 6)
     {
         [ProgressHUD showError:@"Please enter password"];
         [self.passwordField becomeFirstResponder];
         return;
     }
     [ProgressHUD show:@"login" Interaction:NO];
+    
 }
+
+
 
 
 - (void)closeKeyboard {

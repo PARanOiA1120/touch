@@ -29,6 +29,7 @@
 		B048AC7B1A650765000C1D71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B048AC791A650765000C1D71 /* LoginViewController.m */; };
 		B048AC7C1A650765000C1D71 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B048AC7A1A650765000C1D71 /* LoginViewController.xib */; };
 		B074B74B1A68DE6200EF304E /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B074B74A1A68DE6200EF304E /* ProgressHUD.m */; };
+		B09E213D1A6C692E00D5AF13 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B09E213C1A6C692E00D5AF13 /* ProgressHUD.bundle */; };
 		B0BE54601A63C00D000DF8FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE545B1A63C00D000DF8FE /* Parse.framework */; };
 		B0BE54651A63C098000DF8FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54641A63C098000DF8FE /* AudioToolbox.framework */; };
 		B0BE54671A63C0A0000DF8FE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54661A63C0A0000DF8FE /* CFNetwork.framework */; };
@@ -101,6 +102,7 @@
 		B048AC7A1A650765000C1D71 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B074B7491A68DE4800EF304E /* ProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		B074B74A1A68DE6200EF304E /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		B09E213C1A6C692E00D5AF13 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = ../jiechu/jiechu/Util/ProgressHUD.bundle; sourceTree = "<group>"; };
 		B0BE545B1A63C00D000DF8FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B0BE54641A63C098000DF8FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B0BE54661A63C0A0000DF8FE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -324,6 +326,7 @@
 		B074B7461A68DE0000EF304E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B09E213C1A6C692E00D5AF13 /* ProgressHUD.bundle */,
 				B074B7491A68DE4800EF304E /* ProgressHUD.h */,
 				B074B74A1A68DE6200EF304E /* ProgressHUD.m */,
 			);
@@ -416,6 +419,7 @@
 				B02490601A664D3E0078AAD4 /* StepOneViewController.xib in Resources */,
 				B048AC7C1A650765000C1D71 /* LoginViewController.xib in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
+				B09E213D1A6C692E00D5AF13 /* ProgressHUD.bundle in Resources */,
 				B02490571A65CFAB0078AAD4 /* logoTemp@2x.png in Resources */,
 				B02490591A65CFB80078AAD4 /* personal_icon_back@2x.png in Resources */,
 				B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */,

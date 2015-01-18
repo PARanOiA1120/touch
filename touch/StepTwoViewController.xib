@@ -228,25 +228,25 @@
                     <exclude reference="daY-VF-Exz"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Wio-7V-2Z8"/>
-                    <exclude reference="ndV-8m-1bq"/>
-                    <exclude reference="2Nq-U7-qGe"/>
-                    <exclude reference="cYH-I3-BC9"/>
-                    <exclude reference="77F-7u-ARi"/>
-                    <exclude reference="M4z-cn-90U"/>
-                    <exclude reference="M9Y-JG-Fjx"/>
-                    <exclude reference="GCP-ah-Dpf"/>
-                    <exclude reference="fT7-KZ-cK3"/>
+                    <exclude reference="Ecr-Am-DK9"/>
+                    <exclude reference="dYG-db-Xrt"/>
+                    <exclude reference="v0c-b1-4Vy"/>
                     <exclude reference="KXw-lj-xCi"/>
                     <exclude reference="xmL-CL-eo7"/>
                     <exclude reference="yKj-EY-Wgl"/>
                     <exclude reference="7j0-Fx-s6C"/>
                     <exclude reference="WVn-ta-pGb"/>
-                    <exclude reference="Ecr-Am-DK9"/>
-                    <exclude reference="dYG-db-Xrt"/>
-                    <exclude reference="v0c-b1-4Vy"/>
+                    <exclude reference="GCP-ah-Dpf"/>
+                    <exclude reference="fT7-KZ-cK3"/>
+                    <exclude reference="2Nq-U7-qGe"/>
+                    <exclude reference="cYH-I3-BC9"/>
                     <exclude reference="1XK-E5-o1N"/>
                     <exclude reference="Gpj-fy-hrx"/>
+                    <exclude reference="77F-7u-ARi"/>
+                    <exclude reference="M4z-cn-90U"/>
+                    <exclude reference="M9Y-JG-Fjx"/>
+                    <exclude reference="Wio-7V-2Z8"/>
+                    <exclude reference="ndV-8m-1bq"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -261,25 +261,25 @@
                     <include reference="daY-VF-Exz"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Wio-7V-2Z8"/>
-                    <include reference="ndV-8m-1bq"/>
-                    <include reference="2Nq-U7-qGe"/>
-                    <include reference="cYH-I3-BC9"/>
-                    <include reference="77F-7u-ARi"/>
-                    <include reference="M4z-cn-90U"/>
-                    <include reference="M9Y-JG-Fjx"/>
-                    <include reference="GCP-ah-Dpf"/>
-                    <include reference="fT7-KZ-cK3"/>
+                    <include reference="Ecr-Am-DK9"/>
+                    <include reference="dYG-db-Xrt"/>
+                    <include reference="v0c-b1-4Vy"/>
                     <include reference="KXw-lj-xCi"/>
                     <include reference="xmL-CL-eo7"/>
                     <include reference="yKj-EY-Wgl"/>
                     <include reference="7j0-Fx-s6C"/>
                     <include reference="WVn-ta-pGb"/>
-                    <include reference="Ecr-Am-DK9"/>
-                    <include reference="dYG-db-Xrt"/>
-                    <include reference="v0c-b1-4Vy"/>
+                    <include reference="GCP-ah-Dpf"/>
+                    <include reference="fT7-KZ-cK3"/>
+                    <include reference="2Nq-U7-qGe"/>
+                    <include reference="cYH-I3-BC9"/>
                     <include reference="1XK-E5-o1N"/>
                     <include reference="Gpj-fy-hrx"/>
+                    <include reference="77F-7u-ARi"/>
+                    <include reference="M4z-cn-90U"/>
+                    <include reference="M9Y-JG-Fjx"/>
+                    <include reference="Wio-7V-2Z8"/>
+                    <include reference="ndV-8m-1bq"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="379" y="324"/>

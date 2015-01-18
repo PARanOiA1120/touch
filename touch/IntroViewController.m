@@ -103,9 +103,7 @@
     StepOneViewController *registerController = [[StepOneViewController alloc] init];
     UINavigationController *registerNav = [[UINavigationController alloc] initWithRootViewController:registerController];
     [self presentViewController:registerNav animated:YES completion:^{
-    }];
-   // registerController.title=@"Registration 1/2";
-        
+    }];        
 }
 
 /*
