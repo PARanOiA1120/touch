@@ -32,8 +32,8 @@ BOOL fullInfoReturned=NO;
     user.username=[object objectForKey:@"username"];
     user.gender= [object objectForKey:@"gender"];
     user.major= [object objectForKey:@"major"];
-    user.birthday = [object objectForKey:@"birthday"];
-    user.school=[object objectForKey:@"school"];
+    user.classlevel = [object objectForKey:@"classlevel"];
+
     return user;
 }
 
@@ -43,7 +43,6 @@ BOOL fullInfoReturned=NO;
     PFQuery *query=[PFUser query];
     PFObject *object = [query getObjectWithId:userId];
     return [User userWithPFObject:object];
-
 }
 
 
@@ -97,7 +96,7 @@ BOOL fullInfoReturned=NO;
     }];
 }
 
-- (void) signUpInBackgroundWithBlock: (PFBlock)block percentDone:(PercentBlock)percent squrePercent:(PercentBlock)squarePercent
+- (void)signUpInBackgroundWithBlock: (PFBlock)block percentDone:(PercentBlock)percent squrePercent:(PercentBlock)squarePercent;
 {
     PFUser * user = [PFUser user];
     user.username = self.username;
@@ -105,16 +104,8 @@ BOOL fullInfoReturned=NO;
 
     [user setObject:self.major forKey:@"major"];
     [user setObject:self.gender forKey:@"gender"];
+    [user setObject:self.classlevel forKey:@"classlevel"];
     
-    // full information
-    if (self.school!=nil) {
-        [user setObject:self.school forKey:@"school"];
-        
-    }
-    
-    if (self.birthday!=nil) {
-        [user setObject:self.birthday forKey:@"birthday"];
-    }
     
     [ProgressHUD show:@"Uploading portrait" Interaction:NO];
     NSData *imageData=UIImagePNGRepresentation(self.largeImage);
@@ -160,8 +151,7 @@ BOOL fullInfoReturned=NO;
             self.recordID = object.objectId;
             self.username=[object objectForKey:@"userName"];
             self.gender = [object objectForKey:@"gender"];
-            self.birthday = [object objectForKey:@"birthday"];
-            self.school=[object objectForKey:@"school"];
+            self.classlevel = [object objectForKey:@"classlevel"];
             self.major=[object objectForKey:@"major"];
         }
             /*PFFile *imageFile=[object objectForKey:@"squareimage"];
@@ -217,8 +207,7 @@ BOOL fullInfoReturned=NO;
         {
             self.recordID = object.objectId;
             self.gender = [object objectForKey:@"gender"];
-            self.birthday = [object objectForKey:@"birthday"];
-            self.school=[object objectForKey:@"school"];
+            self.classlevel = [object objectForKey:@"classlevel"];
             self.major=[object objectForKey:@"major"];
             block(YES,error);
         }
@@ -280,14 +269,7 @@ BOOL fullInfoReturned=NO;
     PFUser *currentUser = [PFUser currentUser];
     [currentUser setObject:self.gender forKey:@"gender"];
     [currentUser setObject:self.major forKey:@"major"];
-    if (self.birthday!=nil) {
-        [currentUser setObject:self.birthday forKey:@"birthday"];
-    }
-    
-    if (self.school!=nil) {
-        [currentUser setObject:self.school forKey:@"school"];
-        
-    }
+    [currentUser setObject:self.classlevel forKey:@"classlevel"];
     /*
     PFFile *oldLarge = [currentUser objectForKey:@"largeimage"];
     PFFile *oldSquare = [currentUser objectForKey:@"squareimage"];
@@ -355,14 +337,7 @@ BOOL fullInfoReturned=NO;
     PFUser *currentUser = [PFUser currentUser];
     [currentUser setObject:self.gender forKey:@"gender"];
     [currentUser setObject:self.major forKey:@"major"];
-    if (self.birthday!=nil) {
-        [currentUser setObject:self.birthday forKey:@"birthday"];
-    }
-    
-    if (self.school!=nil) {
-        [currentUser setObject:self.school forKey:@"school"];
-        
-    }
+    [currentUser setObject:self.classlevel forKey:@"classlevel"];
 
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded)
@@ -386,6 +361,7 @@ BOOL fullInfoReturned=NO;
         self.username=currentUser.username;
         self.gender = [currentUser objectForKey:@"gender"];
         self.major = [currentUser objectForKey:@"major"];
+        self.classlevel = [currentUser objectForKey:@"classlevel"];
         return YES;
     } else {
         return NO;
@@ -405,8 +381,7 @@ BOOL fullInfoReturned=NO;
     user.recordID = aUser.objectId;
     user.username=[aUser objectForKey:@"username"];
     user.gender = [aUser objectForKey:@"gender"];
-    user.birthday = [aUser objectForKey:@"birthday"];
-    user.school=[aUser objectForKey:@"school"];
+    user.classlevel = [aUser objectForKey:@"classlevel"];
     user.major=[aUser objectForKey:@"major"];
     return user;
 }

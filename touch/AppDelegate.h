@@ -16,6 +16,7 @@
 + (AppDelegate *)delegate;
 
 - (void)goToIntro;
+- (void)createTabBar;
 
 @end
 

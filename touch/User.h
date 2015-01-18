@@ -24,12 +24,11 @@ typedef void (^PFUserBlock)(NSArray *userArray,NSError *error);
 @property (strong, nonatomic) NSString* username;
 @property (strong, nonatomic) NSString* major;
 @property (strong, nonatomic) NSString* gender;
+@property (strong, nonatomic) NSString* classlevel;
 
 //other info
 @property (strong, nonatomic) UIImage* squareImage;
 @property (strong, nonatomic) UIImage* largeImage;
-@property (strong, nonatomic) NSString* school;
-@property (strong, nonatomic) NSString* birthday;
 
 //pic URL
 @property (copy, nonatomic) NSString *thumbPath;

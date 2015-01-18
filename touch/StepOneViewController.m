@@ -13,13 +13,17 @@
 #import "StepTwoViewController.h"
 #import "RegisterViewController.h"
 #import "IntroViewController.h"
+#import "ProgressHUD.h"
+#import "User.h"
 
-@interface StepOneViewController ()
+
+@interface StepOneViewController () <UIScrollViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet InsetTextField *username;
 @property (weak, nonatomic) IBOutlet InsetTextField *password;
 @property (weak, nonatomic) IBOutlet InsetTextField *confirmPW;
 @property (weak, nonatomic) IBOutlet UIButton *next;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -50,6 +54,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+}
+
+
+- (void)viewDidAppear:(BOOL)animated{
+}
 
 - (IBAction)cancelRegister:(id)sender {
     [self.username resignFirstResponder];
@@ -59,9 +70,35 @@
 
 
 - (IBAction)nextStep:(id)sender {
+    if(self.username.text.length == 0){
+        [ProgressHUD showError:@"Please enter a username"];
+        [self.username becomeFirstResponder];
+        return;
+    }
+    
+    if(self.password.text.length == 0){
+        [ProgressHUD showError:@"Please enter a password"];
+        [self.password becomeFirstResponder];
+        return;
+    }
+    
+    if(self.confirmPW.text.length == 0){
+        [ProgressHUD showError:@"Please confirm the password"];
+        [self.confirmPW becomeFirstResponder];
+        return;
+    }
+    User *user = [User currentUser];
+    user.username = self.username.text;
+    if (![self.password.text isEqualToString:self.confirmPW.text])
+    {
+        UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Alert！" message:@"Password not match" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [errorAlertView show];
+        return;
+    }
+    user.password = self.password.text;
+    
     StepTwoViewController *registerController = [[StepTwoViewController alloc] init];
     [self.navigationController pushViewController:registerController animated:YES];
-    //registerController.title=@"Registration 2/2";
 }
 
 

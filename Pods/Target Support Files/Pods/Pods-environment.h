@@ -6,6 +6,12 @@
 // project.
 
 
+// ActionSheetPicker-3.0
+#define COCOAPODS_POD_AVAILABLE_ActionSheetPicker_3_0
+#define COCOAPODS_VERSION_MAJOR_ActionSheetPicker_3_0 1
+#define COCOAPODS_VERSION_MINOR_ActionSheetPicker_3_0 3
+#define COCOAPODS_VERSION_PATCH_ActionSheetPicker_3_0 11
+
 // ICETutorial
 #define COCOAPODS_POD_AVAILABLE_ICETutorial
 #define COCOAPODS_VERSION_MAJOR_ICETutorial 1
@@ -17,4 +23,10 @@
 #define COCOAPODS_VERSION_MAJOR_IHKeyboardAvoiding 2
 #define COCOAPODS_VERSION_MINOR_IHKeyboardAvoiding 0
 #define COCOAPODS_VERSION_PATCH_IHKeyboardAvoiding 0
+
+// SGNavigationProgress
+#define COCOAPODS_POD_AVAILABLE_SGNavigationProgress
+#define COCOAPODS_VERSION_MAJOR_SGNavigationProgress 1
+#define COCOAPODS_VERSION_MINOR_SGNavigationProgress 2
+#define COCOAPODS_VERSION_PATCH_SGNavigationProgress 0
 

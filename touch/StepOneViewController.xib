@@ -10,6 +10,7 @@
                 <outlet property="confirmPW" destination="gde-G3-TaQ" id="lP7-mL-4aU"/>
                 <outlet property="next" destination="Ic4-lI-W2D" id="Ka7-Fm-yd7"/>
                 <outlet property="password" destination="Sv9-d3-Uqc" id="cR4-wd-Jk6"/>
+                <outlet property="scrollView" destination="i5M-Pr-FkT" id="KCd-a7-oB0"/>
                 <outlet property="username" destination="6EO-h0-2iP" id="yTp-ur-Wmb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -289,7 +290,7 @@
                     <include reference="k8o-uG-0D0"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="167" y="255"/>
+            <point key="canvasLocation" x="282" y="223"/>
         </view>
     </objects>
 </document>

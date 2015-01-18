@@ -10,12 +10,16 @@
 #import "IHKeyboardAvoiding.h"
 #import "CommonDefine.h"
 #import "InsetTextField.h"
+#import "ProgressHUD.h"
+#import "AppDelegate.h"
+#import "User.h"
+#import "UINavigationController+SGProgress.h"
 
 @interface StepTwoViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *userPic;
 @property (weak, nonatomic) IBOutlet InsetTextField *major;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gender;
-@property (weak, nonatomic) IBOutlet InsetTextField *birthday;
+@property (weak, nonatomic) IBOutlet InsetTextField *classlevel;
 
 
 @end
@@ -37,7 +41,7 @@
 - (void)closeKeyboard:(id)sender {
     [self.major resignFirstResponder];
     [self.gender resignFirstResponder];
-    [self.birthday resignFirstResponder];
+    [self.classlevel resignFirstResponder];
 
 }
 
@@ -46,6 +50,50 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"scrolled");
+}
+
+- (IBAction)nextStep:(id)sender {
+    [ProgressHUD show:@"Signing Up" Interaction:NO];
+    User *user=[User currentUser];
+    user.major=self.major.text;
+    user.classlevel=self.classlevel.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self dismissViewControllerAnimated:NO completion:^{
+                [ProgressHUD showSuccess:@"Register succeeded"];
+            }];
+            AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [delegate createTabBar];
+        } else {
+            //Something bad has ocurred
+            [ProgressHUD dismiss];
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+        }
+        
+    } percentDone:^(NSInteger percent) {
+        NSNumber *temp = [NSNumber numberWithInteger:percent];
+        float percentage = [temp floatValue];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController setSGProgressMaskWithPercentage:percentage];
+        });
+    } squrePercent:^(NSInteger percentage) {
+        NSNumber *tempo = [NSNumber numberWithInteger:percentage];
+        float percentF = [tempo floatValue];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController setSGProgressMaskWithPercentage:percentF];
+        });
+    }
+     ];
+    
+
+
+}
 
 
 /*
