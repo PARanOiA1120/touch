@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTabBar.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) CustomTabBar *tabBarController;
 
 + (AppDelegate *)delegate;
 
 - (void)goToIntro;
 - (void)createTabBar;
+- (void)showTabBar;
 
 @end
 
