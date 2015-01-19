@@ -42,7 +42,7 @@
     [self.major resignFirstResponder];
     [self.gender resignFirstResponder];
     [self.classlevel resignFirstResponder];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,35 +84,21 @@
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
         }
-        
-    } percentDone:^(NSInteger percent) {
-        NSNumber *temp = [NSNumber numberWithInteger:percent];
-        float percentage = [temp floatValue];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.navigationController setSGProgressMaskWithPercentage:percentage];
-        });
-    } squrePercent:^(NSInteger percentage) {
-        NSNumber *tempo = [NSNumber numberWithInteger:percentage];
-        float percentF = [tempo floatValue];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.navigationController setSGProgressMaskWithPercentage:percentF];
-        });
-    }
-     ];
+    }];
     
-
-
+    
+    
 }
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

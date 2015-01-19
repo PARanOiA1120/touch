@@ -45,8 +45,7 @@ typedef void (^PFUserBlock)(NSArray *userArray,NSError *error);
 
 - (void)logInWithUsernameInBackground: (NSString*)username password:(NSString*) password block:(PFBlock)block;
 
-- (void)signUpInBackgroundWithBlock: (PFBlock)block percentDone:(PercentBlock)percent squrePercent:(PercentBlock)squarePercent;
-
+- (void)signUpInBackgroundWithBlock: (PFBlock)block;
 - (void)getSmallUserAvatarWithUserID:(NSString *)userID andWidth:(int)width andHeight:(int)height andBlock:(ImageBlock)block;
 
 - (void)getNameAndUserAvatar:(PFBlock)block;
