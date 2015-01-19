@@ -1,6 +1,8 @@
+CLANG_CXX_LANGUAGE_STANDARD = c++11
+CLANG_CXX_LIBRARY = libc++
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0" "${PODS_ROOT}/Headers/Public/ICETutorial" "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/SGNavigationProgress"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0" -isystem "${PODS_ROOT}/Headers/Public/ICETutorial" -isystem "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" -isystem "${PODS_ROOT}/Headers/Public/SGNavigationProgress"
-OTHER_LDFLAGS = -ObjC -l"Pods-ActionSheetPicker-3.0" -l"Pods-ICETutorial" -l"Pods-IHKeyboardAvoiding" -l"Pods-SGNavigationProgress" -framework "CoreGraphics" -framework "UIKit"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0" "${PODS_ROOT}/Headers/Public/ICETutorial" "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SGNavigationProgress" "${PODS_ROOT}/Headers/Public/pop"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0" -isystem "${PODS_ROOT}/Headers/Public/ICETutorial" -isystem "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage" -isystem "${PODS_ROOT}/Headers/Public/SGNavigationProgress" -isystem "${PODS_ROOT}/Headers/Public/pop"
+OTHER_LDFLAGS = -ObjC -l"Pods-ActionSheetPicker-3.0" -l"Pods-ICETutorial" -l"Pods-IHKeyboardAvoiding" -l"Pods-SDWebImage" -l"Pods-SGNavigationProgress" -l"Pods-pop" -l"c++" -framework "CoreGraphics" -framework "ImageIO" -framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

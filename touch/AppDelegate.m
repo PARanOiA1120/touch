@@ -12,6 +12,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 
+
 @interface AppDelegate () <ICETutorialControllerDelegate>
 @property (strong, nonatomic) ICETutorialController *introController;
 @end
@@ -67,7 +68,29 @@
 
 
 -(void)createTabBar{
-
+    UIViewController *activity = [[UIViewController alloc] init];
+    UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
+    //    activity.hidesBottomBarWhenPushed = YES;
+    
+    UIViewController *square = [[UIViewController alloc] init];
+    UINavigationController *squareNavi = [[UINavigationController alloc] initWithRootViewController:square];
+    //    square.hidesBottomBarWhenPushed = YES;
+    
+    
+    UIViewController *chatController = [[UIViewController alloc] init];
+    UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
+//    chatNav.hidesBottomBarWhenPushed = YES;
+    
+    UIViewController *mineInfo = [[UIViewController alloc] init];
+    UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
+//    mineInfo.hidesBottomBarWhenPushed = YES;
+    
+    NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activityNav, squareNavi, chatNav, mineInfoNav, nil];
+    
+    self.tabBarController = [[CustomTabBar alloc] init];
+    self.tabBarController.viewControllers = tabbarArray;
+    [self.tabBarController setSelectedTag:0];
+    self.window.rootViewController = self.tabBarController;
     
 }
 
@@ -81,6 +104,13 @@
     IntroViewController *introView = [[IntroViewController alloc] init];
     self.window.rootViewController = introView;
     [self.window makeKeyAndVisible];
+
+}
+- (void)showTabBar
+{
+    if (self.tabBarController) {
+        [self.tabBarController showCustomTabBar];
+    }
 }
 
 @end

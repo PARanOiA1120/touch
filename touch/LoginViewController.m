@@ -148,8 +148,10 @@
         [self.passwordField becomeFirstResponder];
         return;
     }
-    [ProgressHUD show:@"login" Interaction:NO];
-    
+//    [ProgressHUD show:@"login" Interaction:NO];
+    [self closeKeyboard];
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate createTabBar];
 }
 
 
