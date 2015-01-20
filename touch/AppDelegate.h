@@ -17,8 +17,11 @@
 + (AppDelegate *)delegate;
 
 - (void)goToIntro;
+- (void)goToLogin;
 - (void)createTabBar;
 - (void)showTabBar;
+- (void)selectTab:(NSInteger)tab;
+
 
 @end
 

@@ -82,13 +82,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     self.userInfoBtn.tag = TabBarButtonTag_UserInfo;
     [self.slideBg addSubview:self.userInfoBtn];
     [self.buttons addObject:self.userInfoBtn];
-    
-    
-    
-//    self.centerAddBtn = [[VBFPopFlatButton alloc] initWithFrame:CGRectMake((SCREENWIDTH - 57)/2, 4, 57, 40) buttonType:buttonAddType buttonStyle:buttonPlainStyle animateToInitialState:NO];
-//    [self.centerAddBtn  setBackgroundColor:[UIColor colorWithRed:184/255.0f green:150/255.0f blue:101/255.0f alpha:1.0]];
-//    [self.centerAddBtn addTarget:self action:@selector(centerAddBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.slideBg addSubview:self.centerAddBtn];
+
 }
 
 - (void)selectedTab:(UIButton *)button

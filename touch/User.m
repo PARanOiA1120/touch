@@ -80,16 +80,6 @@ BOOL fullInfoReturned=NO;
             {
                 length = 65;
             }
-            /* PFFile *imageFile=[user objectForKey:@"squareimage"];
-             [imageFile getThumbnail:YES width:length*2 height:length*2 withBlock:^(UIImage *smallimage, NSError *error) {
-             if (smallimage) {
-             self.squareImage = smallimage;
-             NSData *squareData = UIImagePNGRepresentation(self.squareImage);
-             [[NSUserDefaults standardUserDefaults] setObject:squareData forKey:@"IconCache"];
-             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ICON_CACHED"];
-             [[NSUserDefaults standardUserDefaults] synchronize];
-             }
-             }];*/
             block(YES,error);
         } else {
             block(NO,error);
