@@ -186,7 +186,7 @@
                         <constraint firstAttribute="width" constant="40" id="ovH-q1-IWO"/>
                         <constraint firstAttribute="height" constant="38" id="tGh-yA-k22"/>
                     </constraints>
-                    <state key="normal" backgroundImage="fb_icon.png">
+                    <state key="normal" backgroundImage="twitter.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -211,7 +211,7 @@
                         <constraint firstAttribute="width" constant="40" id="9Nb-M4-trx"/>
                         <constraint firstAttribute="height" constant="37" id="ZyD-fr-Cik"/>
                     </constraints>
-                    <state key="normal" backgroundImage="fb_icon.png">
+                    <state key="normal" backgroundImage="instagram.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -441,9 +441,11 @@
         </view>
     </objects>
     <resources>
-        <image name="fb_icon.png" width="43" height="42"/>
+        <image name="fb_icon.png" width="86" height="88"/>
+        <image name="instagram.png" width="122" height="128"/>
         <image name="loginBackground.png" width="320" height="568"/>
         <image name="logoTemp.png" width="266" height="266"/>
         <image name="personal_icon_back.png" width="12" height="20"/>
+        <image name="twitter.png" width="74" height="72"/>
     </resources>
 </document>

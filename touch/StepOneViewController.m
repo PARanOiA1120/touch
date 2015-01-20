@@ -39,7 +39,8 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard:)];
     [self.view addGestureRecognizer:pan];
 
-
+    self.password.secureTextEntry = YES;
+    self.confirmPW.secureTextEntry = YES;
 }
 
 - (void)closeKeyboard:(id)sender {

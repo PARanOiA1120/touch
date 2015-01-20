@@ -53,6 +53,7 @@
         [IHKeyboardAvoiding setPadding:10];
     }
     
+    self.passwordField.secureTextEntry=YES;
     [self configView];
     self.backButton.layer.cornerRadius = self.backButton.frame.size.height/2;
     self.backButton.layer.masksToBounds = YES;
@@ -115,6 +116,7 @@
  */
 
 - (void)configView {
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
