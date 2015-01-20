@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import "UINavigationController+SGProgress.h"
+#import "LoginViewController.h"
 
 @interface StepTwoViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *userPic;
@@ -76,7 +77,8 @@
                 [ProgressHUD showSuccess:@"Register succeeded"];
             }];
             AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-            [delegate createTabBar];
+            [delegate goToLogin];
+            
         } else {
             //Something bad has ocurred
             [ProgressHUD dismiss];

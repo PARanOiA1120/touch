@@ -53,6 +53,7 @@
         [IHKeyboardAvoiding setPadding:10];
     }
     
+    self.passwordField.secureTextEntry=YES;
     [self configView];
     self.backButton.layer.cornerRadius = self.backButton.frame.size.height/2;
     self.backButton.layer.masksToBounds = YES;
@@ -115,6 +116,7 @@
  */
 
 - (void)configView {
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
@@ -148,10 +150,27 @@
         [self.passwordField becomeFirstResponder];
         return;
     }
-//    [ProgressHUD show:@"login" Interaction:NO];
-    [self closeKeyboard];
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [delegate createTabBar];
+    [ProgressHUD show:@"Logging in now" Interaction:NO];
+    
+    User *user = [User currentUser];
+    [user logInWithUsernameInBackground:self.userNameField.text password:self.passwordField.text block:^(BOOL succeeded, NSError *error){
+        if (succeeded)
+        {
+            [ProgressHUD showSuccess:@"Login succeeded"];
+            [self closeKeyboard];
+            AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [delegate createTabBar];
+            
+        }else{
+            [ProgressHUD dismiss];
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+            
+            
+        }
+    }];
+
 }
 
 

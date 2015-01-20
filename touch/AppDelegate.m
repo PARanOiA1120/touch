@@ -10,6 +10,9 @@
 #import "IntroViewController.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "CustomTabBar.h"
+#import "LoginViewController.h"
+
 
 
 
@@ -106,12 +109,28 @@
     [self.window makeKeyAndVisible];
 
 }
+
+-(void) goToLogin
+{
+    LoginViewController *loginView = [[LoginViewController alloc] init];
+    self.window.rootViewController = loginView;
+    [self.window makeKeyAndVisible];
+}
+
+
 - (void)showTabBar
 {
     if (self.tabBarController) {
         [self.tabBarController showCustomTabBar];
     }
 }
+
+- (void)selectTab:(NSInteger)tab {
+    [self.tabBarController setSelectedTag:tab];
+}
+
+
+
 
 @end
 
