@@ -23,6 +23,10 @@
 		562103D71A6DAEDA00503613 /* tab_message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 562103D51A6DAEDA00503613 /* tab_message@2x.png */; };
 		562103DA1A6DAEF400503613 /* tab_user_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 562103D81A6DAEF400503613 /* tab_user_p@2x.png */; };
 		562103DB1A6DAEF400503613 /* tab_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 562103D91A6DAEF400503613 /* tab_user@2x.png */; };
+		7E40E9D11A717C1200A92E6A /* CustomAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9C91A717C1200A92E6A /* CustomAnimationView.m */; };
+		7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CB1A717C1200A92E6A /* CustomItem.m */; };
+		7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CE1A717C1200A92E6A /* DRNRealTimeBlurView.m */; };
+		7E40E9D41A717C1200A92E6A /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */; };
 		B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B016F0AB1A63303B000291FB /* IntroViewController.m */; };
 		B016F0B01A633E6F000291FB /* study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B016F0AF1A633E6F000291FB /* study@2x.png */; };
 		B02490551A65CFA20078AAD4 /* loginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02490541A65CFA20078AAD4 /* loginBackground@2x.png */; };
@@ -165,6 +169,14 @@
 		562103D51A6DAEDA00503613 /* tab_message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_message@2x.png"; sourceTree = "<group>"; };
 		562103D81A6DAEF400503613 /* tab_user_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_user_p@2x.png"; sourceTree = "<group>"; };
 		562103D91A6DAEF400503613 /* tab_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_user@2x.png"; sourceTree = "<group>"; };
+		7E40E9C81A717C1200A92E6A /* CustomAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationView.h; sourceTree = "<group>"; };
+		7E40E9C91A717C1200A92E6A /* CustomAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationView.m; sourceTree = "<group>"; };
+		7E40E9CA1A717C1200A92E6A /* CustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItem.h; sourceTree = "<group>"; };
+		7E40E9CB1A717C1200A92E6A /* CustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItem.m; sourceTree = "<group>"; };
+		7E40E9CD1A717C1200A92E6A /* DRNRealTimeBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNRealTimeBlurView.h; sourceTree = "<group>"; };
+		7E40E9CE1A717C1200A92E6A /* DRNRealTimeBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNRealTimeBlurView.m; sourceTree = "<group>"; };
+		7E40E9CF1A717C1200A92E6A /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B016F0AA1A63303B000291FB /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		B016F0AB1A63303B000291FB /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
@@ -400,6 +412,30 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		7E40E9C71A717C1200A92E6A /* CustomAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				7E40E9C81A717C1200A92E6A /* CustomAnimationView.h */,
+				7E40E9C91A717C1200A92E6A /* CustomAnimationView.m */,
+				7E40E9CA1A717C1200A92E6A /* CustomItem.h */,
+				7E40E9CB1A717C1200A92E6A /* CustomItem.m */,
+				7E40E9CC1A717C1200A92E6A /* LiveBlur */,
+			);
+			name = CustomAnimationView;
+			path = touch/Util/CustomAnimationView;
+			sourceTree = "<group>";
+		};
+		7E40E9CC1A717C1200A92E6A /* LiveBlur */ = {
+			isa = PBXGroup;
+			children = (
+				7E40E9CD1A717C1200A92E6A /* DRNRealTimeBlurView.h */,
+				7E40E9CE1A717C1200A92E6A /* DRNRealTimeBlurView.m */,
+				7E40E9CF1A717C1200A92E6A /* UIImage+BoxBlur.h */,
+				7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */,
+			);
+			path = LiveBlur;
+			sourceTree = "<group>";
+		};
 		90D82FEB2D6CA1ACF734558D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +582,7 @@
 		B074B7461A68DE0000EF304E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				7E40E9C71A717C1200A92E6A /* CustomAnimationView */,
 				562103391A6D86A900503613 /* VBFPopFlatButtonClasses */,
 				B074B7491A68DE4800EF304E /* ProgressHUD.h */,
 				562103241A6CB1BD00503613 /* ProgressHUD.bundle */,
@@ -720,16 +757,20 @@
 				B04081B11A6B0ADE002DC1AD /* Image.m in Sources */,
 				B048AC5E1A647214000C1D71 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
+				7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */,
 				B074B74B1A68DE6200EF304E /* ProgressHUD.m in Sources */,
 				B048AC5B1A6452DA000C1D71 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
 				B048AC7B1A650765000C1D71 /* LoginViewController.m in Sources */,
+				7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */,
 				B016F0AC1A63303B000291FB /* IntroViewController.m in Sources */,
 				5621032A1A6CF28900503613 /* CustomTabBar.m in Sources */,
 				5621033F1A6D86A900503613 /* VBFPopFlatButton.m in Sources */,
 				B0CCEF411A684A480013A17E /* StepTwoViewController.m in Sources */,
 				562103AE1A6D875600503613 /* VPImageCropperViewController.m in Sources */,
+				7E40E9D11A717C1200A92E6A /* CustomAnimationView.m in Sources */,
 				5621033E1A6D86A900503613 /* VBFDoubleSegment.m in Sources */,
+				7E40E9D41A717C1200A92E6A /* UIImage+BoxBlur.m in Sources */,
 				B024905F1A664D3E0078AAD4 /* StepOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

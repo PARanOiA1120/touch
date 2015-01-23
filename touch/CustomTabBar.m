@@ -7,7 +7,9 @@
 //
 
 #import "CustomTabBar.h"
-//#import "CustomAnimationView.h"
+#import "VBFPopFlatButton.h"
+#import "DRNRealTimeBlurView.h"
+#import "CustomAnimationView.h"
 typedef NS_ENUM(NSInteger, TabBarButtonTag)
 {
     TabBarButtonTag_Activity = 0,
@@ -18,12 +20,18 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 
 #define CustomTabBar_buttonNormalImages   @[@"tab_activity.png",@"tab_square.png",@"tab_message.png",@"tab_user.png"]
 #define CustomTabBar_buttonSelectedImages   @[@"tab_activity_p.png",@"tab_square_p.png",@"tab_message_p.png",@"tab_user_p.png"]
+#define SCREENWIDTH         CGRectGetWidth([UIScreen mainScreen].bounds)
+
 @interface CustomTabBar ()<UINavigationControllerDelegate>
 @property (strong, nonatomic) UIButton *activityBtn;
 @property (strong, nonatomic) UIButton *squareBtn;
 @property (strong, nonatomic) UIButton *messageBtn;
 @property (strong, nonatomic) UIButton *userInfoBtn;
 @property (strong, nonatomic) NSMutableArray *selectedImage;
+@property (strong, nonatomic) VBFPopFlatButton *centerAddBtn;
+@property (strong, nonatomic) DRNRealTimeBlurView *blurView;
+@property (strong, nonatomic) CustomAnimationView *customAnimationView;
+
 
 
 @end
@@ -82,6 +90,13 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     self.userInfoBtn.tag = TabBarButtonTag_UserInfo;
     [self.slideBg addSubview:self.userInfoBtn];
     [self.buttons addObject:self.userInfoBtn];
+    
+    //center activity icon
+    self.centerAddBtn = [[VBFPopFlatButton alloc] initWithFrame:CGRectMake((SCREENWIDTH - 57)/2, 4, 57, 40) buttonType:buttonAddType buttonStyle:buttonPlainStyle animateToInitialState:NO];
+    [self.centerAddBtn  setBackgroundColor:[UIColor colorWithRed:184/255.0f green:150/255.0f blue:101/255.0f alpha:1.0]];
+    [self.centerAddBtn addTarget:self action:@selector(centerAddBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.slideBg addSubview:self.centerAddBtn];
+
 
 }
 
@@ -102,6 +117,96 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     }
 }
 
+- (void)centerAddBtnClicked:(UIButton *)button
+{
+    NSLog(@"centerAddBtn clicked");
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+        button.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        button.backgroundColor = [UIColor colorWithRed:235/255.0f green:74/255.0f blue:56/255.0f alpha:1.0];
+    } completion:^(BOOL finished)
+     {
+         button.transform = CGAffineTransformMakeScale(1, 1);
+         button.backgroundColor = [UIColor colorWithRed:235/255.0f green:74/255.0f blue:56/255.0f alpha:1.0];
+         [self.centerAddBtn animateToType:buttonCloseType];
+         
+         CGRect rect = [UIScreen mainScreen].bounds;
+         if (!self.blurView) {
+             self.blurView = [[DRNRealTimeBlurView alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, rect.size.height) tintColor:[UIColor blackColor]];
+         }
+         self.blurView.alpha = 0;
+         [self.view addSubview:self.blurView];
+         [UIView animateWithDuration:0.5 delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+             self.blurView.alpha = 1;
+         } completion:^(BOOL finished) {
+             self.slideBg.hidden = YES;
+             if (!self.customAnimationView) {
+                 self.customAnimationView = [[CustomAnimationView alloc]initWithFrame:CGRectMake(0, 0, rect.size.width, rect.size.height)];
+                 self.customAnimationView.delegate = self;
+             }
+             [self.view addSubview:self.customAnimationView];
+             [self.customAnimationView beginAnimations];
+             
+         }];
+         
+     }];
+}
 
+- (void)dismissCustomAnimationView
+{
+    [self resetTabBar];
+    [UIView animateWithDuration:0.7 animations:^{
+        self.blurView.alpha = 0.0f;
+        self.customAnimationView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [self.customAnimationView removeFromSuperview];
+        self.customAnimationView = nil;
+        [self.blurView removeFromSuperview];
+    }];
+}
+
+- (void)resetTabBar
+{
+    self.centerAddBtn.currentButtonType = buttonAddType;
+    self.centerAddBtn.backgroundColor = [UIColor colorWithRed:184/255.0f green:150/255.0f blue:101/255.0f alpha:1.0];
+    [self showCustomTabBar];
+}
+
+/*
+- (void)itemClicked:(CustomItem *)item
+{
+    [self resetTabBar];
+    [UIView animateWithDuration:0.7 animations:^{
+        self.blurView.alpha = 0.0f;
+        self.customAnimationView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [self.customAnimationView removeFromSuperview];
+        self.customAnimationView = nil;
+        [self.blurView removeFromSuperview];
+    }];
+    
+    
+    if (item.function == Function_type_state) {
+        NewActivityViewController *newActivityVC = [[NewActivityViewController alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newActivityVC];
+        [self presentViewController:navController animated:YES completion:^{}];
+        return;
+    } else if (item.function == Function_type_photo) {
+        //CameraViewController *cameraController = [[CameraViewController alloc] init];
+        GalleryViewController *galleryController = [[GalleryViewController alloc] initWithSelectedImages:_selectedImage];
+        galleryController.delegate = self;
+        //UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:cameraController];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:galleryController];
+        [self presentViewController:navController animated:YES completion:^{}];
+    } else if (item.function == Function_type_activity) {
+        CampaignViewController *campaignController = [[CampaignViewController alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:campaignController];
+        [self presentViewController:navController animated:YES completion:^{}];
+    } else if (item.function == Function_type_signIn)
+    {
+        //JCUser *user=[JCUser currentUser];
+        // [user logOut];
+    }
+}
+*/
 
 @end

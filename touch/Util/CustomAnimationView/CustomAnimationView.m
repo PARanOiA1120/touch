@@ -14,6 +14,8 @@
 #define ItemImages @[@"pop_activity.png",@"pop_video.png",@"pop_photo.png",@"pop_state.png",@"pop_sign_in.png"]
 //此处设置点，x 和 y 的值均采用相对于屏幕的宽和高 单位 1 来表示。实际大小即 x *宽  或 y * 高
 #define ItemEndPoints @[@{@"x":@"0.531",@"y":@"0.176"},@{@"x":@"0.375",@"y":@"0.387"},@{@"x":@"0.656",@"y":@"0.528"},@{@"x":@"0.281",@"y":@"0.598"},@{@"x":@"0.531",@"y":@"0.739"}]
+#define SCREENWIDTH         CGRectGetWidth([UIScreen mainScreen].bounds)
+#define SCREENHEIGHT        CGRectGetHeight([UIScreen mainScreen].bounds)
 
 @implementation CustomAnimationView
 
@@ -59,7 +61,7 @@
     return buttonItems;
 }
 
-// 初始化 items
+// initiate items
 - (void)setButtonItems:(NSArray *)buttonItems {
     _buttonItems = buttonItems;
     for (int i = 0; i < self.buttonItems.count; i++) {
@@ -72,7 +74,7 @@
     }
 }
 
-//动画执行前 对items 进行布局
+//when animation begins, make a layout for items
 - (void)layoutItems
 {
     for (UIView *view in self.subviews) {
@@ -86,40 +88,7 @@
 //    [self layoutSubviews];
 }
 
-//执行动画
-/*
-- (void)beginAnimations
-{
-    for (UIView *view in self.subviews){
-        if ([view isKindOfClass:[CustomItem class]]) {
-            
-            CustomItem *item = (CustomItem *)view;
-            CGPoint startPoint = item.startPoint;
-            CGPoint endPoint = item.endPoint;
-            CGFloat offsetY = kCustomAnimationViewOffset * fabs(startPoint.y - endPoint.y)/(sqrt(pow((startPoint.x - endPoint.x), 2)+pow((startPoint.y - endPoint.y), 2)));
-            CGFloat offsetX = kCustomAnimationViewOffset * (endPoint.x - startPoint.x)/(sqrt(pow((startPoint.x - endPoint.x), 2)+pow((startPoint.y - endPoint.y), 2)));
-            
-            [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-                item.alpha = 1.0f;
-            } completion:^(BOOL finished) {
-                
-            }];
-            [UIView animateWithDuration:1.0f delay:0.0 options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut animations:^{
-                item.center = CGPointMake(item.endPoint.x, item.endPoint.y);
-            } completion:^(BOOL finished) {
-                item.center = CGPointMake(item.endPoint.x, item.endPoint.y);
-                [UIView animateWithDuration:3.0f delay:0.0 options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut animations:^{
-                    item.center = CGPointMake(item.endPoint.x - offsetX, item.endPoint.y + offsetY);
-                } completion:^(BOOL finished) {
-                    item.center = CGPointMake(item.endPoint.x - offsetX, item.endPoint.y + offsetY);
-                }];
-            }];
-
-        }
-    }
-}
- */
-//执行动画
+//execute  animation
 - (void)beginAnimations
 {
     for (UIView *view in self.subviews){
