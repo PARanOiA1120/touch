@@ -12,8 +12,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "CustomTabBar.h"
 #import "LoginViewController.h"
-
-
+#import "User.h"
 
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
@@ -41,7 +40,14 @@
     
    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f]];
     
-    [self goToIntro];
+    if(![[User currentUser] isLogined])
+    {
+        [self goToIntro];
+    }
+    else
+    {
+        [self createTabBar];
+    }
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -73,20 +79,16 @@
 -(void)createTabBar{
     UIViewController *activity = [[UIViewController alloc] init];
     UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
-    //    activity.hidesBottomBarWhenPushed = YES;
     
     UIViewController *square = [[UIViewController alloc] init];
     UINavigationController *squareNavi = [[UINavigationController alloc] initWithRootViewController:square];
-    //    square.hidesBottomBarWhenPushed = YES;
-    
     
     UIViewController *chatController = [[UIViewController alloc] init];
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
-//    chatNav.hidesBottomBarWhenPushed = YES;
+
     
     UIViewController *mineInfo = [[UIViewController alloc] init];
     UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
-//    mineInfo.hidesBottomBarWhenPushed = YES;
     
     NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activityNav, squareNavi, chatNav, mineInfoNav, nil];
     

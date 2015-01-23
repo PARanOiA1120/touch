@@ -1,9 +1,9 @@
 //
 //  CustomAnimationView.h
-//  AnimationDemo
+//  touch
 //
-//  Created by xuxingdu on 14/10/28.
-//  Copyright (c) 2014年 AI. All rights reserved.
+//  Created by jiapeiyao on 1/21/15.
+//  Copyright (c) 2015 cs48. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
