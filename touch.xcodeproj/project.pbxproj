@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562104371A74C8E100503613 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 562104351A74C8E100503613 /* ActivityViewController.m */; };
+		562104381A74C8E100503613 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562104361A74C8E100503613 /* ActivityViewController.xib */; };
+		5621043D1A74CBCA00503613 /* ActivityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5621043B1A74CBCA00503613 /* ActivityListViewController.m */; };
+		5621043E1A74CBCA00503613 /* ActivityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5621043C1A74CBCA00503613 /* ActivityListViewController.xib */; };
+		562104601A74D95B00503613 /* UserHeadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5621045F1A74D95B00503613 /* UserHeadImageView.m */; };
 		7E40E9D11A717C1200A92E6A /* CustomAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9C91A717C1200A92E6A /* CustomAnimationView.m */; };
 		7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CB1A717C1200A92E6A /* CustomItem.m */; };
 		7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CE1A717C1200A92E6A /* DRNRealTimeBlurView.m */; };
@@ -89,6 +94,15 @@
 
 /* Begin PBXFileReference section */
 		091258C1AC96E7FF03934F2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		562104341A74C8E100503613 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		562104351A74C8E100503613 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		562104361A74C8E100503613 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		562104391A74C9B700503613 /* TouchDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchDefine.h; sourceTree = "<group>"; };
+		5621043A1A74CBCA00503613 /* ActivityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityListViewController.h; sourceTree = "<group>"; };
+		5621043B1A74CBCA00503613 /* ActivityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityListViewController.m; sourceTree = "<group>"; };
+		5621043C1A74CBCA00503613 /* ActivityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityListViewController.xib; sourceTree = "<group>"; };
+		5621045E1A74D95B00503613 /* UserHeadImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHeadImageView.h; sourceTree = "<group>"; };
+		5621045F1A74D95B00503613 /* UserHeadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHeadImageView.m; sourceTree = "<group>"; };
 		7E40E9C81A717C1200A92E6A /* CustomAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationView.h; sourceTree = "<group>"; };
 		7E40E9C91A717C1200A92E6A /* CustomAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationView.m; sourceTree = "<group>"; };
 		7E40E9CA1A717C1200A92E6A /* CustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItem.h; sourceTree = "<group>"; };
@@ -369,6 +383,7 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				562104391A74C9B700503613 /* TouchDefine.h */,
 				B0E62AA11A71E1370067A244 /* CustomTabBar.h */,
 				B0E62AA21A71E1370067A244 /* CustomTabBar.m */,
 				B0E62AA31A71E1370067A244 /* InsetTextField.h */,
@@ -384,6 +399,14 @@
 				B0E62AB01A71E1370067A244 /* StepTwoViewController.h */,
 				B0E62AB11A71E1370067A244 /* StepTwoViewController.m */,
 				B0E62AB21A71E1370067A244 /* StepTwoViewController.xib */,
+				562104341A74C8E100503613 /* ActivityViewController.h */,
+				562104351A74C8E100503613 /* ActivityViewController.m */,
+				562104361A74C8E100503613 /* ActivityViewController.xib */,
+				5621043A1A74CBCA00503613 /* ActivityListViewController.h */,
+				5621043B1A74CBCA00503613 /* ActivityListViewController.m */,
+				5621043C1A74CBCA00503613 /* ActivityListViewController.xib */,
+				5621045E1A74D95B00503613 /* UserHeadImageView.h */,
+				5621045F1A74D95B00503613 /* UserHeadImageView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -594,8 +617,10 @@
 				B0E62A871A71E1160067A244 /* tab_square_p@2x.png in Resources */,
 				B0E62ABB1A71E1370067A244 /* StepOneViewController.xib in Resources */,
 				B0E62A821A71E1160067A244 /* tab_activity@2x.png in Resources */,
+				5621043E1A74CBCA00503613 /* ActivityListViewController.xib in Resources */,
 				B0E62A851A71E1160067A244 /* tab_message_p@2x.png in Resources */,
 				B0E62A861A71E1160067A244 /* tab_square@2x.png in Resources */,
+				562104381A74C8E100503613 /* ActivityViewController.xib in Resources */,
 				B0E62A491A71E0860067A244 /* ProgressHUD.bundle in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
 				B0E62A831A71E1160067A244 /* tab_activity_p@2x.png in Resources */,
@@ -664,12 +689,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E62AB61A71E1370067A244 /* LoginViewController.m in Sources */,
+				562104371A74C8E100503613 /* ActivityViewController.m in Sources */,
 				B0E62AB41A71E1370067A244 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B0E62ABC1A71E1370067A244 /* StepTwoViewController.m in Sources */,
 				7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
 				B0E62A9C1A71E1270067A244 /* EventManager.m in Sources */,
+				562104601A74D95B00503613 /* UserHeadImageView.m in Sources */,
 				B0E62AA01A71E1270067A244 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
 				B0E62A9D1A71E1270067A244 /* Image.m in Sources */,
@@ -682,6 +709,7 @@
 				7E40E9D11A717C1200A92E6A /* CustomAnimationView.m in Sources */,
 				B0E62ACF1A71E20C0067A244 /* VBFPopFlatButton.m in Sources */,
 				B0E62A4A1A71E0860067A244 /* ProgressHUD.m in Sources */,
+				5621043D1A74CBCA00503613 /* ActivityListViewController.m in Sources */,
 				7E40E9D41A717C1200A92E6A /* UIImage+BoxBlur.m in Sources */,
 				B0E62AB51A71E1370067A244 /* IntroViewController.m in Sources */,
 			);
