@@ -11,6 +11,7 @@
 		7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CB1A717C1200A92E6A /* CustomItem.m */; };
 		7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CE1A717C1200A92E6A /* DRNRealTimeBlurView.m */; };
 		7E40E9D41A717C1200A92E6A /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */; };
+		B032820A1A74B5AC001BAA34 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B03282091A74B5AC001BAA34 /* Comment.m */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
 		B038E2191A62017D00E660ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038E2171A62017D00E660ED /* Main.storyboard */; };
@@ -98,6 +99,8 @@
 		7E40E9CF1A717C1200A92E6A /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
 		7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B03282081A74B5AC001BAA34 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		B03282091A74B5AC001BAA34 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038E20E1A62017D00E660ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038E20F1A62017D00E660ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -280,6 +283,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B03282071A74B589001BAA34 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				B03282081A74B5AC001BAA34 /* Comment.h */,
+				B03282091A74B5AC001BAA34 /* Comment.m */,
+			);
+			name = Comment;
+			path = Model/Comment;
+			sourceTree = "<group>";
+		};
 		B038E2011A62017D00E660ED = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +370,7 @@
 		B038E2351A6238B600E660ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B03282071A74B589001BAA34 /* Comment */,
 				B0E62A8A1A71E1270067A244 /* Event */,
 				B0E62A8F1A71E1270067A244 /* Image */,
 				B0E62A921A71E1270067A244 /* NewsFeed */,
@@ -665,6 +679,7 @@
 				B0E62AB61A71E1370067A244 /* LoginViewController.m in Sources */,
 				B0E62AB41A71E1370067A244 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
+				B032820A1A74B5AC001BAA34 /* Comment.m in Sources */,
 				B0E62ABC1A71E1370067A244 /* StepTwoViewController.m in Sources */,
 				7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
