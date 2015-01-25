@@ -24,4 +24,14 @@ typedef PFDataResultBlock DictionaryResultBlcok;
 typedef PFIdResultBlock IdResultBlcok;
 typedef PFDataResultBlock DataResultBlock;
 
+#define EVENT_TITLE @"event_title"
+#define EVENT_TIME @"event_time"
+#define LOCATION_NAME @"location_name"
+#define EVENT_DESCRIPTION @"event_description"
+#define BACKGROUND_IMAGE @"background_image"
+#define LIKED_USERS @"liked_users"
+#define JOINED_USERS @"joined_users"
+#define APPLIED_USERS @"applied_users"
+#define EVENT_OWNER @"event_owner"
+
 #endif

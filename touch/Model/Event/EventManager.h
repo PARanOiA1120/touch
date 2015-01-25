@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Event.h"
+#import "PFDefine.h"
 
 @interface EventManager : NSObject
 

@@ -11,7 +11,6 @@
 #import "InsetTextField.h"
 #import <QuartzCore/QuartzCore.h>
 #import "StepTwoViewController.h"
-#import "RegisterViewController.h"
 #import "IntroViewController.h"
 #import "ProgressHUD.h"
 #import "User.h"
