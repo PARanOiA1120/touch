@@ -13,6 +13,7 @@
 #import "CustomTabBar.h"
 #import "LoginViewController.h"
 #import "User.h"
+#import "ActivityViewController.h"
 
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
@@ -77,8 +78,7 @@
 
 
 -(void)createTabBar{
-    UIViewController *activity = [[UIViewController alloc] init];
-    UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
+    ActivityViewController *activity = [[ActivityViewController alloc] initWithNibName:@"ActivityViewController" bundle:nil];    UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
     
     UIViewController *square = [[UIViewController alloc] init];
     UINavigationController *squareNavi = [[UINavigationController alloc] initWithRootViewController:square];

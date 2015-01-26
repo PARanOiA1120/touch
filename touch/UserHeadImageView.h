@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserHeadImageView : UIImage
+@interface UserHeadImageView : UIImageView
 @property (strong, nonatomic) NSString *userId;
 @end
