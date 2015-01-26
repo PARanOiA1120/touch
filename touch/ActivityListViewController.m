@@ -420,9 +420,7 @@
     CGFloat containerWidth = SCREENWIDTH - 6;
     
     newsFeed *newsFeed = self.dataSource[indexPath.row];
-    
     UserHeadImageView *headImageView = [[UserHeadImageView alloc] initWithFrame:CGRectMake(5, height, 40, 40)];
-    NSLog(@"Can you see me?");
     headImageView.layer.borderWidth = 1.0f;
     headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     headImageView.layer.masksToBounds = YES;
@@ -430,10 +428,10 @@
     headImageView.userInteractionEnabled = YES;
     User *user = newsFeed.creator;
     headImageView.userId = user.recordID;
-    [user getSmallUserAvatarWithUserID:user.recordID andWidth:40 andHeight:40 andBlock:^(UIImage *image, NSError *error) {
-        headImageView.image = image;
-    }];
-    
+//    [user getSmallUserAvatarWithUserID:user.recordID andWidth:40 andHeight:40 andBlock:^(UIImage *image, NSError *error) {
+//        headImageView.image = image;
+//    }];
+        NSLog(@"Can you see me?");
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userHeadViewTap:)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
