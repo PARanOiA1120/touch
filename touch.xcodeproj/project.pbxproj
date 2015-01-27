@@ -11,6 +11,16 @@
 		7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CB1A717C1200A92E6A /* CustomItem.m */; };
 		7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9CE1A717C1200A92E6A /* DRNRealTimeBlurView.m */; };
 		7E40E9D41A717C1200A92E6A /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */; };
+		A9A560AB1A7705680086A9E6 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560AA1A7705680086A9E6 /* VPImageCropperViewController.m */; };
+		A9A560AE1A7706460086A9E6 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560AD1A7706460086A9E6 /* SZTextView.m */; };
+		A9A560B21A77070A0086A9E6 /* ActivityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560B01A77070A0086A9E6 /* ActivityListViewController.m */; };
+		A9A560B31A77070A0086A9E6 /* ActivityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A560B11A77070A0086A9E6 /* ActivityListViewController.xib */; };
+		A9A560B61A7708090086A9E6 /* UIButton+JCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560B51A7708090086A9E6 /* UIButton+JCButton.m */; };
+		A9A560B91A770AD20086A9E6 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560B81A770AD20086A9E6 /* GalleryViewController.m */; };
+		A9A560BD1A770CDA0086A9E6 /* CampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560BB1A770CDA0086A9E6 /* CampaignViewController.m */; };
+		A9A560BE1A770CDA0086A9E6 /* CampaignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A560BC1A770CDA0086A9E6 /* CampaignViewController.xib */; };
+		A9A560C21A77101B0086A9E6 /* ActivityTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C01A77101B0086A9E6 /* ActivityTypeViewController.m */; };
+		A9A560C31A77101B0086A9E6 /* ActivityTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A560C11A77101B0086A9E6 /* ActivityTypeViewController.xib */; };
 		B032820A1A74B5AC001BAA34 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B03282091A74B5AC001BAA34 /* Comment.m */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
@@ -99,6 +109,23 @@
 		7E40E9CF1A717C1200A92E6A /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
 		7E40E9D01A717C1200A92E6A /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A560A91A7705680086A9E6 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPImageCropperViewController.h; path = touch/Util/VPImageCropperViewController.h; sourceTree = "<group>"; };
+		A9A560AA1A7705680086A9E6 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPImageCropperViewController.m; path = touch/Util/VPImageCropperViewController.m; sourceTree = "<group>"; };
+		A9A560AC1A7706460086A9E6 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZTextView.h; path = Controller/SZTextView.h; sourceTree = "<group>"; };
+		A9A560AD1A7706460086A9E6 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZTextView.m; path = Controller/SZTextView.m; sourceTree = "<group>"; };
+		A9A560AF1A77070A0086A9E6 /* ActivityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityListViewController.h; path = Controller/ActivityListViewController.h; sourceTree = "<group>"; };
+		A9A560B01A77070A0086A9E6 /* ActivityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityListViewController.m; path = Controller/ActivityListViewController.m; sourceTree = "<group>"; };
+		A9A560B11A77070A0086A9E6 /* ActivityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityListViewController.xib; path = Controller/ActivityListViewController.xib; sourceTree = "<group>"; };
+		A9A560B41A7708090086A9E6 /* UIButton+JCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+JCButton.h"; path = "Kit/TopPopView/UIButton+JCButton.h"; sourceTree = "<group>"; };
+		A9A560B51A7708090086A9E6 /* UIButton+JCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+JCButton.m"; path = "Kit/TopPopView/UIButton+JCButton.m"; sourceTree = "<group>"; };
+		A9A560B71A770AD20086A9E6 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryViewController.h; path = Controller/GalleryViewController.h; sourceTree = "<group>"; };
+		A9A560B81A770AD20086A9E6 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GalleryViewController.m; path = Controller/GalleryViewController.m; sourceTree = "<group>"; };
+		A9A560BA1A770CDA0086A9E6 /* CampaignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CampaignViewController.h; path = Controller/CampaignViewController.h; sourceTree = "<group>"; };
+		A9A560BB1A770CDA0086A9E6 /* CampaignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CampaignViewController.m; path = Controller/CampaignViewController.m; sourceTree = "<group>"; };
+		A9A560BC1A770CDA0086A9E6 /* CampaignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CampaignViewController.xib; path = Controller/CampaignViewController.xib; sourceTree = "<group>"; };
+		A9A560BF1A77101B0086A9E6 /* ActivityTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTypeViewController.h; path = Controller/ActivityTypeViewController.h; sourceTree = "<group>"; };
+		A9A560C01A77101B0086A9E6 /* ActivityTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTypeViewController.m; path = Controller/ActivityTypeViewController.m; sourceTree = "<group>"; };
+		A9A560C11A77101B0086A9E6 /* ActivityTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityTypeViewController.xib; path = Controller/ActivityTypeViewController.xib; sourceTree = "<group>"; };
 		B03282081A74B5AC001BAA34 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		B03282091A74B5AC001BAA34 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				B0E62AD01A71E2670067A244 /* CommonDefine.h */,
+				A9A560B41A7708090086A9E6 /* UIButton+JCButton.h */,
+				A9A560B51A7708090086A9E6 /* UIButton+JCButton.m */,
 				B038E2111A62017D00E660ED /* AppDelegate.h */,
 				B038E2121A62017D00E660ED /* AppDelegate.m */,
 				B074B7461A68DE0000EF304E /* Util */,
@@ -388,6 +417,9 @@
 				B0E62AA31A71E1370067A244 /* InsetTextField.h */,
 				B0E62AA41A71E1370067A244 /* InsetTextField.m */,
 				B0E62AA51A71E1370067A244 /* IntroViewController.h */,
+				A9A560BF1A77101B0086A9E6 /* ActivityTypeViewController.h */,
+				A9A560C01A77101B0086A9E6 /* ActivityTypeViewController.m */,
+				A9A560C11A77101B0086A9E6 /* ActivityTypeViewController.xib */,
 				B0E62AA61A71E1370067A244 /* IntroViewController.m */,
 				B0E62AA71A71E1370067A244 /* LoginViewController.h */,
 				B0E62AA81A71E1370067A244 /* LoginViewController.m */,
@@ -398,6 +430,16 @@
 				B0E62AB01A71E1370067A244 /* StepTwoViewController.h */,
 				B0E62AB11A71E1370067A244 /* StepTwoViewController.m */,
 				B0E62AB21A71E1370067A244 /* StepTwoViewController.xib */,
+				A9A560B71A770AD20086A9E6 /* GalleryViewController.h */,
+				A9A560B81A770AD20086A9E6 /* GalleryViewController.m */,
+				A9A560AF1A77070A0086A9E6 /* ActivityListViewController.h */,
+				A9A560B01A77070A0086A9E6 /* ActivityListViewController.m */,
+				A9A560B11A77070A0086A9E6 /* ActivityListViewController.xib */,
+				A9A560AC1A7706460086A9E6 /* SZTextView.h */,
+				A9A560AD1A7706460086A9E6 /* SZTextView.m */,
+				A9A560BA1A770CDA0086A9E6 /* CampaignViewController.h */,
+				A9A560BB1A770CDA0086A9E6 /* CampaignViewController.m */,
+				A9A560BC1A770CDA0086A9E6 /* CampaignViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -424,6 +466,8 @@
 				B0E629E31A71E0860067A244 /* ProgressHUD.bundle */,
 				B0E629E41A71E0860067A244 /* ProgressHUD.h */,
 				B0E629E51A71E0860067A244 /* ProgressHUD.m */,
+				A9A560A91A7705680086A9E6 /* VPImageCropperViewController.h */,
+				A9A560AA1A7705680086A9E6 /* VPImageCropperViewController.m */,
 				7E40E9C71A717C1200A92E6A /* CustomAnimationView */,
 			);
 			name = Util;
@@ -606,6 +650,7 @@
 				B0E62A671A71E0F70067A244 /* instagram.png in Resources */,
 				B0E62A871A71E1160067A244 /* tab_square_p@2x.png in Resources */,
 				B0E62ABB1A71E1370067A244 /* StepOneViewController.xib in Resources */,
+				A9A560BE1A770CDA0086A9E6 /* CampaignViewController.xib in Resources */,
 				B0E62A821A71E1160067A244 /* tab_activity@2x.png in Resources */,
 				B0E62A851A71E1160067A244 /* tab_message_p@2x.png in Resources */,
 				B0E62A861A71E1160067A244 /* tab_square@2x.png in Resources */,
@@ -617,7 +662,9 @@
 				B0E62A691A71E0F70067A244 /* logoTemp@2x.png in Resources */,
 				B0E62A6A1A71E0F70067A244 /* personal_icon_back@2x.png in Resources */,
 				B0E62A841A71E1160067A244 /* tab_message@2x.png in Resources */,
+				A9A560B31A77070A0086A9E6 /* ActivityListViewController.xib in Resources */,
 				B0E62A781A71E10C0067A244 /* touch@2x.png in Resources */,
+				A9A560C31A77101B0086A9E6 /* ActivityTypeViewController.xib in Resources */,
 				B0E62A6D1A71E0F70067A244 /* xiaolajiao@2x.png in Resources */,
 				B0E62A681A71E0F70067A244 /* loginBackground@2x.png in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
@@ -681,8 +728,11 @@
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B032820A1A74B5AC001BAA34 /* Comment.m in Sources */,
 				B0E62ABC1A71E1370067A244 /* StepTwoViewController.m in Sources */,
+				A9A560B91A770AD20086A9E6 /* GalleryViewController.m in Sources */,
 				7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */,
+				A9A560AE1A7706460086A9E6 /* SZTextView.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
+				A9A560B61A7708090086A9E6 /* UIButton+JCButton.m in Sources */,
 				B0E62A9C1A71E1270067A244 /* EventManager.m in Sources */,
 				B0E62AA01A71E1270067A244 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
@@ -690,13 +740,17 @@
 				B0E62ABA1A71E1370067A244 /* StepOneViewController.m in Sources */,
 				7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */,
 				B0E62A9B1A71E1270067A244 /* Event.m in Sources */,
+				A9A560BD1A770CDA0086A9E6 /* CampaignViewController.m in Sources */,
 				B0E62A9F1A71E1270067A244 /* newsFeedManager.m in Sources */,
 				B0E62A9E1A71E1270067A244 /* newsFeed.m in Sources */,
 				B0E62ACE1A71E20C0067A244 /* VBFDoubleSegment.m in Sources */,
+				A9A560B21A77070A0086A9E6 /* ActivityListViewController.m in Sources */,
 				7E40E9D11A717C1200A92E6A /* CustomAnimationView.m in Sources */,
 				B0E62ACF1A71E20C0067A244 /* VBFPopFlatButton.m in Sources */,
+				A9A560AB1A7705680086A9E6 /* VPImageCropperViewController.m in Sources */,
 				B0E62A4A1A71E0860067A244 /* ProgressHUD.m in Sources */,
 				7E40E9D41A717C1200A92E6A /* UIImage+BoxBlur.m in Sources */,
+				A9A560C21A77101B0086A9E6 /* ActivityTypeViewController.m in Sources */,
 				B0E62AB51A71E1370067A244 /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

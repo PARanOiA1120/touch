@@ -47,7 +47,8 @@ install_resource()
       ;;
   esac
 }
-          install_resource "ICETutorial/Resources/background-gradient.png"
+          install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
+                    install_resource "ICETutorial/Resources/background-gradient.png"
                     install_resource "ICETutorial/Resources/background-gradient@2x.png"
                     install_resource "ICETutorial/Resources/button-background.png"
                     install_resource "ICETutorial/Resources/button-background@2x.png"
