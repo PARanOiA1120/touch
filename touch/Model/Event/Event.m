@@ -17,7 +17,7 @@
 NSString * const className = @"event";
 NSString * const title = @"event_title";
 NSString * const startTime = @"event_time";
-NSString * const subject = @"event_type";
+NSString * const subject = @"subject_type";
 NSString * const background = @"background_image";
 NSString * const location = @"location_name";
 NSString * const type = @"event_type";

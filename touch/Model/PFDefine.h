@@ -24,6 +24,7 @@ typedef PFDataResultBlock DictionaryResultBlcok;
 typedef PFIdResultBlock IdResultBlcok;
 typedef PFDataResultBlock DataResultBlock;
 
+#define PFEVENT @"pfevent"
 #define EVENT_TITLE @"event_title"
 #define EVENT_TIME @"event_time"
 #define LOCATION_NAME @"location_name"
@@ -33,5 +34,7 @@ typedef PFDataResultBlock DataResultBlock;
 #define JOINED_USERS @"joined_users"
 #define APPLIED_USERS @"applied_users"
 #define EVENT_OWNER @"event_owner"
+#define EVENT_TYPE @"event_type"
+#define SUBJECT_TYPE @"subject_type"
 
 #endif

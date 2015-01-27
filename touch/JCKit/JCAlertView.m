@@ -8,7 +8,7 @@
 
 #import "JCAlertView.h"
 #import "DRNRealTimeBlurView.h"
-#import "TouchDefine.h"
+#import "PFDefine.h"
 
 @interface JCAlertView ()
 

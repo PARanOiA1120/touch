@@ -202,7 +202,6 @@ BOOL fullInfoReturned=NO;
 }
 
 
-
 + (User *)getPFUserFromPFUser:(PFObject *)aUser
 {
     User *user = [[User alloc] init];
