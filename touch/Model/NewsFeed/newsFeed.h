@@ -43,6 +43,8 @@ typedef NS_OPTIONS(NSInteger, NewsType) {
 @property (assign, nonatomic) NSInteger commentCount;
 @property (strong ,nonatomic) NSArray *taggedUsers;
 
+-(id)initForTest:(NSString *)s NT:(NewsType)i ID:(NSString *)nid;
+
 + (instancetype)newsFeedWithPFObject:(PFObject *)object;
 
 + (PFObject *)getNewsFeedObject:(NSString *)newsId;

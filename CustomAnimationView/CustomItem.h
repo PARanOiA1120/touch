@@ -1,13 +1,13 @@
 //
 //  CustomItem.h
-//  touch
+//  AnimationDemo
 //
-//  Created by jiapeiyao on 1/21/15.
-//  Copyright (c) 2015 cs48. All rights reserved.
+//  Created by xuxingdu on 14/10/28.
+//  Copyright (c) 2014年 AI. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#define ItemFuncion @[@"Event",@"Status",@"Coming soon",@"Coming soon",@"Coming soon"]
+#define ItemFuncion @[@"活动",@"视频",@"拍照",@"发状态",@"签到"]
 typedef NS_ENUM(NSInteger, Function_type)
 {
     Function_type_activity = 0,

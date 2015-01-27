@@ -18,6 +18,17 @@ NSString * const NewsFeedComments = @"comments";
 
 @implementation newsFeed
 
+-(id)initForTest:(NSString *)s NT:(NewsType)i ID:(NSString *)nid
+{
+    newsFeed *feed = [[newsFeed alloc] init];
+    feed.content = s;
+    feed.eventType = i;
+    feed.newsId = nid;
+    feed.creator = [[User alloc] init];
+    return feed;
+}
+
+
 + (instancetype)newsFeedWithPFObject:(PFObject *)object {
     newsFeed *feed = [[newsFeed alloc] init];
     feed.content = [object valueForKey:NewsFeedContent];
@@ -40,5 +51,7 @@ NSString * const NewsFeedComments = @"comments";
     [object setObject:[NSNumber numberWithInteger:_eventType] forKey:NewsFeedEventType];
     return object;
 }
+
+
 
 @end
