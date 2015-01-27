@@ -8,9 +8,7 @@
 
 #import "ActivityListViewController.h"
 #import "AppDelegate.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "AppDelegate.h"
-//#import "EGORefreshTableHeaderView.h"
 #import "CustomActionSheet.h"
 #import "CommonDefine.h"
 #import "UserHeadImageView.h"
@@ -18,9 +16,7 @@
 #import "newsFeedManager.h"
 
 
-@interface ActivityListViewController () <UITableViewDataSource,UITableViewDelegate
-//,EGORefreshTableDelegate
->
+@interface ActivityListViewController () <UITableViewDataSource,UITableViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UIView *customView;
@@ -31,8 +27,6 @@
 @property (strong, nonatomic) NSMutableArray *heightArray;
 @property (assign, nonatomic) int currentPage;
 @property (assign, nonatomic) BOOL isInit;
-
-//@property (nonatomic, strong) EGORefreshTableHeaderView *headerView;
 @property (nonatomic) BOOL reloadingData;
 @end
 
@@ -110,66 +104,7 @@
 }
 
 
-//所有点击用户头像的事件
-//- (void)userHeadViewTap:(UITapGestureRecognizer *)tap
-//{
-//    UserHeadImageView *imageView = (UserHeadImageView *)tap.view;
-//    NSString *userId = imageView.userId;
-//    PersonalHomepageViewController *personHomeVC = [[PersonalHomepageViewController alloc] init];
-//    personHomeVC.hidesBottomBarWhenPushed = YES;
-//    personHomeVC.userId = userId;
-//    [[AppDelegate delegate] hideTabBar];
-//    [self.navigationController pushViewController:personHomeVC animated:YES];
-//}
 
-//点赞 按钮点击事件
-//- (void)likeAction:(UIButton *)button
-//{
-//    newsFeed *newsFeed = self.dataSource[button.tag];
-//    if (button.selected) {
-//        //已经赞过了，准备取消赞
-//        [button setImage:[UIImage imageNamed:@"activity_btn_praise_normal.png"] forState:UIControlStateNormal];
-//        button.selected = NO;
-//        [[newsFeedManager sharedManager]unlikeNewsFeed:newsFeed.newsId ByUser:[User currentUser] InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//            NSLog(succeeded ? @"取消成功" : @"取消失败");
-//            if (succeeded) {
-//                [self requestDataWithPage:self.currentPage];
-//            }
-//        }];
-//    }
-//    else
-//    {
-//        //还未赞过，准备点赞
-//        [button setImage:[UIImage imageNamed:@"activity_btn_praise_selected.png"] forState:UIControlStateNormal];
-//        button.selected = YES;
-//        [[JCNewsFeedManager sharedManager] likeNewsFeed:newsFeed.newsId ByUser:[JCUser currentUser] InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//            NSLog(succeeded ? @"点赞成功" : @"点赞失败");
-//            if (succeeded) {
-//                [self requestDataWithPage:self.currentPage];
-//            }
-//        }];
-//    }
-//}
-
-//显示更多赞按钮 点击事件
-//- (void)otherLikeClicked:(UIButton *)button
-//{
-//    JCNewsFeed *newsFeed = self.dataSource[button.tag];
-//    PraiseListViewController *praiseList = [[PraiseListViewController alloc] init];
-//    praiseList.praiseArray = newsFeed.likeUsers;
-//    [self.navigationController pushViewController:praiseList animated:YES];
-//}
-
-//评论按钮 点击事件
-//- (void)commentAction:(UIButton *)button
-//{
-//    JCNewsFeed *newsFeed = self.dataSource[button.tag];
-//    CommentListViewController *commentList = [[CommentListViewController alloc] init];
-//    commentList.commentArray = newsFeed.comments;
-//    commentList.commentType = CommentTypeNewsFeed;
-//    commentList.postId = newsFeed.newsId;
-//    [self.navigationController pushViewController:commentList animated:YES];
-//}
 
 //更多操作按钮 点击事件
 - (void)moreButtonAction:(UIButton *)button
@@ -196,34 +131,6 @@
 }
 - (IBAction)actionSheetCollect:(id)sender {
 }
-
-//活动圈中发表的图片手势响应事件
-//- (void)tapImage:(UITapGestureRecognizer *)tap
-//{
-//    UIImageView *imageView = (UIImageView *)[tap view];
-//    
-//    int sourceIndex = imageView.tag/1000;
-//    int imageIndex = imageView.tag%1000;
-//    
-//    NSArray *imageArray = [NSArray arrayWithArray:[(JCNewsFeed *)self.dataSource[sourceIndex]photos]];
-//    
-//    NSInteger count = imageArray.count;
-//    NSMutableArray *photos = [NSMutableArray arrayWithCapacity:count];
-//    for (int i = 0; i < count; i++) {
-//        // 替换为中等尺寸图片
-//        NSString *url = SAFEPARAMETER(imageArray[i][@"file_url"]);
-//        Photo *photo = [[Photo alloc] init];
-//        photo.url = [NSURL URLWithString:url]; // 图片路径
-//        photo.srcImageView = imageView; // 来源于哪个UIImageView
-//        [photos addObject:photo];
-//    }
-//    // 2.显示相册
-//    PhotoBrowser *browser = [[PhotoBrowser alloc] init];
-//    browser.currentPhotoIndex = imageIndex;
-//    browser.photos = photos;
-//    [browser show];
-//}
-
 
 //根据EventType 返回标题
 - (NSString *)getTitleWithEventType:(NSInteger)eventType
@@ -291,22 +198,7 @@
 {
     CGFloat height = 5.0;//cell 边框距离上边缘高度
     height = height + 5 + 40 + 5; //头像以及 title time 高度 间隙10
-    
-//    if (newsFeed.eventType == 0 || newsFeed.eventType == 2) {
-//        //发表图片
-//        NSArray *images = [NSArray arrayWithArray:newsFeed.photos];
-//        if (images.count == 1) {
-//            height = height + 150 + 5; //如果只有一张图片 则切换为大图
-//        }
-//        else if (images.count == 2)
-//        {
-//            height = height + 75 + 5; //2张图放一行，小图
-//        }
-//        else
-//        {
-//            height = height + 75*2 + 5 + 5; //大于2 张图 放2行 行间距 10 小图
-//        }
-//    }
+
     if (newsFeed.eventType == 3 || newsFeed.eventType == 4 || newsFeed.eventType == 5)
     {
         //发表活动
@@ -454,57 +346,13 @@
     [containerView addSubview:timeLabel];
     
     height = height + 40 + 5; // title time Label 高度
-    
-    //图片 或者 是图片加活动描述
-//    NSArray *imagesArray = [NSArray arrayWithArray:newsFeed.photos];
-//    if (newsFeed.eventType == 0 || newsFeed.eventType == 2)
-//    {
-//        //发布图片
-//        if (imagesArray.count == 1) {
-//            //单张图片
-//            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45, height, 150, 150)];
-//            [imageView sd_setImageWithURL:[NSURL URLWithString:imagesArray[0][@"thumbnail_url"]] placeholderImage:[UIImage imageNamed:@"activity_pic.png"]];
-//            [containerView addSubview:imageView];
-//            imageView.userInteractionEnabled = YES;
-//            imageView.tag = 1000*indexPath.row + 0;
-//            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];
-//            tap.numberOfTapsRequired = 1;
-//            tap.numberOfTouchesRequired = 1;
-//            [imageView addGestureRecognizer:tap];
-//            height = height + 150 + 5; //单张图 高度
-//        }
-//        else
-//        {
-//            NSInteger maxCount = imagesArray.count > 4 ? 4 : imagesArray.count;
-//            int row = 0, col = 0;
-//            for (int i = 0; i < maxCount; i++) {
-//                if (col == 2) {
-//                    col = 0;
-//                    row = row + 1;
-//                }
-//                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45 + col*80, height + 80*row, 75, 75)];
-//                [imageView sd_setImageWithURL:[NSURL URLWithString:imagesArray[i][@"thumbnail_url"]] placeholderImage:[UIImage imageNamed:@"activity_pic.png"]];
-//                [containerView addSubview:imageView];
-//                imageView.userInteractionEnabled = YES;
-//                imageView.tag = 1000*indexPath.row + i;
-//                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];
-//                tap.numberOfTapsRequired = 1;
-//                tap.numberOfTouchesRequired = 1;
-//                [imageView addGestureRecognizer:tap];
-//                
-//                col ++;
-//            }
-//            
-//            height = height + (maxCount >2 ? 80*2 : 80);
-//        }
-//    }
-    if (newsFeed.eventType == 3 || newsFeed.eventType == 4 || newsFeed.eventType == 5)
+     if (newsFeed.eventType == 3 || newsFeed.eventType == 4 || newsFeed.eventType == 5)
     {
         //发布活动
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary:newsFeed.eventDic];
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45, height, 75, 75)];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:dic[@"background_image"][@"thumb_image"]] placeholderImage:[UIImage imageNamed:@"activity_pic.png"]];
+
         [containerView addSubview:imageView];
         
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, height, containerWidth - 5 - 120, 75)];
@@ -568,7 +416,7 @@
             praiseHeadView.layer.borderWidth = 1;
             praiseHeadView.userInteractionEnabled = YES;
             praiseHeadView.userId = like[i][@"userId"];
-            [praiseHeadView sd_setImageWithURL:[NSURL URLWithString:like[i][@"thumb_image_url"]]];
+            
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userHeadViewTap:)];
             tap.numberOfTapsRequired = 1;
             tap.numberOfTouchesRequired = 1;
@@ -676,47 +524,6 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    [_headerView egoRefreshScrollViewDidScroll:scrollView];
-//}
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-//{
-//    [_headerView egoRefreshScrollViewDidEndDragging:scrollView];
-//}
-//
-//#pragma mark -- EGORefreshTableViewDelegate
-//
-//- (void)egoRefreshTableDidTriggerRefresh:(EGORefreshPos)aRefreshPos
-//{
-//    [self reloadTableViewDataSource];
-//}
-//
-//- (BOOL)egoRefreshTableDataSourceIsLoading:(UIView *)view
-//{
-//    return _reloadingData;
-//}
-//
-//- (NSDate *)egoRefreshTableDataSourceLastUpdated:(UIView *)view
-//{
-//    return [NSDate date];
-//}
-//
-//
-//- (void)reloadTableViewDataSource
-//{
-//    _reloadingData = YES;
-//    _currentPage = 1;
-//    [self requestDataWithPage:_currentPage];
-//}
-//
-//- (void)doneReloadTableViewDataSource
-//{
-//    _reloadingData = NO;
-////    [_headerView egoRefreshScrollViewDataSourceDidFinishedLoading:_activityTableView];
-//    [_activityTableView reloadData];
-//}
-//
 
 
 /*

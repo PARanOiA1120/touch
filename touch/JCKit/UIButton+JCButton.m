@@ -7,7 +7,7 @@
 //
 
 #import "UIButton+JCButton.h"
-#import "TouchDefine.h"
+#import "PFDefine.h"
 
 #define TYPE_IMAGE_TOP_MARGIN       30.0
 #define TYPE_TITLE_BOTTOM_MARGIN    10.0

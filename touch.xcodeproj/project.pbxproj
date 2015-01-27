@@ -104,7 +104,6 @@
 		562104341A74C8E100503613 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		562104351A74C8E100503613 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		562104361A74C8E100503613 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
-		562104391A74C9B700503613 /* TouchDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchDefine.h; sourceTree = "<group>"; };
 		5621043A1A74CBCA00503613 /* ActivityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityListViewController.h; sourceTree = "<group>"; };
 		5621043B1A74CBCA00503613 /* ActivityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityListViewController.m; sourceTree = "<group>"; };
 		5621043C1A74CBCA00503613 /* ActivityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityListViewController.xib; sourceTree = "<group>"; };
@@ -442,7 +441,6 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				562104391A74C9B700503613 /* TouchDefine.h */,
 				B0E62AA11A71E1370067A244 /* CustomTabBar.h */,
 				B0E62AA21A71E1370067A244 /* CustomTabBar.m */,
 				B0E62AA31A71E1370067A244 /* InsetTextField.h */,
@@ -634,11 +632,11 @@
 				TargetAttributes = {
 					B038E2091A62017D00E660ED = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = WHN3G9ECZ6;
+						DevelopmentTeam = AQNTGEWRNX;
 					};
 					B038E2221A62017D00E660ED = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = WHN3G9ECZ6;
+						DevelopmentTeam = AQNTGEWRNX;
 						TestTargetID = B038E2091A62017D00E660ED;
 					};
 				};

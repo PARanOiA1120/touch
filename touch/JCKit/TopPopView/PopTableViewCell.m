@@ -8,7 +8,7 @@
 
 #import "PopTableViewCell.h"
 #import "CommonDefine.h"
-#import "TouchDefine.h"
+#import "PFDefine.h"
 
 @interface PopTableViewCell ()
 @property (strong, nonatomic) UIView *backView;

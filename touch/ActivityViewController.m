@@ -8,7 +8,7 @@
 
 #import "ActivityViewController.h"
 #import "ActivityListViewController.h"
-#import "TouchDefine.h"
+#import "PFDefine.h"
 @interface ActivityViewController () <UIGestureRecognizerDelegate>
 @property (strong, nonatomic) NSArray *childViewControllers;
 @property (strong, nonatomic) ActivityListViewController *activityList;
