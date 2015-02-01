@@ -10,6 +10,10 @@
 #import "VBFPopFlatButton.h"
 #import "DRNRealTimeBlurView.h"
 #import "CustomAnimationView.h"
+#import "NewStatusViewController.h"
+#import "CampaignViewController.h"
+#import "CustomItem.h"
+
 typedef NS_ENUM(NSInteger, TabBarButtonTag)
 {
     TabBarButtonTag_Activity = 0,
@@ -22,7 +26,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 #define CustomTabBar_buttonSelectedImages   @[@"tab_activity_p.png",@"tab_square_p.png",@"tab_message_p.png",@"tab_user_p.png"]
 #define SCREENWIDTH         CGRectGetWidth([UIScreen mainScreen].bounds)
 
-@interface CustomTabBar ()<UINavigationControllerDelegate>
+@interface CustomTabBar ()<UINavigationControllerDelegate, CustomAnimationViewDelegate>
 @property (strong, nonatomic) UIButton *activityBtn;
 @property (strong, nonatomic) UIButton *squareBtn;
 @property (strong, nonatomic) UIButton *messageBtn;
@@ -31,6 +35,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 @property (strong, nonatomic) VBFPopFlatButton *centerAddBtn;
 @property (strong, nonatomic) DRNRealTimeBlurView *blurView;
 @property (strong, nonatomic) CustomAnimationView *customAnimationView;
+@property (strong, nonatomic) UIView *backView;
 
 
 
@@ -45,7 +50,6 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     self.slideBg.backgroundColor = [UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f];
     self.slideBg.userInteractionEnabled = YES;
     [self.view addSubview:self.slideBg];
-//    [self hideRealTabBar];
     [self customTabBar];
 }
 
@@ -55,7 +59,6 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 }
 
 - (void)customTabBar{
-    //创建按钮
     int viewCount = 4;
     
     self.buttons = [NSMutableArray arrayWithCapacity:viewCount];
@@ -171,42 +174,32 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     [self showCustomTabBar];
 }
 
-/*
+
 - (void)itemClicked:(CustomItem *)item
 {
     [self resetTabBar];
     [UIView animateWithDuration:0.7 animations:^{
         self.blurView.alpha = 0.0f;
+        _backView.alpha = 0.0;
         self.customAnimationView.alpha = 0.0f;
     } completion:^(BOOL finished) {
         [self.customAnimationView removeFromSuperview];
         self.customAnimationView = nil;
         [self.blurView removeFromSuperview];
+        [_backView removeFromSuperview];
     }];
     
-    
     if (item.function == Function_type_state) {
-        NewActivityViewController *newActivityVC = [[NewActivityViewController alloc] init];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newActivityVC];
+        NewStatusViewController *newStatusVC = [[NewStatusViewController alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newStatusVC];
         [self presentViewController:navController animated:YES completion:^{}];
         return;
-    } else if (item.function == Function_type_photo) {
-        //CameraViewController *cameraController = [[CameraViewController alloc] init];
-        GalleryViewController *galleryController = [[GalleryViewController alloc] initWithSelectedImages:_selectedImage];
-        galleryController.delegate = self;
-        //UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:cameraController];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:galleryController];
-        [self presentViewController:navController animated:YES completion:^{}];
-    } else if (item.function == Function_type_activity) {
+    }else if (item.function == Function_type_activity) {
         CampaignViewController *campaignController = [[CampaignViewController alloc] init];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:campaignController];
         [self presentViewController:navController animated:YES completion:^{}];
-    } else if (item.function == Function_type_signIn)
-    {
-        //JCUser *user=[JCUser currentUser];
-        // [user logOut];
     }
 }
-*/
+
 
 @end

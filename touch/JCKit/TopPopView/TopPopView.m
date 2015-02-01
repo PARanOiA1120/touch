@@ -45,7 +45,6 @@ static NSString *collectionCellReuseIndentifier = @"collectionCell";
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackground:)];
     [self addGestureRecognizer:tapRecognizer];
     UIView *wrapView = [[UIView alloc] init];
-//    wrapView.backgroundColor = RGBACOLOR(184.0, 150.0, 101.0, 0.8);
     [self addSubview:wrapView];
     self.wrapView = wrapView;
 }

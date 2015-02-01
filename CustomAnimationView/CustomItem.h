@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#define ItemFuncion @[@"活动",@"视频",@"拍照",@"发状态",@"签到"]
+#define ItemFuncion @[@"Event",@"Status",@"Photo",@"Video",@"Sign in"]
 typedef NS_ENUM(NSInteger, Function_type)
 {
     Function_type_activity = 0,
