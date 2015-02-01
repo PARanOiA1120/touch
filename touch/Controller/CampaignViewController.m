@@ -12,7 +12,7 @@
 #import "ActivityTypeViewController.h"
 #import "Event.h"
 #import "EventManager.h"
-#import "UIButton+JCButton.h"
+//#import "UIButton+JCButton.h"
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "PPiFlatSegmentedControl.h"

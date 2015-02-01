@@ -15,12 +15,12 @@
 		A9A560AE1A7706460086A9E6 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560AD1A7706460086A9E6 /* SZTextView.m */; };
 		A9A560B21A77070A0086A9E6 /* ActivityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560B01A77070A0086A9E6 /* ActivityListViewController.m */; };
 		A9A560B31A77070A0086A9E6 /* ActivityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A560B11A77070A0086A9E6 /* ActivityListViewController.xib */; };
-		A9A560B61A7708090086A9E6 /* UIButton+JCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560B51A7708090086A9E6 /* UIButton+JCButton.m */; };
 		A9A560B91A770AD20086A9E6 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560B81A770AD20086A9E6 /* GalleryViewController.m */; };
 		A9A560BD1A770CDA0086A9E6 /* CampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560BB1A770CDA0086A9E6 /* CampaignViewController.m */; };
 		A9A560BE1A770CDA0086A9E6 /* CampaignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A560BC1A770CDA0086A9E6 /* CampaignViewController.xib */; };
 		A9A560C21A77101B0086A9E6 /* ActivityTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C01A77101B0086A9E6 /* ActivityTypeViewController.m */; };
 		A9A560C31A77101B0086A9E6 /* ActivityTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A560C11A77101B0086A9E6 /* ActivityTypeViewController.xib */; };
+		A9A560C91A7717BA0086A9E6 /* UIButton+Button.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C81A7717BA0086A9E6 /* UIButton+Button.m */; };
 		B032820A1A74B5AC001BAA34 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B03282091A74B5AC001BAA34 /* Comment.m */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
@@ -116,8 +116,6 @@
 		A9A560AF1A77070A0086A9E6 /* ActivityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityListViewController.h; path = Controller/ActivityListViewController.h; sourceTree = "<group>"; };
 		A9A560B01A77070A0086A9E6 /* ActivityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityListViewController.m; path = Controller/ActivityListViewController.m; sourceTree = "<group>"; };
 		A9A560B11A77070A0086A9E6 /* ActivityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityListViewController.xib; path = Controller/ActivityListViewController.xib; sourceTree = "<group>"; };
-		A9A560B41A7708090086A9E6 /* UIButton+JCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+JCButton.h"; path = "Kit/TopPopView/UIButton+JCButton.h"; sourceTree = "<group>"; };
-		A9A560B51A7708090086A9E6 /* UIButton+JCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+JCButton.m"; path = "Kit/TopPopView/UIButton+JCButton.m"; sourceTree = "<group>"; };
 		A9A560B71A770AD20086A9E6 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryViewController.h; path = Controller/GalleryViewController.h; sourceTree = "<group>"; };
 		A9A560B81A770AD20086A9E6 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GalleryViewController.m; path = Controller/GalleryViewController.m; sourceTree = "<group>"; };
 		A9A560BA1A770CDA0086A9E6 /* CampaignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CampaignViewController.h; path = Controller/CampaignViewController.h; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		A9A560BF1A77101B0086A9E6 /* ActivityTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTypeViewController.h; path = Controller/ActivityTypeViewController.h; sourceTree = "<group>"; };
 		A9A560C01A77101B0086A9E6 /* ActivityTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTypeViewController.m; path = Controller/ActivityTypeViewController.m; sourceTree = "<group>"; };
 		A9A560C11A77101B0086A9E6 /* ActivityTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityTypeViewController.xib; path = Controller/ActivityTypeViewController.xib; sourceTree = "<group>"; };
+		A9A560C71A7717BA0086A9E6 /* UIButton+Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Button.h"; sourceTree = "<group>"; };
+		A9A560C81A7717BA0086A9E6 /* UIButton+Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Button.m"; sourceTree = "<group>"; };
 		B03282081A74B5AC001BAA34 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		B03282091A74B5AC001BAA34 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,8 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				B0E62AD01A71E2670067A244 /* CommonDefine.h */,
-				A9A560B41A7708090086A9E6 /* UIButton+JCButton.h */,
-				A9A560B51A7708090086A9E6 /* UIButton+JCButton.m */,
+				A9A560C71A7717BA0086A9E6 /* UIButton+Button.h */,
+				A9A560C81A7717BA0086A9E6 /* UIButton+Button.m */,
 				B038E2111A62017D00E660ED /* AppDelegate.h */,
 				B038E2121A62017D00E660ED /* AppDelegate.m */,
 				B074B7461A68DE0000EF304E /* Util */,
@@ -732,10 +732,10 @@
 				7E40E9D31A717C1200A92E6A /* DRNRealTimeBlurView.m in Sources */,
 				A9A560AE1A7706460086A9E6 /* SZTextView.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
-				A9A560B61A7708090086A9E6 /* UIButton+JCButton.m in Sources */,
 				B0E62A9C1A71E1270067A244 /* EventManager.m in Sources */,
 				B0E62AA01A71E1270067A244 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
+				A9A560C91A7717BA0086A9E6 /* UIButton+Button.m in Sources */,
 				B0E62A9D1A71E1270067A244 /* Image.m in Sources */,
 				B0E62ABA1A71E1370067A244 /* StepOneViewController.m in Sources */,
 				7E40E9D21A717C1200A92E6A /* CustomItem.m in Sources */,

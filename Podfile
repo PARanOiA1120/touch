@@ -5,4 +5,5 @@ pod 'IHKeyboardAvoiding'
 pod 'ActionSheetPicker-3.0', '~> 1.3.9'
 pod 'SGNavigationProgress'
 pod 'RMDateSelectionViewController'
+pod 'GPUImage', :head
 pod 'PPiFlatSegmentedControl'

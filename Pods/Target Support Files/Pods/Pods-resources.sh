@@ -48,6 +48,11 @@ install_resource()
   esac
 }
           install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
+                    install_resource "GPUImage/framework/Resources/lookup.png"
+                    install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
+                    install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
+                    install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
+                    install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
                     install_resource "ICETutorial/Resources/background-gradient.png"
                     install_resource "ICETutorial/Resources/background-gradient@2x.png"
                     install_resource "ICETutorial/Resources/button-background.png"
