@@ -23,6 +23,15 @@
 		B038E21B1A62017D00E660ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B038E21A1A62017D00E660ED /* Images.xcassets */; };
 		B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B038E21C1A62017D00E660ED /* LaunchScreen.xib */; };
 		B038E22A1A62017D00E660ED /* touchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2291A62017D00E660ED /* touchTests.m */; };
+		B086864B1A7EC5240046CC9D /* ActivityTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08686401A7EC5240046CC9D /* ActivityTypeViewController.m */; };
+		B086864C1A7EC5240046CC9D /* ActivityTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08686411A7EC5240046CC9D /* ActivityTypeViewController.xib */; };
+		B086864D1A7EC5240046CC9D /* CampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08686431A7EC5240046CC9D /* CampaignViewController.m */; };
+		B086864E1A7EC5240046CC9D /* CampaignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08686441A7EC5240046CC9D /* CampaignViewController.xib */; };
+		B086864F1A7EC5240046CC9D /* NewStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08686471A7EC5240046CC9D /* NewStatusViewController.m */; };
+		B08686501A7EC5240046CC9D /* NewStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08686481A7EC5240046CC9D /* NewStatusViewController.xib */; };
+		B08686511A7EC5240046CC9D /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B086864A1A7EC5240046CC9D /* SZTextView.m */; };
+		B08686551A7EC6250046CC9D /* ActivityTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B08686531A7EC6250046CC9D /* ActivityTypeCell.m */; };
+		B08686581A7EC8EF0046CC9D /* ActivityTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08686571A7EC8EF0046CC9D /* ActivityTypeCell.xib */; };
 		B0ACBD5D1A7DFAF000CBA508 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD4A1A7DFAEF00CBA508 /* IntroViewController.m */; };
 		B0ACBD5E1A7DFAF000CBA508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD4C1A7DFAEF00CBA508 /* LoginViewController.m */; };
 		B0ACBD5F1A7DFAF000CBA508 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACBD4D1A7DFAEF00CBA508 /* LoginViewController.xib */; };
@@ -35,9 +44,6 @@
 		B0ACBD661A7DFAF000CBA508 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD591A7DFAEF00CBA508 /* ActivityViewController.m */; };
 		B0ACBD671A7DFAF000CBA508 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACBD5A1A7DFAEF00CBA508 /* ActivityViewController.xib */; };
 		B0ACBD681A7DFAF000CBA508 /* UserHeadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD5C1A7DFAF000CBA508 /* UserHeadImageView.m */; };
-		B0ACBD711A7E023C00CBA508 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD701A7E023C00CBA508 /* SZTextView.m */; };
-		B0ACBD751A7E169600CBA508 /* NewStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD731A7E169600CBA508 /* NewStatusViewController.m */; };
-		B0ACBD761A7E169600CBA508 /* NewStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACBD741A7E169600CBA508 /* NewStatusViewController.xib */; };
 		B0ACBD791A7E1BEE00CBA508 /* UIButton+Button.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD781A7E1BEE00CBA508 /* UIButton+Button.m */; };
 		B0BE54601A63C00D000DF8FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE545B1A63C00D000DF8FE /* Parse.framework */; };
 		B0BE54651A63C098000DF8FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54641A63C098000DF8FE /* AudioToolbox.framework */; };
@@ -136,6 +142,20 @@
 		B038E2231A62017D00E660ED /* touchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038E2281A62017D00E660ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038E2291A62017D00E660ED /* touchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchTests.m; sourceTree = "<group>"; };
+		B086863F1A7EC5240046CC9D /* ActivityTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTypeViewController.h; sourceTree = "<group>"; };
+		B08686401A7EC5240046CC9D /* ActivityTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTypeViewController.m; sourceTree = "<group>"; };
+		B08686411A7EC5240046CC9D /* ActivityTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTypeViewController.xib; sourceTree = "<group>"; };
+		B08686421A7EC5240046CC9D /* CampaignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignViewController.h; sourceTree = "<group>"; };
+		B08686431A7EC5240046CC9D /* CampaignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignViewController.m; sourceTree = "<group>"; };
+		B08686441A7EC5240046CC9D /* CampaignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignViewController.xib; sourceTree = "<group>"; };
+		B08686461A7EC5240046CC9D /* NewStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewStatusViewController.h; sourceTree = "<group>"; };
+		B08686471A7EC5240046CC9D /* NewStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewStatusViewController.m; sourceTree = "<group>"; };
+		B08686481A7EC5240046CC9D /* NewStatusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewStatusViewController.xib; sourceTree = "<group>"; };
+		B08686491A7EC5240046CC9D /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
+		B086864A1A7EC5240046CC9D /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
+		B08686521A7EC6250046CC9D /* ActivityTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTypeCell.h; sourceTree = "<group>"; };
+		B08686531A7EC6250046CC9D /* ActivityTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTypeCell.m; sourceTree = "<group>"; };
+		B08686571A7EC8EF0046CC9D /* ActivityTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTypeCell.xib; sourceTree = "<group>"; };
 		B0ACBD491A7DFAEF00CBA508 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		B0ACBD4A1A7DFAEF00CBA508 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		B0ACBD4B1A7DFAEF00CBA508 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -155,11 +175,6 @@
 		B0ACBD5A1A7DFAEF00CBA508 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		B0ACBD5B1A7DFAF000CBA508 /* UserHeadImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHeadImageView.h; sourceTree = "<group>"; };
 		B0ACBD5C1A7DFAF000CBA508 /* UserHeadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHeadImageView.m; sourceTree = "<group>"; };
-		B0ACBD6F1A7E023C00CBA508 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
-		B0ACBD701A7E023C00CBA508 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
-		B0ACBD721A7E169600CBA508 /* NewStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewStatusViewController.h; sourceTree = "<group>"; };
-		B0ACBD731A7E169600CBA508 /* NewStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewStatusViewController.m; sourceTree = "<group>"; };
-		B0ACBD741A7E169600CBA508 /* NewStatusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewStatusViewController.xib; sourceTree = "<group>"; };
 		B0ACBD771A7E1BEE00CBA508 /* UIButton+Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Button.h"; sourceTree = "<group>"; };
 		B0ACBD781A7E1BEE00CBA508 /* UIButton+Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Button.m"; sourceTree = "<group>"; };
 		B0BE545B1A63C00D000DF8FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -450,7 +465,8 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B0ACBD691A7DFB9200CBA508 /* CreateEvent */,
+				B086863E1A7EC5240046CC9D /* NewEvent */,
+				B08686451A7EC5240046CC9D /* NewStatus */,
 				B0ACBD481A7DFAEF00CBA508 /* Entry */,
 				B0ACBD541A7DFAEF00CBA508 /* Newsfeed */,
 				B0E62AA11A71E1370067A244 /* CustomTabBar.h */,
@@ -489,6 +505,36 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		B086863E1A7EC5240046CC9D /* NewEvent */ = {
+			isa = PBXGroup;
+			children = (
+				B086863F1A7EC5240046CC9D /* ActivityTypeViewController.h */,
+				B08686401A7EC5240046CC9D /* ActivityTypeViewController.m */,
+				B08686411A7EC5240046CC9D /* ActivityTypeViewController.xib */,
+				B08686421A7EC5240046CC9D /* CampaignViewController.h */,
+				B08686431A7EC5240046CC9D /* CampaignViewController.m */,
+				B08686441A7EC5240046CC9D /* CampaignViewController.xib */,
+				B08686521A7EC6250046CC9D /* ActivityTypeCell.h */,
+				B08686531A7EC6250046CC9D /* ActivityTypeCell.m */,
+				B08686571A7EC8EF0046CC9D /* ActivityTypeCell.xib */,
+			);
+			name = NewEvent;
+			path = Controller/NewEvent;
+			sourceTree = "<group>";
+		};
+		B08686451A7EC5240046CC9D /* NewStatus */ = {
+			isa = PBXGroup;
+			children = (
+				B08686461A7EC5240046CC9D /* NewStatusViewController.h */,
+				B08686471A7EC5240046CC9D /* NewStatusViewController.m */,
+				B08686481A7EC5240046CC9D /* NewStatusViewController.xib */,
+				B08686491A7EC5240046CC9D /* SZTextView.h */,
+				B086864A1A7EC5240046CC9D /* SZTextView.m */,
+			);
+			name = NewStatus;
+			path = Controller/NewStatus;
+			sourceTree = "<group>";
+		};
 		B0ACBD481A7DFAEF00CBA508 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,19 +568,6 @@
 			);
 			name = Newsfeed;
 			path = Controller/Newsfeed;
-			sourceTree = "<group>";
-		};
-		B0ACBD691A7DFB9200CBA508 /* CreateEvent */ = {
-			isa = PBXGroup;
-			children = (
-				B0ACBD721A7E169600CBA508 /* NewStatusViewController.h */,
-				B0ACBD731A7E169600CBA508 /* NewStatusViewController.m */,
-				B0ACBD741A7E169600CBA508 /* NewStatusViewController.xib */,
-				B0ACBD6F1A7E023C00CBA508 /* SZTextView.h */,
-				B0ACBD701A7E023C00CBA508 /* SZTextView.m */,
-			);
-			name = CreateEvent;
-			path = Controller/CreateEvent;
 			sourceTree = "<group>";
 		};
 		B0E62A6E1A71E10C0067A244 /* Intro&Guide */ = {
@@ -712,25 +745,28 @@
 				B0ACBD671A7DFAF000CBA508 /* ActivityViewController.xib in Resources */,
 				B0ACBD631A7DFAF000CBA508 /* StepTwoViewController.xib in Resources */,
 				B0E62A671A71E0F70067A244 /* instagram.png in Resources */,
+				B08686581A7EC8EF0046CC9D /* ActivityTypeCell.xib in Resources */,
 				B0E62A871A71E1160067A244 /* tab_square_p@2x.png in Resources */,
 				B0E62A821A71E1160067A244 /* tab_activity@2x.png in Resources */,
 				B0E62A851A71E1160067A244 /* tab_message_p@2x.png in Resources */,
 				B0E62A861A71E1160067A244 /* tab_square@2x.png in Resources */,
+				B086864E1A7EC5240046CC9D /* CampaignViewController.xib in Resources */,
 				B0E62A491A71E0860067A244 /* ProgressHUD.bundle in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
 				B0E62A831A71E1160067A244 /* tab_activity_p@2x.png in Resources */,
 				B0E62A881A71E1160067A244 /* tab_user@2x.png in Resources */,
 				B0E62A751A71E10C0067A244 /* partner@2x.png in Resources */,
 				B0E62A691A71E0F70067A244 /* logoTemp@2x.png in Resources */,
+				B08686501A7EC5240046CC9D /* NewStatusViewController.xib in Resources */,
 				B0E62A6A1A71E0F70067A244 /* personal_icon_back@2x.png in Resources */,
 				B0E62A841A71E1160067A244 /* tab_message@2x.png in Resources */,
 				B0E62A781A71E10C0067A244 /* touch@2x.png in Resources */,
 				B0E62A6D1A71E0F70067A244 /* xiaolajiao@2x.png in Resources */,
 				B0ACBD651A7DFAF000CBA508 /* ActivityListViewController.xib in Resources */,
 				B0E62A681A71E0F70067A244 /* loginBackground@2x.png in Resources */,
+				B086864C1A7EC5240046CC9D /* ActivityTypeViewController.xib in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
 				B0E62A6C1A71E0F70067A244 /* twitter.png in Resources */,
-				B0ACBD761A7E169600CBA508 /* NewStatusViewController.xib in Resources */,
 				B0ACBD611A7DFAF000CBA508 /* StepOneViewController.xib in Resources */,
 				B0E62A761A71E10C0067A244 /* review@2x.png in Resources */,
 				B0ACBD5F1A7DFAF000CBA508 /* LoginViewController.xib in Resources */,
@@ -787,24 +823,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08686551A7EC6250046CC9D /* ActivityTypeCell.m in Sources */,
 				B0E62AB41A71E1370067A244 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B0ACBD5E1A7DFAF000CBA508 /* LoginViewController.m in Sources */,
 				B032820A1A74B5AC001BAA34 /* Comment.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
-				B0ACBD711A7E023C00CBA508 /* SZTextView.m in Sources */,
+				B086864B1A7EC5240046CC9D /* ActivityTypeViewController.m in Sources */,
 				B0E62A9C1A71E1270067A244 /* EventManager.m in Sources */,
 				B0ACBD791A7E1BEE00CBA508 /* UIButton+Button.m in Sources */,
 				B0E62AA01A71E1270067A244 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
 				B0E62A9D1A71E1270067A244 /* Image.m in Sources */,
+				B08686511A7EC5240046CC9D /* SZTextView.m in Sources */,
 				566712141A7570E500647D8E /* CustomActionSheet.m in Sources */,
 				B0ACBD5D1A7DFAF000CBA508 /* IntroViewController.m in Sources */,
 				B0ACBD681A7DFAF000CBA508 /* UserHeadImageView.m in Sources */,
 				566712251A75717100647D8E /* CustomItem.m in Sources */,
 				566712271A75717100647D8E /* UIImage+BoxBlur.m in Sources */,
-				B0ACBD751A7E169600CBA508 /* NewStatusViewController.m in Sources */,
 				B0E62A9B1A71E1270067A244 /* Event.m in Sources */,
+				B086864F1A7EC5240046CC9D /* NewStatusViewController.m in Sources */,
 				B0E62A9F1A71E1270067A244 /* newsFeedManager.m in Sources */,
 				B0E62A9E1A71E1270067A244 /* newsFeed.m in Sources */,
 				566712151A7570E500647D8E /* JCAlertView.m in Sources */,
@@ -814,6 +852,7 @@
 				B0E62A4A1A71E0860067A244 /* ProgressHUD.m in Sources */,
 				566712261A75717100647D8E /* DRNRealTimeBlurView.m in Sources */,
 				B0ACBD601A7DFAF000CBA508 /* StepOneViewController.m in Sources */,
+				B086864D1A7EC5240046CC9D /* CampaignViewController.m in Sources */,
 				566712161A7570E500647D8E /* PopCollectionViewCell.m in Sources */,
 				566712241A75717100647D8E /* CustomAnimationView.m in Sources */,
 				B0ACBD641A7DFAF000CBA508 /* ActivityListViewController.m in Sources */,
