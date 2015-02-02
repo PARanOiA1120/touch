@@ -74,6 +74,7 @@ RMDateSelectionViewControllerDelegate>
     self.eventDate = [NSDate date];
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [_dateFormatter setDateFormat:@"YYYYyearMMmonthDDday"];
+    NSLog(@"View loaded");
 }
 
 - (void)configureNavigationBar {
@@ -184,7 +185,6 @@ RMDateSelectionViewControllerDelegate>
             event.subjectType = other;
             break;
         default:
-            event.subjectType = other;
             break;
     }
     
@@ -322,7 +322,7 @@ RMDateSelectionViewControllerDelegate>
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

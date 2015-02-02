@@ -4,8 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CampaignViewController1">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CampaignViewController">
             <connections>
+                <outlet property="tableView" destination="kyM-Xu-pwX" id="eq5-KJ-3df"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +14,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kyM-Xu-pwX">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="DBT-4Q-Y8r"/>
+                        <outlet property="delegate" destination="-1" id="Ses-m7-5W9"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kyM-Xu-pwX" secondAttribute="trailing" id="DNx-1w-eOd"/>
+                <constraint firstItem="kyM-Xu-pwX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wca-Gm-RO5"/>
+                <constraint firstAttribute="bottom" secondItem="kyM-Xu-pwX" secondAttribute="bottom" id="bZb-SG-pKs"/>
+                <constraint firstItem="kyM-Xu-pwX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xOk-bY-3cL"/>
+            </constraints>
         </view>
     </objects>
 </document>

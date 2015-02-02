@@ -95,7 +95,7 @@
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor blackColor];
     label.font = [UIFont systemFontOfSize:14.0];
-    label.text = @"说点什么...";
+    label.text = @"Say something...";
     [view addSubview:label];
     _tableView.tableHeaderView = view;
 }
@@ -144,15 +144,11 @@
 #pragma mark -- Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 1;
-    } else {
-        return 4;
-    }
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

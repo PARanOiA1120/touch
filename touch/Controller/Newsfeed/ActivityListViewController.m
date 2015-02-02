@@ -130,32 +130,17 @@
     switch (eventType) {
         case 0:
         {
-            title = @"发表了图片";
+            title = @"created an event";
         }
             break;
         case 1:
         {
-            title = @"发表了状态";
+            title = @"posted a status";
         }
             break;
         case 2:
         {
-            title = @"发表了图片";
-        }
-            break;
-        case 3:
-        {
-            title = @"参加了活动";
-        }
-            break;
-        case 4:
-        {
-            title = @"分享了活动";
-        }
-            break;
-        case 5:
-        {
-            title = @"发布了活动";
+            title = @"joined the event";
         }
             break;
         default:
