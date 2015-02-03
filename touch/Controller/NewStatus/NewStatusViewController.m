@@ -115,6 +115,7 @@
 
 
 - (void)createNewsFeed:(UIButton *)button {
+    NSLog(@"Pressed");
     if ([_inputView.text isEqualToString:@""]) {
         return;
     }
@@ -139,6 +140,8 @@
             NSLog(@"create news feed failed");
         }
     }];
+    NSLog(@"Reach");
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
 
 #pragma mark -- Table view data source
