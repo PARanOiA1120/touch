@@ -87,40 +87,7 @@
 //    [self layoutSubviews];
 }
 
-//执行动画
-/*
-- (void)beginAnimations
-{
-    for (UIView *view in self.subviews){
-        if ([view isKindOfClass:[CustomItem class]]) {
-            
-            CustomItem *item = (CustomItem *)view;
-            CGPoint startPoint = item.startPoint;
-            CGPoint endPoint = item.endPoint;
-            CGFloat offsetY = kCustomAnimationViewOffset * fabs(startPoint.y - endPoint.y)/(sqrt(pow((startPoint.x - endPoint.x), 2)+pow((startPoint.y - endPoint.y), 2)));
-            CGFloat offsetX = kCustomAnimationViewOffset * (endPoint.x - startPoint.x)/(sqrt(pow((startPoint.x - endPoint.x), 2)+pow((startPoint.y - endPoint.y), 2)));
-            
-            [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-                item.alpha = 1.0f;
-            } completion:^(BOOL finished) {
-                
-            }];
-            [UIView animateWithDuration:1.0f delay:0.0 options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut animations:^{
-                item.center = CGPointMake(item.endPoint.x, item.endPoint.y);
-            } completion:^(BOOL finished) {
-                item.center = CGPointMake(item.endPoint.x, item.endPoint.y);
-                [UIView animateWithDuration:3.0f delay:0.0 options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseOut animations:^{
-                    item.center = CGPointMake(item.endPoint.x - offsetX, item.endPoint.y + offsetY);
-                } completion:^(BOOL finished) {
-                    item.center = CGPointMake(item.endPoint.x - offsetX, item.endPoint.y + offsetY);
-                }];
-            }];
 
-        }
-    }
-}
- */
-//执行动画
 - (void)beginAnimations
 {
     for (UIView *view in self.subviews){

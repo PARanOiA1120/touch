@@ -60,8 +60,6 @@
     UIColor *tintColor = [UIColor blackColor];
     DRNRealTimeBlurView *blurView = [[DRNRealTimeBlurView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1.0, 1.0) tintColor:tintColor];
     blurView.backgroundColor = tintColor;
-//    blurView.backgroundColor = [UIColor blackColor];
-//    blurView.tintColor = [UIColor blackColor];
     blurView.tint = tintColor;
     blurView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackground:)];
@@ -92,7 +90,6 @@
 - (void)showInView:(UIView *)view {
     [view addSubview:self];
     self.frame = view.bounds;
-//    [self layoutSubviews];
     [self configSubviews];
     _backBlurView.alpha = 0.0;
     [UIView animateWithDuration:0.3

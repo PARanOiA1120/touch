@@ -47,12 +47,10 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     if (selected) {
-//        _backView.backgroundColor = RGBACOLOR(184.0, 150.0, 101.0, 0.5);
         _backView.backgroundColor = [UIColor redColor];
     } else {
         _backView.backgroundColor = RGBACOLOR(184.0, 150.0, 101.0, 0.8);
     }
-    // Configure the view for the selected state
 }
 
 + (CGFloat)cellHeight {

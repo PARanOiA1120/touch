@@ -25,10 +25,10 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
-    self.title = @"活动圈";
+    self.title = @"News Feed";
     self.editButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.editButton.frame = CGRectMake(0, 0, 50, 50);
-    [self.editButton setTitle:@"编辑" forState:UIControlStateNormal];
+    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
     [self.editButton setTitleColor:RGBACOLOR(169, 134, 75, 1) forState:UIControlStateNormal];
 //    [self.editButton addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
     self.editButton.hidden = YES;

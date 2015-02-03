@@ -74,15 +74,6 @@
 
 - (void)requestDataWithPage:(int)page
 {
-//    [[JCNewsFeedManager sharedManager] getNewsFeedsInBackgroundwithParameters:@{@"page":[NSNumber numberWithInt:page],@"count":@10,@"userId":[JCUser currentUser].recordID} WithBlock:^(NSArray *array, NSError *error) {
-//        if (array.count > 0) {
-//            self.dataSource = [array mutableCopy];
-//            self.heightArray = [NSMutableArray arrayWithCapacity:self.dataSource.count];
-//            [self calculateAndStoreCellHeight];
-//            self.isInit = YES;
-//        }
-//        [self doneReloadTableViewDataSource];
-//    }];
     [self.dataSource addObject:[[newsFeed alloc] initForTest:@"test" NT:1 ID:@"TestID"]];
     NSLog(@"Value of count2 = %lu",(unsigned long)self.dataSource.count);
     self.heightArray = [NSMutableArray arrayWithCapacity:self.dataSource.count];
@@ -139,32 +130,17 @@
     switch (eventType) {
         case 0:
         {
-            title = @"发表了图片";
+            title = @"created an event";
         }
             break;
         case 1:
         {
-            title = @"发表了状态";
+            title = @"posted a status";
         }
             break;
         case 2:
         {
-            title = @"发表了图片";
-        }
-            break;
-        case 3:
-        {
-            title = @"参加了活动";
-        }
-            break;
-        case 4:
-        {
-            title = @"分享了活动";
-        }
-            break;
-        case 5:
-        {
-            title = @"发布了活动";
+            title = @"joined the event";
         }
             break;
         default:

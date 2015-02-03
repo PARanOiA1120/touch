@@ -1,19 +1,19 @@
 //
-//  UIButton+JCButton.m
-//  jiechu
+//  UIButton+Button.m
+//  touch
 //
-//  Created by jianxd on 14/12/9.
-//  Copyright (c) 2014年 jiechu. All rights reserved.
+//  Created by Ariel Xin on 2/1/15.
+//  Copyright (c) 2015 cs48. All rights reserved.
 //
 
-#import "UIButton+JCButton.h"
+#import "UIButton+Button.h"
 #import "PFDefine.h"
 
 #define TYPE_IMAGE_TOP_MARGIN       30.0
 #define TYPE_TITLE_BOTTOM_MARGIN    10.0
 #define TYPE_TITLE_SIZE             14.0
 
-@implementation UIButton (JCButton)
+@implementation UIButton (Button)
 + (instancetype)eventTypeButtonWithFramg:(CGRect)frame normalImage:(UIImage *)nImage highlightImage:(UIImage *)hImage text:(NSString *)text {
     UIButton *button = [[UIButton alloc] initWithFrame:frame];
     CGFloat screenScale = [UIScreen mainScreen].scale;

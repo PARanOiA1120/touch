@@ -49,6 +49,6 @@ typedef NS_OPTIONS(NSInteger, NewsType) {
 
 + (PFObject *)getNewsFeedObject:(NSString *)newsId;
 
-- (PFObject *)AVObjectValue;
+- (PFObject *)PFObjectValue;
 
 @end
