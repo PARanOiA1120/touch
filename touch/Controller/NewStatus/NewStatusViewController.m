@@ -123,10 +123,10 @@
     
     newsFeed.content = _inputView.text;
     
-    [ProgressHUD show:nil];
+   /* [ProgressHUD show:nil];
     [[newsFeedManager sharedManager] createNewsFeed:newsFeed InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         [ProgressHUD dismiss];
-        if (succeeded) {
+        if (succeeded) {*/
             NSLog(@"create news feed success");
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter]postNotificationName:UIActivityCircleNeedRefreshDataNotification object:nil];
@@ -134,11 +134,14 @@
                     [[AppDelegate delegate] selectTab:0];
                 }];
             });
-        } else {
+      /*  }
+    else {
             [ProgressHUD show:@"create news feed failed"];
             NSLog(@"create news feed failed");
         }
-    }];
+    }];*/
+    NSLog(@"Reach");
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
 
 #pragma mark -- Table view data source
