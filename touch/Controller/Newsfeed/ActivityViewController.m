@@ -9,7 +9,8 @@
 #import "ActivityViewController.h"
 #import "ActivityListViewController.h"
 #import "PFDefine.h"
-@interface ActivityViewController () <UIGestureRecognizerDelegate>
+#import "NewStatusViewController.h"
+@interface ActivityViewController () <UIGestureRecognizerDelegate, ActivityDelegate>
 @property (strong, nonatomic) NSArray *childViewControllers;
 @property (strong, nonatomic) ActivityListViewController *activityList;
 @property (strong, nonatomic) UIButton *editButton;
@@ -48,7 +49,10 @@
 }
 
 
-
+-(void)didSend:(newsFeed *)nf
+{
+    [self.activityList testAddNewsFeed:nf];
+}
 
 /*
  #pragma mark - Navigation

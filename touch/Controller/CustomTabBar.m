@@ -191,6 +191,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     
     if (item.function == Function_type_state) {
         NewStatusViewController *newStatusVC = [[NewStatusViewController alloc] init];
+        newStatusVC.delegate = self.viewControllers[0];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newStatusVC];
         [self presentViewController:navController animated:YES completion:^{}];
         return;

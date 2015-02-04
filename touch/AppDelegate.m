@@ -90,7 +90,7 @@
     UIViewController *mineInfo = [[UIViewController alloc] init];
     UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
     
-    NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activityNav, squareNavi, chatNav, mineInfoNav, nil];
+    NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activity, squareNavi, chatNav, mineInfoNav, nil];
     
     self.tabBarController = [[CustomTabBar alloc] init];
     self.tabBarController.viewControllers = tabbarArray;
