@@ -132,7 +132,7 @@
     switch (eventType) {
         case 0:
         {
-            title = @"created an event";
+            title = @"created the event";
         }
             break;
         case 1:
@@ -177,8 +177,7 @@
     CGFloat height = 5.0;//cell 边框距离上边缘高度
     height = height + 5 + 40 + 5; //头像以及 title time 高度 间隙10
 
-    if (newsFeed.eventType == 3 || newsFeed.eventType == 4 || newsFeed.eventType == 5)
-    {
+    if (newsFeed.eventType == 0 || newsFeed.eventType == 2){
         //发表活动
         height = height + 75 + 10; //间距 10
     }
@@ -197,7 +196,6 @@
     if (like.count > 0) {
         height = height + 25 + 5;
     }
-    
     
     //评论
     NSArray *comment = [NSArray arrayWithArray:newsFeed.comments];
@@ -324,7 +322,7 @@
     [containerView addSubview:timeLabel];
     
     height = height + 40 + 5; // title time Label 高度
-     if (newsFeed.eventType == 3 || newsFeed.eventType == 4 || newsFeed.eventType == 5)
+     if (newsFeed.eventType == 0 || newsFeed.eventType == 2)
     {
         //发布活动
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary:newsFeed.eventDic];
@@ -472,7 +470,7 @@
     [likeBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -25, 0, 0)];
     [likeBtn setTitleColor:RGBACOLOR(146, 146, 146, 1) forState:UIControlStateNormal];
     [likeBtn.titleLabel setFont:[UIFont systemFontOfSize:13]];
-    [likeBtn setTitle:@"Interested" forState:UIControlStateNormal];
+    [likeBtn setTitle:@"Like" forState:UIControlStateNormal];
     likeBtn.tag = indexPath.row;
     [likeBtn addTarget:self action:@selector(likeAction:) forControlEvents:UIControlEventTouchUpInside];
     [containerView addSubview:likeBtn];

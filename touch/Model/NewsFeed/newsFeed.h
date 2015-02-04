@@ -20,10 +20,9 @@ FOUNDATION_EXPORT NSString * const NewsFeedLikeUsers;
 FOUNDATION_EXPORT NSString * const NewsFeedComments;
 
 typedef NS_OPTIONS(NSInteger, NewsType) {
-    NewsTypeOnlyText      = 0,
-    NewsTypeJoinEvent     = 1,
-    NewsTypeShareEvent    = 2,
-    NewsTypeCreatedEvent  = 3
+    NewsTypeOnlyText      = 1,
+    NewsTypeCreatedEvent  = 0,
+    NewsTypeJoinEvent     = 2
 };
 
 @interface newsFeed : NSObject
