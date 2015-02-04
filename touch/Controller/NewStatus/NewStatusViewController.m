@@ -16,6 +16,7 @@
 #import "Event.h"
 #import "CommonDefine.h"
 #import "SZTextView.h"
+
 @interface NewStatusViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIView *photoView;
@@ -115,15 +116,11 @@
 
 
 - (void)createNewsFeed:(UIButton *)button {
-    NSLog(@"Pressed");
     if ([_inputView.text isEqualToString:@""]) {
         return;
     }
-    newsFeed *newsFeed;/////////////
-    newsFeed.eventType = NewsTypeOnlyText;
-    
-    newsFeed.content = _inputView.text;
-    
+    newsFeed *nf = [[newsFeed alloc] initForTest:_inputView.text NT:1 ID:@"TestID" UserName:@"Me  "];/////////////
+    [self.delegate didSend:nf];
    /* [ProgressHUD show:nil];
     [[newsFeedManager sharedManager] createNewsFeed:newsFeed InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         [ProgressHUD dismiss];
@@ -142,7 +139,7 @@
         }
     }];
     }];*/
-    NSLog(@"Reach");
+    NSLog(@"Reach???????????????????");
     [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
 

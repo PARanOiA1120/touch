@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "newsFeed.h"
 
 @interface ActivityListViewController : UIViewController
-
+-(void)testAddNewsFeed:(newsFeed *)nf;
 @end

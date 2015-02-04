@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "newsFeed.h"
+@class NewStatusViewController;
+@protocol ActivityDelegate <NSObject>
+
+-(void)didSend:(newsFeed *)nf;
+
+@end
+
+
 
 @interface NewStatusViewController : UIViewController
+@property id<ActivityDelegate>delegate;
+
 - (id)initWithImages:(NSArray *)images;
 @end

@@ -18,13 +18,14 @@ NSString * const NewsFeedComments = @"comments";
 
 @implementation newsFeed
 
--(id)initForTest:(NSString *)s NT:(NewsType)i ID:(NSString *)nid
+-(id)initForTest:(NSString *)s NT:(NewsType)i ID:(NSString *)nid UserName:(NSString *)name
 {
     newsFeed *feed = [[newsFeed alloc] init];
     feed.content = s;
     feed.eventType = i;
     feed.newsId = nid;
     feed.creator = [[User alloc] init];
+    feed.creator.username = name;
     return feed;
 }
 
