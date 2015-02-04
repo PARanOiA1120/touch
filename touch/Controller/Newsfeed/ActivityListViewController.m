@@ -367,7 +367,7 @@
     [containerView addSubview:tagImageView];
     
     UILabel *tagLabel = [[UILabel alloc] initWithFrame:CGRectMake(45, height, containerWidth - 5 - 45, 20)];
-    tagLabel.text = [NSString stringWithFormat:@"%@",@"用户发状态时所在的位置"];
+    tagLabel.text = [NSString stringWithFormat:@"%@",@"▽ Location"];
     tagLabel.font = [UIFont systemFontOfSize:13];
     tagLabel.textColor = RGBACOLOR(136, 157, 181, 1);
     [containerView addSubview:tagLabel];
@@ -470,7 +470,7 @@
     [likeBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -25, 0, 0)];
     [likeBtn setTitleColor:RGBACOLOR(146, 146, 146, 1) forState:UIControlStateNormal];
     [likeBtn.titleLabel setFont:[UIFont systemFontOfSize:13]];
-    [likeBtn setTitle:@"点赞" forState:UIControlStateNormal];
+    [likeBtn setTitle:@"Interested" forState:UIControlStateNormal];
     likeBtn.tag = indexPath.row;
     [likeBtn addTarget:self action:@selector(likeAction:) forControlEvents:UIControlEventTouchUpInside];
     [containerView addSubview:likeBtn];
@@ -482,7 +482,7 @@
     [commentBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -25, 0, 0)];
     [commentBtn setTitleColor:RGBACOLOR(146, 146, 146, 1) forState:UIControlStateNormal];
     [commentBtn.titleLabel setFont:[UIFont systemFontOfSize:13]];
-    [commentBtn setTitle:@"评论" forState:UIControlStateNormal];
+    [commentBtn setTitle:@"Comment" forState:UIControlStateNormal];
     commentBtn.tag = indexPath.row;
     [commentBtn addTarget:self action:@selector(commentAction:) forControlEvents:UIControlEventTouchUpInside];
     [containerView addSubview:commentBtn];
