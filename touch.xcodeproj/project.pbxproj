@@ -16,6 +16,10 @@
 		566712251A75717100647D8E /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667121E1A75717100647D8E /* CustomItem.m */; };
 		566712261A75717100647D8E /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566712211A75717100647D8E /* DRNRealTimeBlurView.m */; };
 		566712271A75717100647D8E /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 566712231A75717100647D8E /* UIImage+BoxBlur.m */; };
+		7E40EA451A861A0E00A92E6A /* PersonalHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */; };
+		7E40EA461A861A0E00A92E6A /* PersonalHomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */; };
+		7E64D4A51A87018B002DD5F8 /* tempMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4A31A87018B002DD5F8 /* tempMineInfoViewController.m */; };
+		7E64D4A61A87018B002DD5F8 /* tempMineInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4A41A87018B002DD5F8 /* tempMineInfoViewController.xib */; };
 		B032820A1A74B5AC001BAA34 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B03282091A74B5AC001BAA34 /* Comment.m */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
@@ -152,6 +156,12 @@
 		566712211A75717100647D8E /* DRNRealTimeBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNRealTimeBlurView.m; sourceTree = "<group>"; };
 		566712221A75717100647D8E /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
 		566712231A75717100647D8E /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
+		7E40EA421A861A0E00A92E6A /* PersonalHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalHomepageViewController.h; path = Controller/MineInfo/PersonalHomepageViewController.h; sourceTree = "<group>"; };
+		7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalHomepageViewController.m; path = Controller/MineInfo/PersonalHomepageViewController.m; sourceTree = "<group>"; };
+		7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonalHomepageViewController.xib; path = Controller/MineInfo/PersonalHomepageViewController.xib; sourceTree = "<group>"; };
+		7E64D4A21A87018B002DD5F8 /* tempMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tempMineInfoViewController.h; path = Controller/MineInfo/tempMineInfoViewController.h; sourceTree = "<group>"; };
+		7E64D4A31A87018B002DD5F8 /* tempMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tempMineInfoViewController.m; path = Controller/MineInfo/tempMineInfoViewController.m; sourceTree = "<group>"; };
+		7E64D4A41A87018B002DD5F8 /* tempMineInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = tempMineInfoViewController.xib; path = Controller/MineInfo/tempMineInfoViewController.xib; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B03282081A74B5AC001BAA34 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		B03282091A74B5AC001BAA34 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
@@ -403,6 +413,19 @@
 			path = LiveBlur;
 			sourceTree = "<group>";
 		};
+		7E40EA1B1A84D24B00A92E6A /* MineInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7E40EA421A861A0E00A92E6A /* PersonalHomepageViewController.h */,
+				7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */,
+				7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */,
+				7E64D4A21A87018B002DD5F8 /* tempMineInfoViewController.h */,
+				7E64D4A31A87018B002DD5F8 /* tempMineInfoViewController.m */,
+				7E64D4A41A87018B002DD5F8 /* tempMineInfoViewController.xib */,
+			);
+			name = MineInfo;
+			sourceTree = "<group>";
+		};
 		90D82FEB2D6CA1ACF734558D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +538,7 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7E40EA1B1A84D24B00A92E6A /* MineInfo */,
 				B086863E1A7EC5240046CC9D /* NewEvent */,
 				B08686451A7EC5240046CC9D /* NewStatus */,
 				B0ACBD481A7DFAEF00CBA508 /* Entry */,
@@ -852,6 +876,7 @@
 				B04321A41A801DD800E46236 /* CampaignViewController.xib in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
 				B04321AB1A8020F700E46236 /* pop_activity@2x.png in Resources */,
+				7E64D4A61A87018B002DD5F8 /* tempMineInfoViewController.xib in Resources */,
 				B0E62A831A71E1160067A244 /* tab_activity_p@2x.png in Resources */,
 				B04321BF1A80210D00E46236 /* type_other_p@2x.png in Resources */,
 				B0E62A881A71E1160067A244 /* tab_user@2x.png in Resources */,
@@ -867,6 +892,7 @@
 				B0E62A781A71E10C0067A244 /* touch@2x.png in Resources */,
 				B0E62A6D1A71E0F70067A244 /* xiaolajiao@2x.png in Resources */,
 				B04321AD1A8020F700E46236 /* pop_photo@2x.png in Resources */,
+				7E40EA461A861A0E00A92E6A /* PersonalHomepageViewController.xib in Resources */,
 				B0ACBD651A7DFAF000CBA508 /* ActivityListViewController.xib in Resources */,
 				B04321AF1A8020F700E46236 /* pop_state@2x.png in Resources */,
 				B04321C01A80210D00E46236 /* type_other_p@3x.png in Resources */,
@@ -940,6 +966,7 @@
 				B0E62AB41A71E1370067A244 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B0ACBD5E1A7DFAF000CBA508 /* LoginViewController.m in Sources */,
+				7E40EA451A861A0E00A92E6A /* PersonalHomepageViewController.m in Sources */,
 				B032820A1A74B5AC001BAA34 /* Comment.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
 				B086864B1A7EC5240046CC9D /* ActivityTypeViewController.m in Sources */,
@@ -965,6 +992,7 @@
 				B0E62A4A1A71E0860067A244 /* ProgressHUD.m in Sources */,
 				566712261A75717100647D8E /* DRNRealTimeBlurView.m in Sources */,
 				B0ACBD601A7DFAF000CBA508 /* StepOneViewController.m in Sources */,
+				7E64D4A51A87018B002DD5F8 /* tempMineInfoViewController.m in Sources */,
 				B086864D1A7EC5240046CC9D /* CampaignViewController.m in Sources */,
 				566712161A7570E500647D8E /* PopCollectionViewCell.m in Sources */,
 				566712241A75717100647D8E /* CustomAnimationView.m in Sources */,
