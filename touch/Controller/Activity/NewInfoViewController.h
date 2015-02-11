@@ -1,5 +1,5 @@
 //
-//  TempMineInfoViewController2.h
+//  NewInfoViewController.h
 //  touch
 //
 //  Created by zhu on 2/10/15.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TempMineInfoViewController2 : UIViewController
-
+@interface NewInfoViewController : UIViewController
+- (void)editTableView:(BOOL)flag;
 @end
+
