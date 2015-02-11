@@ -13,6 +13,7 @@
 #import "NewStatusViewController.h"
 #import "CampaignViewController.h"
 #import "CustomItem.h"
+#import "PersonalHomepageViewController.h" //Mark for deletion
 
 typedef NS_ENUM(NSInteger, TabBarButtonTag)
 {
@@ -108,6 +109,8 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     [self setSelectedTag:button.tag];
 }
 
+//set up all the buttons with their icons, and
+//find the one that's being selected and replace its icon with a selected-version one
 - (void)setSelectedTag:(NSInteger)tag{
     for (int i = 0; i < self.buttons.count; i++) {
         UIButton *btn = self.buttons[i];
