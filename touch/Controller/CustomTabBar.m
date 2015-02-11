@@ -203,13 +203,6 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:campaignController];
         [self presentViewController:navController animated:YES completion:^{}];
     }
-    //Mark for deletion
-    else {
-        PersonalHomepageViewController *campaignController = [[PersonalHomepageViewController alloc] init];
-        //UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:campaignController];
-        [self presentViewController:campaignController animated:YES completion:^{}];
-    }
-    //Mark for deletion
 }
 
 

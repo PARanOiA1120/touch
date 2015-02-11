@@ -1,19 +1,19 @@
 //
-//  tempMineInfoViewController.m
+//  TempMineInfoViewController.m
 //  touch
 //
-//  Created by CharlesYJP on 2/7/15.
+//  Created by CharlesYJP on 2/10/15.
 //  Copyright (c) 2015 cs48. All rights reserved.
 //
 
-#import "tempMineInfoViewController.h"
+#import "TempMineInfoViewController.h"
 #import "PersonalHomepageViewController.h"
 
-@interface tempMineInfoViewController ()
+@interface TempMineInfoViewController ()
+
 @end
 
-@implementation tempMineInfoViewController
-@synthesize ButtonToPP;
+@implementation TempMineInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,18 +25,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)enterPersonalPage:(id)sender {
-    NSLog(@"Button Pressed");
+- (IBAction)toPersonalPage:(id)sender {
+    PersonalHomepageViewController *ppage = [[PersonalHomepageViewController alloc] init];
+    [self presentViewController:ppage animated:YES completion:^{
+    }];
 
 }
-
--(IBAction)gotoPersonalPage:(id)sender {
-    NSLog(@"Button Pressed");
-    //PersonalHomepageViewController *pp=[[PersonalHomepageViewController alloc] init];
-    //[self presentViewController:pp animated:YES completion:^{
-    //}];
-}
-
 
 /*
 #pragma mark - Navigation
