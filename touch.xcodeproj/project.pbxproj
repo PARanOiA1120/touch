@@ -20,6 +20,10 @@
 		7E40EA461A861A0E00A92E6A /* PersonalHomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */; };
 		7E64D4AC1A8B060C002DD5F8 /* TempMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4AA1A8B060C002DD5F8 /* TempMineInfoViewController.m */; };
 		7E64D4AD1A8B060C002DD5F8 /* TempMineInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4AB1A8B060C002DD5F8 /* TempMineInfoViewController.xib */; };
+		A95B5F021A8B1C4700A6C266 /* NewInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A95B5F001A8B1C4700A6C266 /* NewInfoViewController.m */; };
+		A95B5F031A8B1C4700A6C266 /* NewInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95B5F011A8B1C4700A6C266 /* NewInfoViewController.xib */; };
+		A95B5F081A8B222000A6C266 /* TempMineInfoViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A95B5F061A8B222000A6C266 /* TempMineInfoViewController2.m */; };
+		A95B5F091A8B222000A6C266 /* TempMineInfoViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95B5F071A8B222000A6C266 /* TempMineInfoViewController2.xib */; };
 		B032820A1A74B5AC001BAA34 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B03282091A74B5AC001BAA34 /* Comment.m */; };
 		B038E2101A62017D00E660ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E20F1A62017D00E660ED /* main.m */; };
 		B038E2131A62017D00E660ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B038E2121A62017D00E660ED /* AppDelegate.m */; };
@@ -163,6 +167,12 @@
 		7E64D4AA1A8B060C002DD5F8 /* TempMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempMineInfoViewController.m; sourceTree = "<group>"; };
 		7E64D4AB1A8B060C002DD5F8 /* TempMineInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempMineInfoViewController.xib; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A95B5EFF1A8B1C4700A6C266 /* NewInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewInfoViewController.h; path = Controller/NewInfoViewController.h; sourceTree = "<group>"; };
+		A95B5F001A8B1C4700A6C266 /* NewInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewInfoViewController.m; path = Controller/NewInfoViewController.m; sourceTree = "<group>"; };
+		A95B5F011A8B1C4700A6C266 /* NewInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewInfoViewController.xib; path = Controller/NewInfoViewController.xib; sourceTree = "<group>"; };
+		A95B5F051A8B222000A6C266 /* TempMineInfoViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempMineInfoViewController2.h; path = Controller/TempMineInfoViewController2.h; sourceTree = "<group>"; };
+		A95B5F061A8B222000A6C266 /* TempMineInfoViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TempMineInfoViewController2.m; path = Controller/TempMineInfoViewController2.m; sourceTree = "<group>"; };
+		A95B5F071A8B222000A6C266 /* TempMineInfoViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TempMineInfoViewController2.xib; path = Controller/TempMineInfoViewController2.xib; sourceTree = "<group>"; };
 		B03282081A74B5AC001BAA34 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		B03282091A74B5AC001BAA34 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		B038E20A1A62017D00E660ED /* touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -435,6 +445,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A95B5F041A8B1C5400A6C266 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				A95B5EFF1A8B1C4700A6C266 /* NewInfoViewController.h */,
+				A95B5F001A8B1C4700A6C266 /* NewInfoViewController.m */,
+				A95B5F011A8B1C4700A6C266 /* NewInfoViewController.xib */,
+				A95B5F051A8B222000A6C266 /* TempMineInfoViewController2.h */,
+				A95B5F061A8B222000A6C266 /* TempMineInfoViewController2.m */,
+				A95B5F071A8B222000A6C266 /* TempMineInfoViewController2.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		B03282071A74B589001BAA34 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +561,7 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A95B5F041A8B1C5400A6C266 /* Activity */,
 				7E40EA1B1A84D24B00A92E6A /* MineInfo */,
 				B086863E1A7EC5240046CC9D /* NewEvent */,
 				B08686451A7EC5240046CC9D /* NewStatus */,
@@ -865,9 +889,11 @@
 				B08686581A7EC8EF0046CC9D /* ActivityTypeCell.xib in Resources */,
 				B0E62A871A71E1160067A244 /* tab_square_p@2x.png in Resources */,
 				B04321B01A8020F700E46236 /* pop_video@2x.png in Resources */,
+				A95B5F091A8B222000A6C266 /* TempMineInfoViewController2.xib in Resources */,
 				B04321A21A8018D700E46236 /* btn_yellow@2x.png in Resources */,
 				B04321D41A80838B00E46236 /* partnerRecruiting@2x.png in Resources */,
 				B0E62A821A71E1160067A244 /* tab_activity@2x.png in Resources */,
+				A95B5F031A8B1C4700A6C266 /* NewInfoViewController.xib in Resources */,
 				B0E62A851A71E1160067A244 /* tab_message_p@2x.png in Resources */,
 				B0E62A861A71E1160067A244 /* tab_square@2x.png in Resources */,
 				7E64D4AD1A8B060C002DD5F8 /* TempMineInfoViewController.xib in Resources */,
@@ -962,6 +988,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95B5F081A8B222000A6C266 /* TempMineInfoViewController2.m in Sources */,
 				B08686551A7EC6250046CC9D /* ActivityTypeCell.m in Sources */,
 				B0E62AB41A71E1370067A244 /* InsetTextField.m in Sources */,
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
@@ -1001,6 +1028,7 @@
 				566712181A7570E500647D8E /* TopPopView.m in Sources */,
 				566712171A7570E500647D8E /* PopTableViewCell.m in Sources */,
 				B0ACBD621A7DFAF000CBA508 /* StepTwoViewController.m in Sources */,
+				A95B5F021A8B1C4700A6C266 /* NewInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
