@@ -9,8 +9,7 @@
 #import "NewInfoViewController.h"
 #import "AppDelegate.h"
 #import "CommonDefine.h"
-@interface NewInfoViewController ()
-<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface NewInfoViewController () <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) NSMutableArray *dataSource;
 @property (assign, nonatomic) CGFloat translationY;
@@ -27,21 +26,21 @@
     self.dataSource = [@[
                          @{
                              @"newInfo_type":@"0",//0代表普通的状态
-                             @"newInfo_title":@"bunji like my post",
-                             @"newInfo_content":@"It is so cold out there. I should wear some more clothes，take care my friends",
+                             @"newInfo_title":@"bob 赞了我的状态",
+                             @"newInfo_content":@"今天好冷呀，要多穿点衣服了，各位亲们也要注意保暖哦",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          
                          @{
                              @"newInfo_type":@"1",//1代表通知 谁关注了我，谁和我有30个共同好友
-                             @"newInfo_title":@"bunji follows me",
+                             @"newInfo_title":@"bob 关注了我",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          @{
                              @"newInfo_type":@"2",//2代表通知 谁关注了谁
-                             @"newInfo_title":@"benji follows bob",
+                             @"newInfo_title":@"bob 关注了tom",
                              @"head":@"newinfo_head.png",
                              @"otherHead":@"newinfo_head.png",
                              @"userName":@"bob"
@@ -49,29 +48,52 @@
                          
                          @{
                              @"newInfo_type":@"3",//3代表 谁点赞了我参加的活动
-                             @"newInfo_title":@"bunji likes my activity",
+                             @"newInfo_title":@"bob 赞了我参加的活动",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
                              @"activityInfo":@{
                                      @"activityPic":@[@"activity_pic.png"],
-                                     @"activityContent":@"[Christmas]Chrismas night party, everyone welcomed，DO NOT passby"
+                                     @"activityContent":@"[圣诞爬天梯]又到了这个激动人心的夜晚,欢迎大家来参加，走过路过别要错过了"
                                      
                                      }
                              },
                          
                          @{
                              @"newInfo_type":@"4",//4代表 谁点赞了我的照片
-                             @"newInfo_title":@"benji likes my photos",
+                             @"newInfo_title":@"bob 赞了我发的照片",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
                              @"activityInfo":@{
                                      @"activityPic":@[@"activity_pic.png",@"activity_pic.png",@"activity_pic.png",@"activity_pic.png"],
                                      }
-                             
+                             },
+                         @{
+                             @"newInfo_type":@"0",//0代表普通的状态
+                             @"newInfo_title":@"bob 赞了我的状态",
+                             @"newInfo_content":@"今天好冷呀，要多穿点衣服了，各位亲们也要注意保暖哦",
+                             @"head":@"newinfo_head.png",
+                             @"userName":@"bob"
+                             },
                          
+                         @{
+                             @"newInfo_type":@"1",//1代表通知 谁关注了我，谁和我有30个共同好友
+                             @"newInfo_title":@"bob 关注了我",
+                             @"head":@"newinfo_head.png",
+                             @"userName":@"bob"
                              }
-                         
                          ]mutableCopy];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[AppDelegate delegate] showTabBar];
+    self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 64 - 49);
+}
+
+- (void)editTableView:(BOOL)flag
+{
+    [self.myTableView setEditing:flag animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -260,7 +282,6 @@
     CGPoint translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview];
     if (translation.y < self.translationY) {
         self.parentViewController.navigationController.navigationBarHidden = YES;
-//        [[AppDelegate delegate] hideTabBar];
         self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
     }
     else
@@ -272,14 +293,7 @@
     self.translationY = translation.y;
     NSLog(@"%f",translation.y);
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end

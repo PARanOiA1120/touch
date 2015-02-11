@@ -15,8 +15,7 @@
 #import "User.h"
 #import "ActivityViewController.h"
 #import "TempMineInfoViewController.h"
-#import "TempMineInfoViewController2.h"
-
+#import "NewInfoViewController.h"
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
 @property (strong, nonatomic) ICETutorialController *introController;
@@ -83,10 +82,7 @@
     ActivityViewController *activity = [[ActivityViewController alloc] initWithNibName:@"ActivityViewController" bundle:nil];
     UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
     
-//    UIViewController *square = [[UIViewController alloc] init];
-//    UINavigationController *squareNavi = [[UINavigationController alloc] initWithRootViewController:square];
-    
-    TempMineInfoViewController2 *newInfo = [[TempMineInfoViewController2 alloc] initWithNibName:@"TempMineInfoViewController2" bundle:nil];
+    NewInfoViewController *newInfo = [[NewInfoViewController alloc] initWithNibName:@"NewInfoViewController" bundle:nil]; //Mark for deletion
     UINavigationController *newInfoNav=[[UINavigationController alloc] initWithRootViewController:newInfo];
     
     UIViewController *chatController = [[UIViewController alloc] init];
