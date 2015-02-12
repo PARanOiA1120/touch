@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalInfoViewController">
+            <connections>
+                <outlet property="headImageView" destination="Zbt-V6-DdV" id="86d-F9-UwZ"/>
+                <outlet property="myTableView" destination="2Hz-EV-BEw" id="ZEa-pX-j8T"/>
+                <outlet property="tableHeadView" destination="7eW-9P-vyu" id="Mul-81-L9B"/>
+                <outlet property="view" destination="BOP-Qa-yBA" id="C22-aF-yDS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="BOP-Qa-yBA">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-EV-BEw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Hz-EV-BEw" secondAttribute="bottom" id="JVC-uf-b5y"/>
+                <constraint firstAttribute="trailing" secondItem="2Hz-EV-BEw" secondAttribute="trailing" id="Z1x-HB-lfE"/>
+                <constraint firstItem="2Hz-EV-BEw" firstAttribute="top" secondItem="BOP-Qa-yBA" secondAttribute="top" id="aSS-Vz-bc2"/>
+                <constraint firstItem="2Hz-EV-BEw" firstAttribute="leading" secondItem="BOP-Qa-yBA" secondAttribute="leading" id="yex-iK-KRG"/>
+            </constraints>
+            <point key="canvasLocation" x="117" y="115"/>
+        </view>
+        <view contentMode="scaleToFill" id="7eW-9P-vyu">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zbt-V6-DdV">
+                    <rect key="frame" x="120" y="10" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="0QN-wm-1NR"/>
+                        <constraint firstAttribute="height" constant="80" id="Pej-bs-Pb5"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iua-vU-ZJe">
+                    <rect key="frame" x="0.0" y="99" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="VcM-l9-QtS"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Iua-vU-ZJe" secondAttribute="trailing" id="06W-Ap-FP0"/>
+                <constraint firstAttribute="centerY" secondItem="Zbt-V6-DdV" secondAttribute="centerY" id="94J-tG-MyE"/>
+                <constraint firstItem="Iua-vU-ZJe" firstAttribute="leading" secondItem="7eW-9P-vyu" secondAttribute="leading" id="LzJ-Fx-EO4"/>
+                <constraint firstAttribute="bottom" secondItem="Iua-vU-ZJe" secondAttribute="bottom" id="nsa-8Y-MB6"/>
+                <constraint firstAttribute="centerX" secondItem="Zbt-V6-DdV" secondAttribute="centerX" id="vBv-B7-057"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="117" y="487"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

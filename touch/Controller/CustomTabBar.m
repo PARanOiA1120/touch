@@ -205,5 +205,9 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     }
 }
 
+- (void)hideCustomTabBar
+{
+    self.slideBg.hidden = YES;
+}
 
 @end

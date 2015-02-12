@@ -133,7 +133,12 @@
     [self.tabBarController setSelectedTag:tab];
 }
 
-
+- (void)hideTabBar
+{
+    if (self.tabBarController) {
+        [self.tabBarController hideCustomTabBar];
+    }
+}
 
 
 @end

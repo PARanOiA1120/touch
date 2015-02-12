@@ -21,6 +21,7 @@
 - (void)createTabBar;
 - (void)showTabBar;
 - (void)selectTab:(NSInteger)tab;
+- (void)hideTabBar;
 
 
 @end
