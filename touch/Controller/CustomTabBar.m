@@ -14,6 +14,7 @@
 #import "CampaignViewController.h"
 #import "CustomItem.h"
 #import "PersonalHomepageViewController.h" //Mark for deletion
+#import "NewInfoViewController.h" //Mark for deletion2
 
 typedef NS_ENUM(NSInteger, TabBarButtonTag)
 {
@@ -203,6 +204,8 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:campaignController];
         [self presentViewController:navController animated:YES completion:^{}];
     }
+    
+
 }
 
 - (void)hideCustomTabBar

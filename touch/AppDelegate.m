@@ -15,7 +15,7 @@
 #import "User.h"
 #import "ActivityViewController.h"
 #import "TempMineInfoViewController.h"
-
+#import "NewInfoViewController.h"
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
 @property (strong, nonatomic) ICETutorialController *introController;
@@ -79,20 +79,19 @@
 
 
 -(void)createTabBar{
-    ActivityViewController *activity = [[ActivityViewController alloc] initWithNibName:@"ActivityViewController" bundle:nil];    UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
+    ActivityViewController *activity = [[ActivityViewController alloc] initWithNibName:@"ActivityViewController" bundle:nil];
+    UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
     
-    UIViewController *square = [[UIViewController alloc] init];
-    UINavigationController *squareNavi = [[UINavigationController alloc] initWithRootViewController:square];
+    NewInfoViewController *newInfo = [[NewInfoViewController alloc] initWithNibName:@"NewInfoViewController" bundle:nil]; //Mark for deletion
+    UINavigationController *newInfoNav=[[UINavigationController alloc] initWithRootViewController:newInfo];
     
     UIViewController *chatController = [[UIViewController alloc] init];
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
 
-    
-    //UIViewController *mineInfo = [[UIViewController alloc] initWithNibName:@"MineInfoViewController" bundle:nil];
     TempMineInfoViewController *mineInfo = [[TempMineInfoViewController alloc] initWithNibName:@"TempMineInfoViewController" bundle:nil]; //Mark for deletion
     UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
-    
-    NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activity, squareNavi, chatNav, mineInfoNav, nil];
+
+    NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activityNav, newInfoNav, chatNav, mineInfoNav, nil];
     
     self.tabBarController = [[CustomTabBar alloc] init];
     self.tabBarController.viewControllers = tabbarArray;
