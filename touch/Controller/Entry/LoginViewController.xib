@@ -178,6 +178,7 @@
                     </variation>
                     <connections>
                         <action selector="loginToPlatform1:" destination="-1" eventType="touchUpInside" id="d50-0I-WZc"/>
+                        <action selector="loginWithFacebook:" destination="-1" eventType="touchUpInside" id="099-Ej-Nvl"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqD-it-Fu6">
@@ -203,6 +204,7 @@
                     </variation>
                     <connections>
                         <action selector="loginToPlatform2:" destination="-1" eventType="touchUpInside" id="zgU-QA-SsN"/>
+                        <action selector="loginWithTwitter:" destination="-1" eventType="touchUpInside" id="DQ3-7z-e5T"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSN-SC-cQa">
@@ -228,6 +230,7 @@
                     </variation>
                     <connections>
                         <action selector="loginToPlatform3:" destination="-1" eventType="touchUpInside" id="HbZ-TC-YEg"/>
+                        <action selector="loginWithInstagram:" destination="-1" eventType="touchUpInside" id="Fak-AX-7LC"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-vZ-SPm">

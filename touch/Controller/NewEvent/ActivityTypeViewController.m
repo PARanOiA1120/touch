@@ -39,7 +39,7 @@ static NSString *reuseIdentifier = @"typeCell";
 }
 
 #pragma mark -- UICollectionViewDataSource
-
+//create collection view
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -50,10 +50,10 @@ static NSString *reuseIdentifier = @"typeCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ActivityTypeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.typeImageView.image = [UIImage imageNamed:@"type_dinner.png"];
-    cell.nameLabel.text = @"聚餐";
-    cell.normalImage = [UIImage imageNamed:@"type_dinner.png"];
-    cell.selectedImage = [UIImage imageNamed:@"type_dinner.png"];
+    cell.typeImageView.image = [UIImage imageNamed:@""];
+    cell.nameLabel.text = @"";
+    cell.normalImage = [UIImage imageNamed:@""];
+    cell.selectedImage = [UIImage imageNamed:@""];
     cell.selectedLabelColor = [UIColor redColor];
     return cell;
 }

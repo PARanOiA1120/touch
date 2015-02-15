@@ -21,8 +21,6 @@
 @property (weak, nonatomic) IBOutlet InsetTextField *major;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gender;
 @property (weak, nonatomic) IBOutlet InsetTextField *classlevel;
-
-
 @end
 
 @implementation StepTwoViewController
@@ -43,7 +41,6 @@
     [self.major resignFirstResponder];
     [self.gender resignFirstResponder];
     [self.classlevel resignFirstResponder];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,26 +48,22 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    NSLog(@"scrolled");
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
 }
 
+//click "next" to finish the signup process
 - (IBAction)nextStep:(id)sender {
     [ProgressHUD show:@"Signing Up" Interaction:NO];
     
     User *user=[User currentUser];
     user.major=self.major.text;
     user.classlevel=self.classlevel.text;
-    
     if (self.gender.selectedSegmentIndex == 0)
-    {
         user.gender=@"female";
-    }
-    else {
+    else
         user.gender=@"male";
-    }
     
+    //Signup in background, database record the username, password, major, gender, classlevel information
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self dismissViewControllerAnimated:NO completion:^{
@@ -87,20 +80,6 @@
             [errorAlertView show];
         }
     }];
-    
-    
-    
 }
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

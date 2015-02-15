@@ -18,13 +18,11 @@
 }
 */
 
-- (CGRect)textRectForBounds:(CGRect)bounds
-{
+- (CGRect)textRectForBounds:(CGRect)bounds{
     return CGRectInset(bounds, 15, 0);
 }
 
-- (CGRect)editingRectForBounds:(CGRect)bounds
-{
+- (CGRect)editingRectForBounds:(CGRect)bounds{
     return CGRectInset(bounds, 15, 0);
 }
 

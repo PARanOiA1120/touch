@@ -27,8 +27,7 @@ static NSString * const kTextAlignmentKey = @"textAlignment";
 
 @implementation SZTextView
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
+- (instancetype)initWithCoder:(NSCoder *)coder{
     self = [super initWithCoder:coder];
     if (self) {
         [self preparePlaceholder];
