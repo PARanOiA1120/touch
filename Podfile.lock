@@ -9,6 +9,9 @@ PODS:
   - PPiFlatSegmentedControl (1.4.0):
     - PPiAwesomeButton
   - RMDateSelectionViewController (1.4.2)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
   - SGNavigationProgress (1.2)
 
 DEPENDENCIES:
@@ -18,6 +21,7 @@ DEPENDENCIES:
   - pop (~> 1.0)
   - PPiFlatSegmentedControl
   - RMDateSelectionViewController
+  - SDWebImage (~> 3.6)
   - SGNavigationProgress
 
 SPEC CHECKSUMS:
@@ -29,6 +33,7 @@ SPEC CHECKSUMS:
   PPiAwesomeButton: 9c57f5b72e3a36eaa4f5b811fbdb90913e5cdb21
   PPiFlatSegmentedControl: 50e7a033ea2084661a77398ac6e721f852444c18
   RMDateSelectionViewController: 381a72a39834643c3a7c0fd9857272070c402f58
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   SGNavigationProgress: 6c38006ca3c652618411c67d493b263343d5aece
 
 COCOAPODS: 0.35.0

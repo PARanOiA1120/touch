@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlackCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HCH-Bq-VcI" customClass="BlackCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HCH-Bq-VcI" id="eTs-r7-DXI">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hr-xV-oym">
+                        <rect key="frame" x="5" y="7" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="eiG-jm-0aS"/>
+                            <constraint firstAttribute="height" constant="50" id="q62-qj-fl2"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJw-Iq-Vfp">
+                        <rect key="frame" x="70" y="12" width="150" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="7OL-up-tqW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NV-Fn-y5e">
+                        <rect key="frame" x="260" y="19" width="50" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="HAY-a3-c4n"/>
+                            <constraint firstAttribute="width" constant="50" id="Q0g-ht-Rkn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0NV-Fn-y5e" secondAttribute="trailing" constant="10" id="0aU-Pc-5Id"/>
+                    <constraint firstItem="0NV-Fn-y5e" firstAttribute="top" secondItem="eTs-r7-DXI" secondAttribute="top" constant="19" id="2C5-op-slM"/>
+                    <constraint firstItem="0Hr-xV-oym" firstAttribute="top" secondItem="eTs-r7-DXI" secondAttribute="top" constant="7" id="HOc-jB-Ts3"/>
+                    <constraint firstItem="0Hr-xV-oym" firstAttribute="leading" secondItem="eTs-r7-DXI" secondAttribute="leading" constant="5" id="JLI-TX-TfE"/>
+                    <constraint firstAttribute="bottom" secondItem="IJw-Iq-Vfp" secondAttribute="bottom" constant="12" id="KTS-0U-pMd"/>
+                    <constraint firstItem="IJw-Iq-Vfp" firstAttribute="leading" secondItem="eTs-r7-DXI" secondAttribute="leading" constant="70" id="T1y-4h-Wsk"/>
+                    <constraint firstItem="IJw-Iq-Vfp" firstAttribute="top" secondItem="eTs-r7-DXI" secondAttribute="top" constant="12" id="rsW-fc-OJ7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="functionButton" destination="0NV-Fn-y5e" id="lgS-pU-8Yo"/>
+                <outlet property="headButton" destination="0Hr-xV-oym" id="bhp-IS-J6j"/>
+                <outlet property="nameLabel" destination="IJw-Iq-Vfp" id="UcT-cL-UJW"/>
+            </connections>
+            <point key="canvasLocation" x="226" y="254.5"/>
+        </tableViewCell>
+    </objects>
+</document>
