@@ -30,23 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (IS_IPHONE_6P)
-    {
-        //[IHKeyboardAvoiding setPadding:125];
-    }
-    if (IS_IPHONE_6)
-    {
-        //[IHKeyboardAvoiding setPadding:85];
-    }
-    if (IS_IPHONE_5)
-    {
+    if (IS_IPHONE_5){
         [IHKeyboardAvoiding setKeyboardAvoidingMode:KeyboardAvoidingModeMinimumDelayed];
         [IHKeyboardAvoiding setAvoidingView:self.avoidingView withTriggerView:self.userNameField];
         [IHKeyboardAvoiding setAvoidingView:self.avoidingView withTriggerView:self.passwordField];
         [IHKeyboardAvoiding setPadding:10];
     }
-    if (IS_IPHONE_4_OR_LESS)
-    {
+    if (IS_IPHONE_4_OR_LESS){
         [IHKeyboardAvoiding setKeyboardAvoidingMode:KeyboardAvoidingModeMinimumDelayed];
         [IHKeyboardAvoiding setAvoidingView:self.avoidingView withTriggerView:self.userNameField];
         [IHKeyboardAvoiding setAvoidingView:self.avoidingView withTriggerView:self.passwordField];
@@ -59,7 +49,7 @@
     self.backButton.layer.masksToBounds = YES;
 }
 
-
+//back to the IntroViewController if "back" button tapped
 - (IBAction)back:(id)sender {
     NSLog(@"back clicked");
     [self.userNameField resignFirstResponder];
@@ -68,17 +58,17 @@
 }
 
 
-
+//We haven't implemented the following four methods
 - (IBAction)forgotPassword:(id)sender {
 }
 
-- (IBAction)loginToPlatform1:(id)sender {
+- (IBAction)loginWithFacebook:(id)sender {
 }
 
-- (IBAction)loginToPlatform2:(id)sender {
+- (IBAction)loginWithTwitter:(id)sender {
 }
 
-- (IBAction)loginToPlatform3:(id)sender {
+- (IBAction)loginWithInstagram:(id)sender {
 }
 
 
@@ -116,7 +106,6 @@
  */
 
 - (void)configView {
-
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
@@ -139,12 +128,14 @@
 
 #pragma model
 - (IBAction)login:(id)sender {
-    if(self.userNameField.text.length<3){
+    //If username is less then 3 chars, pop an alert view
+    if(!self.userNameField.text || (self.userNameField.text.length<3)){
         [ProgressHUD showError:@"Please enter username"];
         [self.userNameField becomeFirstResponder];
         return;
     }
-    if (self.passwordField.text.length < 6)
+    //If password is less then 6 chars, pop an alert view
+    if (!self.passwordField.text || (self.passwordField.text.length < 6))
     {
         [ProgressHUD showError:@"Please enter password"];
         [self.passwordField becomeFirstResponder];
@@ -153,9 +144,9 @@
     [ProgressHUD show:@"Logging in now" Interaction:NO];
     
     User *user = [User currentUser];
+    //check if password is correct in database
     [user logInWithUsernameInBackground:self.userNameField.text password:self.passwordField.text block:^(BOOL succeeded, NSError *error){
-        if (succeeded)
-        {
+        if (succeeded){
             [ProgressHUD showSuccess:@"Login succeeded"];
             [self closeKeyboard];
             AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -165,16 +156,12 @@
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
-            
-            
         }
     }];
-
 }
 
-
-
-
+//tap anywhere to hide the keyboard
+//note: there is no keyboard pops up when testing using the simulator
 - (void)closeKeyboard {
     [self.userNameField resignFirstResponder];
     [self.passwordField resignFirstResponder];

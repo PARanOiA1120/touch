@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 cs48. All rights reserved.
 //
 
+//This file is used to define some frequently used parameters
+
 #ifndef touch_CommonDefine_h
 #define touch_CommonDefine_h
 

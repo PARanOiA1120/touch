@@ -16,12 +16,19 @@
 
 + (AppDelegate *)delegate;
 
+//go to the introduction/guding pages
 - (void)goToIntro;
+//go to loginViewController when the login button is tapped
 - (void)goToLogin;
+//go to the main page after user logged in
 - (void)createTabBar;
-- (void)showTabBar;
+//navigates user among news fees, notification center, chatting and personal homepage
 - (void)selectTab:(NSInteger)tab;
+//show tab bar
+- (void)showTabBar;
+//hide tab bar
 - (void)hideTabBar;
+
 
 
 @end
