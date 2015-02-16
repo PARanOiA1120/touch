@@ -7,11 +7,10 @@
 //
 
 #import "PersonalInfoViewController.h"
-//#import "JCUser.h"
+#import "User.h"
 #import "PersonInfoCell.h"
 #import "ActionSheetDatePicker.h"
 #import "IHKeyboardAvoiding.h"
-#import "VPImageCropperViewController.h"
 #import "ProgressHUD.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -24,7 +23,7 @@
 
 #define PersonalInfoTitle @[@[@"昵称",@"性别",@"生日"],@[@"职业",@"公司",@"学校",@"邮箱"]]
 #define PersonalInfoKey @[@[@"name",@"sex",@"birthday"],@[@"job",@"workplace",@"school",@"email"]]
-@interface PersonalInfoViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UITextFieldDelegate,VPImageCropperDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
+@interface PersonalInfoViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) IBOutlet UIView *tableHeadView;
 
@@ -472,12 +471,6 @@
         UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
         portraitImg = [self imageByScalingToMaxSize:portraitImg];
         // present the cropper view controller
-        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) limitScaleRatio:3.0];
-        imgCropperVC.delegate = self;
-        imgCropperVC.tag = 0;
-        [self presentViewController:imgCropperVC animated:YES completion:^{
-            // TO DO
-        }];
     }];
 }
 
@@ -486,74 +479,7 @@
     }];
 }
 
-#pragma mark VPImageCropperDelegate
-- (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
-    if (cropperViewController.tag == 0)
-    {
-        //this is large image
-        self.selectedImage = editedImage;
-        [cropperViewController dismissViewControllerAnimated:YES completion:^{
-            VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:editedImage cropFrame:CGRectMake(0, (SCREEN_HEIGHT - SCREEN_WIDTH) / 2, SCREEN_WIDTH, SCREEN_WIDTH) limitScaleRatio:3.0];
-            imgCropperVC.tag = 1;
-            imgCropperVC.delegate = self;
-            [self presentViewController:imgCropperVC animated:YES completion:^{
-                // TO DO
-            }];
-        }];
-    }
-    if (cropperViewController.tag == 1) {
-        self.squareImage = editedImage;
-        
-        self.isNewImage = YES;
-        //NSLog(@"finished");
-        [cropperViewController dismissViewControllerAnimated:YES completion:^{
-            self.headImageView.image = editedImage;
-        }];
-    }
-}
 
-
-- (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController {
-    if (cropperViewController.tag == 1)
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意" message:@"您的头像还没设置完成，继续完成？" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", @"取消",nil];
-        [alert show];
-    }
-    [cropperViewController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
-
-#pragma mark alertview delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSLog(@"button index is %ld",(long)buttonIndex);
-    if (buttonIndex == 0)
-    {
-        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:self.selectedImage cropFrame:CGRectMake(0, (self.view.frame.size.height - self.view.frame.size.width) / 2, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
-        imgCropperVC.tag = 1;
-        imgCropperVC.delegate = self;
-        [self presentViewController:imgCropperVC animated:YES completion:^{
-            // TO DO
-        }];
-    }
-    else
-    {
-        self.isNewImage = NO;
-    }
-}
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
 

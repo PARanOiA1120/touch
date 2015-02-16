@@ -10,7 +10,6 @@
 #import "PersonalHomepageViewController.h"
 #import "DRNRealTimeBlurView.h"
 #import "User.h"
-#import "UserListViewController.h"
 #import "PersonalInfoViewController.h"
 #import "ProgressHUD.h"
 #import "AppDelegate.h"
