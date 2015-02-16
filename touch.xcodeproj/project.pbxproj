@@ -12,10 +12,6 @@
 		566712161A7570E500647D8E /* PopCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667120D1A7570E500647D8E /* PopCollectionViewCell.m */; };
 		566712171A7570E500647D8E /* PopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667120F1A7570E500647D8E /* PopTableViewCell.m */; };
 		566712181A7570E500647D8E /* TopPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566712111A7570E500647D8E /* TopPopView.m */; };
-		566712241A75717100647D8E /* CustomAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667121C1A75717100647D8E /* CustomAnimationView.m */; };
-		566712251A75717100647D8E /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667121E1A75717100647D8E /* CustomItem.m */; };
-		566712261A75717100647D8E /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566712211A75717100647D8E /* DRNRealTimeBlurView.m */; };
-		566712271A75717100647D8E /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 566712231A75717100647D8E /* UIImage+BoxBlur.m */; };
 		7E40EA451A861A0E00A92E6A /* PersonalHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */; };
 		7E40EA461A861A0E00A92E6A /* PersonalHomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */; };
 		7E64D4B61A8B172E002DD5F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4B41A8B172E002DD5F8 /* PersonalInfoViewController.m */; };
@@ -73,6 +69,10 @@
 		B08686511A7EC5240046CC9D /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B086864A1A7EC5240046CC9D /* SZTextView.m */; };
 		B08686551A7EC6250046CC9D /* ActivityTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B08686531A7EC6250046CC9D /* ActivityTypeCell.m */; };
 		B08686581A7EC8EF0046CC9D /* ActivityTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08686571A7EC8EF0046CC9D /* ActivityTypeCell.xib */; };
+		B099B5631A91D639005B6D28 /* CustomAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B099B55B1A91D639005B6D28 /* CustomAnimationView.m */; };
+		B099B5641A91D639005B6D28 /* CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B099B55D1A91D639005B6D28 /* CustomItem.m */; };
+		B099B5651A91D639005B6D28 /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B099B5601A91D639005B6D28 /* DRNRealTimeBlurView.m */; };
+		B099B5661A91D639005B6D28 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = B099B5621A91D639005B6D28 /* UIImage+BoxBlur.m */; };
 		B0ACBD5D1A7DFAF000CBA508 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD4A1A7DFAEF00CBA508 /* IntroViewController.m */; };
 		B0ACBD5E1A7DFAF000CBA508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACBD4C1A7DFAEF00CBA508 /* LoginViewController.m */; };
 		B0ACBD5F1A7DFAF000CBA508 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACBD4D1A7DFAEF00CBA508 /* LoginViewController.xib */; };
@@ -161,14 +161,6 @@
 		5667120F1A7570E500647D8E /* PopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableViewCell.m; sourceTree = "<group>"; };
 		566712101A7570E500647D8E /* TopPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPopView.h; sourceTree = "<group>"; };
 		566712111A7570E500647D8E /* TopPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPopView.m; sourceTree = "<group>"; };
-		5667121B1A75717100647D8E /* CustomAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationView.h; sourceTree = "<group>"; };
-		5667121C1A75717100647D8E /* CustomAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationView.m; sourceTree = "<group>"; };
-		5667121D1A75717100647D8E /* CustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItem.h; sourceTree = "<group>"; };
-		5667121E1A75717100647D8E /* CustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItem.m; sourceTree = "<group>"; };
-		566712201A75717100647D8E /* DRNRealTimeBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNRealTimeBlurView.h; sourceTree = "<group>"; };
-		566712211A75717100647D8E /* DRNRealTimeBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNRealTimeBlurView.m; sourceTree = "<group>"; };
-		566712221A75717100647D8E /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
-		566712231A75717100647D8E /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		7E40EA421A861A0E00A92E6A /* PersonalHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalHomepageViewController.h; path = Controller/MineInfo/PersonalHomepageViewController.h; sourceTree = "<group>"; };
 		7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalHomepageViewController.m; path = Controller/MineInfo/PersonalHomepageViewController.m; sourceTree = "<group>"; };
 		7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonalHomepageViewController.xib; path = Controller/MineInfo/PersonalHomepageViewController.xib; sourceTree = "<group>"; };
@@ -243,6 +235,14 @@
 		B08686521A7EC6250046CC9D /* ActivityTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTypeCell.h; sourceTree = "<group>"; };
 		B08686531A7EC6250046CC9D /* ActivityTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTypeCell.m; sourceTree = "<group>"; };
 		B08686571A7EC8EF0046CC9D /* ActivityTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTypeCell.xib; sourceTree = "<group>"; };
+		B099B55A1A91D639005B6D28 /* CustomAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationView.h; sourceTree = "<group>"; };
+		B099B55B1A91D639005B6D28 /* CustomAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationView.m; sourceTree = "<group>"; };
+		B099B55C1A91D639005B6D28 /* CustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItem.h; sourceTree = "<group>"; };
+		B099B55D1A91D639005B6D28 /* CustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItem.m; sourceTree = "<group>"; };
+		B099B55F1A91D639005B6D28 /* DRNRealTimeBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNRealTimeBlurView.h; sourceTree = "<group>"; };
+		B099B5601A91D639005B6D28 /* DRNRealTimeBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNRealTimeBlurView.m; sourceTree = "<group>"; };
+		B099B5611A91D639005B6D28 /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		B099B5621A91D639005B6D28 /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		B0ACBD491A7DFAEF00CBA508 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		B0ACBD4A1A7DFAEF00CBA508 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		B0ACBD4B1A7DFAEF00CBA508 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -417,29 +417,6 @@
 				566712111A7570E500647D8E /* TopPopView.m */,
 			);
 			path = TopPopView;
-			sourceTree = "<group>";
-		};
-		5667121A1A75717100647D8E /* CustomAnimationView */ = {
-			isa = PBXGroup;
-			children = (
-				5667121B1A75717100647D8E /* CustomAnimationView.h */,
-				5667121C1A75717100647D8E /* CustomAnimationView.m */,
-				5667121D1A75717100647D8E /* CustomItem.h */,
-				5667121E1A75717100647D8E /* CustomItem.m */,
-				5667121F1A75717100647D8E /* LiveBlur */,
-			);
-			path = CustomAnimationView;
-			sourceTree = "<group>";
-		};
-		5667121F1A75717100647D8E /* LiveBlur */ = {
-			isa = PBXGroup;
-			children = (
-				566712201A75717100647D8E /* DRNRealTimeBlurView.h */,
-				566712211A75717100647D8E /* DRNRealTimeBlurView.m */,
-				566712221A75717100647D8E /* UIImage+BoxBlur.h */,
-				566712231A75717100647D8E /* UIImage+BoxBlur.m */,
-			);
-			path = LiveBlur;
 			sourceTree = "<group>";
 		};
 		7E40EA1B1A84D24B00A92E6A /* MineInfo */ = {
@@ -672,7 +649,7 @@
 		B074B7461A68DE0000EF304E /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				5667121A1A75717100647D8E /* CustomAnimationView */,
+				B099B5591A91D639005B6D28 /* CustomAnimationView */,
 				B0E62AC61A71E20C0067A244 /* VBFPopFlatButtonClasses */,
 				B0E629E31A71E0860067A244 /* ProgressHUD.bundle */,
 				B0E629E41A71E0860067A244 /* ProgressHUD.h */,
@@ -710,6 +687,30 @@
 			);
 			name = NewStatus;
 			path = Controller/NewStatus;
+			sourceTree = "<group>";
+		};
+		B099B5591A91D639005B6D28 /* CustomAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				B099B55A1A91D639005B6D28 /* CustomAnimationView.h */,
+				B099B55B1A91D639005B6D28 /* CustomAnimationView.m */,
+				B099B55C1A91D639005B6D28 /* CustomItem.h */,
+				B099B55D1A91D639005B6D28 /* CustomItem.m */,
+				B099B55E1A91D639005B6D28 /* LiveBlur */,
+			);
+			name = CustomAnimationView;
+			path = touch/Util/CustomAnimationView;
+			sourceTree = "<group>";
+		};
+		B099B55E1A91D639005B6D28 /* LiveBlur */ = {
+			isa = PBXGroup;
+			children = (
+				B099B55F1A91D639005B6D28 /* DRNRealTimeBlurView.h */,
+				B099B5601A91D639005B6D28 /* DRNRealTimeBlurView.m */,
+				B099B5611A91D639005B6D28 /* UIImage+BoxBlur.h */,
+				B099B5621A91D639005B6D28 /* UIImage+BoxBlur.m */,
+			);
+			path = LiveBlur;
 			sourceTree = "<group>";
 		};
 		B0ACBD481A7DFAEF00CBA508 /* Entry */ = {
@@ -1042,21 +1043,22 @@
 				B038E2131A62017D00E660ED /* AppDelegate.m in Sources */,
 				B0ACBD5E1A7DFAF000CBA508 /* LoginViewController.m in Sources */,
 				7E40EA451A861A0E00A92E6A /* PersonalHomepageViewController.m in Sources */,
+				B099B5631A91D639005B6D28 /* CustomAnimationView.m in Sources */,
 				7E64D4F81A9017CE002DD5F8 /* TempMineInfoViewController.m in Sources */,
 				B032820A1A74B5AC001BAA34 /* Comment.m in Sources */,
+				B099B5661A91D639005B6D28 /* UIImage+BoxBlur.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
 				B086864B1A7EC5240046CC9D /* ActivityTypeViewController.m in Sources */,
 				B0E62A9C1A71E1270067A244 /* EventManager.m in Sources */,
 				B0ACBD791A7E1BEE00CBA508 /* UIButton+Button.m in Sources */,
 				B0E62AA01A71E1270067A244 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
+				B099B5641A91D639005B6D28 /* CustomItem.m in Sources */,
 				B0E62A9D1A71E1270067A244 /* Image.m in Sources */,
 				B08686511A7EC5240046CC9D /* SZTextView.m in Sources */,
 				566712141A7570E500647D8E /* CustomActionSheet.m in Sources */,
 				B0ACBD5D1A7DFAF000CBA508 /* IntroViewController.m in Sources */,
 				B0ACBD681A7DFAF000CBA508 /* UserHeadImageView.m in Sources */,
-				566712251A75717100647D8E /* CustomItem.m in Sources */,
-				566712271A75717100647D8E /* UIImage+BoxBlur.m in Sources */,
 				B0E62A9B1A71E1270067A244 /* Event.m in Sources */,
 				B086864F1A7EC5240046CC9D /* NewStatusViewController.m in Sources */,
 				B0E62A9F1A71E1270067A244 /* newsFeedManager.m in Sources */,
@@ -1066,11 +1068,10 @@
 				B0ACBD661A7DFAF000CBA508 /* ActivityViewController.m in Sources */,
 				B0E62ACF1A71E20C0067A244 /* VBFPopFlatButton.m in Sources */,
 				B0E62A4A1A71E0860067A244 /* ProgressHUD.m in Sources */,
-				566712261A75717100647D8E /* DRNRealTimeBlurView.m in Sources */,
 				B0ACBD601A7DFAF000CBA508 /* StepOneViewController.m in Sources */,
+				B099B5651A91D639005B6D28 /* DRNRealTimeBlurView.m in Sources */,
 				B086864D1A7EC5240046CC9D /* CampaignViewController.m in Sources */,
 				566712161A7570E500647D8E /* PopCollectionViewCell.m in Sources */,
-				566712241A75717100647D8E /* CustomAnimationView.m in Sources */,
 				B0ACBD641A7DFAF000CBA508 /* ActivityListViewController.m in Sources */,
 				7E64D4B61A8B172E002DD5F8 /* PersonalInfoViewController.m in Sources */,
 				566712181A7570E500647D8E /* TopPopView.m in Sources */,
