@@ -18,13 +18,10 @@
 		566712271A75717100647D8E /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 566712231A75717100647D8E /* UIImage+BoxBlur.m */; };
 		7E40EA451A861A0E00A92E6A /* PersonalHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */; };
 		7E40EA461A861A0E00A92E6A /* PersonalHomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */; };
-		7E64D4B11A8B0F58002DD5F8 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4AF1A8B0F58002DD5F8 /* UserListViewController.m */; };
-		7E64D4B21A8B0F58002DD5F8 /* UserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4B01A8B0F58002DD5F8 /* UserListViewController.xib */; };
 		7E64D4B61A8B172E002DD5F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4B41A8B172E002DD5F8 /* PersonalInfoViewController.m */; };
 		7E64D4B71A8B172E002DD5F8 /* PersonalInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4B51A8B172E002DD5F8 /* PersonalInfoViewController.xib */; };
 		7E64D4F01A8D4AF7002DD5F8 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4EE1A8D4AF7002DD5F8 /* PersonInfoCell.m */; };
 		7E64D4F11A8D4AF7002DD5F8 /* PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4EF1A8D4AF7002DD5F8 /* PersonInfoCell.xib */; };
-		7E64D4F41A8D4BA1002DD5F8 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4F31A8D4BA1002DD5F8 /* VPImageCropperViewController.m */; };
 		7E64D4F81A9017CE002DD5F8 /* TempMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4F61A9017CE002DD5F8 /* TempMineInfoViewController.m */; };
 		7E64D4F91A9017CE002DD5F8 /* TempMineInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4F71A9017CE002DD5F8 /* TempMineInfoViewController.xib */; };
 		B029F1A31A8BF3D100E60771 /* NewInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029F1A11A8BF3D100E60771 /* NewInfoViewController.m */; };
@@ -175,17 +172,12 @@
 		7E40EA421A861A0E00A92E6A /* PersonalHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalHomepageViewController.h; path = Controller/MineInfo/PersonalHomepageViewController.h; sourceTree = "<group>"; };
 		7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalHomepageViewController.m; path = Controller/MineInfo/PersonalHomepageViewController.m; sourceTree = "<group>"; };
 		7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonalHomepageViewController.xib; path = Controller/MineInfo/PersonalHomepageViewController.xib; sourceTree = "<group>"; };
-		7E64D4AE1A8B0F58002DD5F8 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserListViewController.h; path = Controller/MineInfo/UserListViewController.h; sourceTree = "<group>"; };
-		7E64D4AF1A8B0F58002DD5F8 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserListViewController.m; path = Controller/MineInfo/UserListViewController.m; sourceTree = "<group>"; };
-		7E64D4B01A8B0F58002DD5F8 /* UserListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserListViewController.xib; path = Controller/MineInfo/UserListViewController.xib; sourceTree = "<group>"; };
 		7E64D4B31A8B172E002DD5F8 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalInfoViewController.h; path = Controller/MineInfo/PersonalInfoViewController.h; sourceTree = "<group>"; };
 		7E64D4B41A8B172E002DD5F8 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalInfoViewController.m; path = Controller/MineInfo/PersonalInfoViewController.m; sourceTree = "<group>"; };
 		7E64D4B51A8B172E002DD5F8 /* PersonalInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonalInfoViewController.xib; path = Controller/MineInfo/PersonalInfoViewController.xib; sourceTree = "<group>"; };
 		7E64D4ED1A8D4AF7002DD5F8 /* PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonInfoCell.h; path = Controller/MineInfo/PersonInfoCell.h; sourceTree = "<group>"; };
 		7E64D4EE1A8D4AF7002DD5F8 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonInfoCell.m; path = Controller/MineInfo/PersonInfoCell.m; sourceTree = "<group>"; };
 		7E64D4EF1A8D4AF7002DD5F8 /* PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonInfoCell.xib; path = Controller/MineInfo/PersonInfoCell.xib; sourceTree = "<group>"; };
-		7E64D4F21A8D4BA1002DD5F8 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPImageCropperViewController.h; path = touch/Util/VPImageCropperViewController.h; sourceTree = "<group>"; };
-		7E64D4F31A8D4BA1002DD5F8 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPImageCropperViewController.m; path = touch/Util/VPImageCropperViewController.m; sourceTree = "<group>"; };
 		7E64D4F51A9017CE002DD5F8 /* TempMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempMineInfoViewController.h; path = Controller/MineInfo/TempMineInfoViewController.h; sourceTree = "<group>"; };
 		7E64D4F61A9017CE002DD5F8 /* TempMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TempMineInfoViewController.m; path = Controller/MineInfo/TempMineInfoViewController.m; sourceTree = "<group>"; };
 		7E64D4F71A9017CE002DD5F8 /* TempMineInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TempMineInfoViewController.xib; path = Controller/MineInfo/TempMineInfoViewController.xib; sourceTree = "<group>"; };
@@ -459,9 +451,6 @@
 				7E40EA421A861A0E00A92E6A /* PersonalHomepageViewController.h */,
 				7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */,
 				7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */,
-				7E64D4AE1A8B0F58002DD5F8 /* UserListViewController.h */,
-				7E64D4AF1A8B0F58002DD5F8 /* UserListViewController.m */,
-				7E64D4B01A8B0F58002DD5F8 /* UserListViewController.xib */,
 				7E64D4B31A8B172E002DD5F8 /* PersonalInfoViewController.h */,
 				7E64D4B41A8B172E002DD5F8 /* PersonalInfoViewController.m */,
 				7E64D4B51A8B172E002DD5F8 /* PersonalInfoViewController.xib */,
@@ -688,8 +677,6 @@
 				B0E629E31A71E0860067A244 /* ProgressHUD.bundle */,
 				B0E629E41A71E0860067A244 /* ProgressHUD.h */,
 				B0E629E51A71E0860067A244 /* ProgressHUD.m */,
-				7E64D4F21A8D4BA1002DD5F8 /* VPImageCropperViewController.h */,
-				7E64D4F31A8D4BA1002DD5F8 /* VPImageCropperViewController.m */,
 			);
 			name = Util;
 			path = ..;
@@ -987,7 +974,6 @@
 				B04321CB1A807B4D00E46236 /* discloser@2x.png in Resources */,
 				B04321D21A80838B00E46236 /* infoSession@2x.png in Resources */,
 				B086864C1A7EC5240046CC9D /* ActivityTypeViewController.xib in Resources */,
-				7E64D4B21A8B0F58002DD5F8 /* UserListViewController.xib in Resources */,
 				B038E21E1A62017D00E660ED /* LaunchScreen.xib in Resources */,
 				B05A91241A915F2A00A4F536 /* personal_icon_head_selected@2x.png in Resources */,
 				B04321D31A80838B00E46236 /* other@2x.png in Resources */,
@@ -1073,7 +1059,6 @@
 				566712271A75717100647D8E /* UIImage+BoxBlur.m in Sources */,
 				B0E62A9B1A71E1270067A244 /* Event.m in Sources */,
 				B086864F1A7EC5240046CC9D /* NewStatusViewController.m in Sources */,
-				7E64D4B11A8B0F58002DD5F8 /* UserListViewController.m in Sources */,
 				B0E62A9F1A71E1270067A244 /* newsFeedManager.m in Sources */,
 				B0E62A9E1A71E1270067A244 /* newsFeed.m in Sources */,
 				566712151A7570E500647D8E /* JCAlertView.m in Sources */,
@@ -1088,7 +1073,6 @@
 				566712241A75717100647D8E /* CustomAnimationView.m in Sources */,
 				B0ACBD641A7DFAF000CBA508 /* ActivityListViewController.m in Sources */,
 				7E64D4B61A8B172E002DD5F8 /* PersonalInfoViewController.m in Sources */,
-				7E64D4F41A8D4BA1002DD5F8 /* VPImageCropperViewController.m in Sources */,
 				566712181A7570E500647D8E /* TopPopView.m in Sources */,
 				566712171A7570E500647D8E /* PopTableViewCell.m in Sources */,
 				B0ACBD621A7DFAF000CBA508 /* StepTwoViewController.m in Sources */,
