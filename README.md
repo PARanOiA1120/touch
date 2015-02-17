@@ -28,22 +28,22 @@ A username(at least 3 chars long), a password(at least 6 chars long), gender, ma
 
 ###Login
 You can either register a new account and login with that account, or login with the existed account with 
- -Username: xixihaha
- -Password: xixihaha
+ - Username: xixihaha
+ - Password: xixihaha
  
 ###Create Event
-  -Click the "+" button at the center of the tab bar
-  -Tap the first bubble "Event"
-  -Fill in "Title" and "Description" fields(no length restriction)
-  -Tap the "Post" button
-  -The event will appear in the news feed
+  - Click the "+" button at the center of the tab bar
+  - Tap the first bubble "Event"
+  - Fill in "Title" and "Description" fields(no length restriction)
+  - Tap the "Post" button
+  - The event will appear in the news feed
 
 ###Post Status
-  -Click the "+" button at the center of the tab bar
-  -Tap the fourth bubble "Status"
-  -Type some words(no length restriction)
-  -Tap the "Send" button
-  -The status will appear in the news feed
+  - Click the "+" button at the center of the tab bar
+  - Tap the fourth bubble "Status"
+  - Type some words(no length restriction)
+  - Tap the "Send" button
+  - The status will appear in the news feed
 
 ###Check Notification Center
 Tap the second tab of the tab bar. 
