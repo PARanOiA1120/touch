@@ -17,8 +17,7 @@
 
 @implementation IntroViewController
 
--(instancetype)init
-{
+-(instancetype)init{
     // Init the pages texts, and pictures.
     ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithTitle:@"How to meet instructors?"
                                                             subTitle:@"Use touch to make appointments!"
@@ -89,14 +88,14 @@
     [self toRegister];
 }
 
-- (void)toLogin
-{
+//go to the LoginViewController when "Login" button is tapped
+- (void)toLogin{
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [delegate goToLogin];
 }
 
-- (void)toRegister
-{
+//go to StepOneViewController when "Register" button is tapped
+- (void)toRegister{
     [self stopScrolling];
     StepOneViewController *registerController = [[StepOneViewController alloc] init];
     UINavigationController *registerNav = [[UINavigationController alloc] initWithRootViewController:registerController];

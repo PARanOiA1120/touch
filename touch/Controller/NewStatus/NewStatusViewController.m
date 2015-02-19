@@ -60,13 +60,6 @@
     } else {}
 }
 
-- (id)initWithImages:(NSArray *)images {
-    self = [super init];
-    if (self) {
-        self.selectedImages = [images mutableCopy];
-    }
-    return self;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -89,7 +82,6 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
 
-
 - (void)configureTableHeaderView {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, SCREENWIDTH, 40.0)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 10.0, SCREENWIDTH - 30.0, 20.0)];
@@ -101,6 +93,7 @@
     _tableView.tableHeaderView = view;
 }
 
+//Hard-coded UI to add the "post" button
 - (void)configureTableFooterView {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, SCREENWIDTH, 60.0)];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(7.0, 10.0, SCREENWIDTH - 20.0, 46.0)];
@@ -113,8 +106,8 @@
     _tableView.tableFooterView = view;
 }
 
-
-
+//post to newsfeed
+//We're still working on posting status to backend
 - (void)createNewsFeed:(UIButton *)button {
     if ([_inputView.text isEqualToString:@""]) {
         return;
@@ -144,7 +137,7 @@
 }
 
 #pragma mark -- Table view data source
-
+//create a table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }

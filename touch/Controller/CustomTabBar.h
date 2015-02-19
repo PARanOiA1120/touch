@@ -18,5 +18,6 @@
 - (void)setSelectedTag:(NSInteger)tag;
 - (void)showCustomTabBar;
 - (void)resetTabBar;
+- (void)hideCustomTabBar;
 
 @end

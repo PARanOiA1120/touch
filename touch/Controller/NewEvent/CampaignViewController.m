@@ -67,7 +67,6 @@ RMDateSelectionViewControllerDelegate>
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [self configureNavigationBar];
-    
     [self configureTableHeaderView];
     [self configureTableFooterView];
     
@@ -96,9 +95,7 @@ RMDateSelectionViewControllerDelegate>
     [self.view endEditing:YES];
 }
 
-
 - (void)configureViews {
-    
 }
 
 - (void)setLeftPaddingForTextField:(UITextField *)textField {

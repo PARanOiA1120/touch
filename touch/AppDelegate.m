@@ -36,20 +36,17 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
  
-    
     self.window.backgroundColor = [UIColor whiteColor];
     NSLog(@" window frame  %@",NSStringFromCGRect([[UIScreen mainScreen]bounds]));
     
    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f]];
     
+    //If user haven't logged in, open the app with intro pages
     if(![[User currentUser] isLogined])
-    {
         [self goToIntro];
-    }
+    //If user already logged in, go to the main page directly
     else
-    {
         [self createTabBar];
-    }
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -79,15 +76,19 @@
 
 
 -(void)createTabBar{
+    //Navigate to news feed
     ActivityViewController *activity = [[ActivityViewController alloc] initWithNibName:@"ActivityViewController" bundle:nil];
     UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
     
+    //Navigate to notification center
     NewInfoViewController *newInfo = [[NewInfoViewController alloc] initWithNibName:@"NewInfoViewController" bundle:nil]; //Mark for deletion
     UINavigationController *newInfoNav=[[UINavigationController alloc] initWithRootViewController:newInfo];
     
+    //Navigate to chatting list, we don't plan to implement this part this quarter
     UIViewController *chatController = [[UIViewController alloc] init];
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
 
+    //Navigate to personal homepage
     TempMineInfoViewController *mineInfo = [[TempMineInfoViewController alloc] initWithNibName:@"TempMineInfoViewController" bundle:nil]; //Mark for deletion
     UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
 
@@ -105,24 +106,21 @@
 }
 
 
-- (void)goToIntro
-{
+- (void)goToIntro{
     IntroViewController *introView = [[IntroViewController alloc] init];
     self.window.rootViewController = introView;
     [self.window makeKeyAndVisible];
 
 }
 
--(void) goToLogin
-{
+-(void) goToLogin{
     LoginViewController *loginView = [[LoginViewController alloc] init];
     self.window.rootViewController = loginView;
     [self.window makeKeyAndVisible];
 }
 
 
-- (void)showTabBar
-{
+- (void)showTabBar{
     if (self.tabBarController) {
         [self.tabBarController showCustomTabBar];
     }
@@ -132,8 +130,10 @@
     [self.tabBarController setSelectedTag:tab];
 }
 
-
-
+- (void)hideTabBar{
+    if (self.tabBarController)
+        [self.tabBarController hideCustomTabBar];
+}
 
 @end
 

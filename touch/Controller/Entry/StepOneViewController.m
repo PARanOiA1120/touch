@@ -53,28 +53,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
+//Back to IntroViewController when "back" button is tapped
 - (IBAction)cancelRegister:(id)sender {
     [self.username resignFirstResponder];
     [self.password resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-- (IBAction)nextStep:(id)sender {
+//If user entered username has more than two chars, password has more than 5 chars,
+//and the two password match, go to StepTwoViewController
+- (IBAction)nextStep:(id)sender{
     if(self.username.text.length <3 ){
         [ProgressHUD showError:@"Please enter a username"];
         [self.username becomeFirstResponder];
         return;
     }
-    
     if(self.password.text.length<6){
         [ProgressHUD showError:@"Please enter a password"];
         [self.password becomeFirstResponder];
         return;
     }
-    
     if(self.confirmPW.text.length<6){
         [ProgressHUD showError:@"Please confirm the password"];
         [self.confirmPW becomeFirstResponder];
@@ -83,8 +81,7 @@
     
     User *user = [User currentUser];
     user.username = self.username.text;
-    if (![self.password.text isEqualToString:self.confirmPW.text])
-    {
+    if (![self.password.text isEqualToString:self.confirmPW.text]){
         UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Alert！" message:@"Password not match" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [errorAlertView show];
         return;
@@ -95,18 +92,5 @@
     [self.navigationController pushViewController:registerController animated:YES];
     
 }
-
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
