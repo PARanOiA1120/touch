@@ -26,21 +26,21 @@
     self.dataSource = [@[
                          @{
                              @"newInfo_type":@"0",//0代表普通的状态
-                             @"newInfo_title":@"bob 赞了我的状态",
-                             @"newInfo_content":@"今天好冷呀，要多穿点衣服了，各位亲们也要注意保暖哦",
+                             @"newInfo_title":@"bunji like my post",
+                             @"newInfo_content":@"It is so cold out there. I should wear some more clothes，take care my friends",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          
                          @{
                              @"newInfo_type":@"1",//1代表通知 谁关注了我，谁和我有30个共同好友
-                             @"newInfo_title":@"bob 关注了我",
+                             @"newInfo_title":@"bunji follows me",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          @{
                              @"newInfo_type":@"2",//2代表通知 谁关注了谁
-                             @"newInfo_title":@"bob 关注了tom",
+                             @"newInfo_title":@"benji follows bob",
                              @"head":@"newinfo_head.png",
                              @"otherHead":@"newinfo_head.png",
                              @"userName":@"bob"
@@ -48,19 +48,19 @@
                          
                          @{
                              @"newInfo_type":@"3",//3代表 谁点赞了我参加的活动
-                             @"newInfo_title":@"bob 赞了我参加的活动",
+                             @"newInfo_title":@"bunji likes my activity",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
                              @"activityInfo":@{
                                      @"activityPic":@[@"activity_pic.png"],
-                                     @"activityContent":@"[圣诞爬天梯]又到了这个激动人心的夜晚,欢迎大家来参加，走过路过别要错过了"
+                                     @"activityContent":@"[Christmas]Chrismas night party, everyone welcomed，DO NOT passby"
                                      
                                      }
                              },
                          
                          @{
                              @"newInfo_type":@"4",//4代表 谁点赞了我的照片
-                             @"newInfo_title":@"bob 赞了我发的照片",
+                             @"newInfo_title":@"benji likes my photos",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
                              @"activityInfo":@{
@@ -69,18 +69,48 @@
                              },
                          @{
                              @"newInfo_type":@"0",//0代表普通的状态
-                             @"newInfo_title":@"bob 赞了我的状态",
-                             @"newInfo_content":@"今天好冷呀，要多穿点衣服了，各位亲们也要注意保暖哦",
+                             @"newInfo_title":@"bunji like my post",
+                             @"newInfo_content":@"It is so cold out there. I should wear some more clothes，take care my friends",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          
                          @{
                              @"newInfo_type":@"1",//1代表通知 谁关注了我，谁和我有30个共同好友
-                             @"newInfo_title":@"bob 关注了我",
+                             @"newInfo_title":@"bunji follows me",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
+                             },
+                         @{
+                             @"newInfo_type":@"2",//2代表通知 谁关注了谁
+                             @"newInfo_title":@"benji follows bob",
+                             @"head":@"newinfo_head.png",
+                             @"otherHead":@"newinfo_head.png",
+                             @"userName":@"bob"
+                             },
+                         
+                         @{
+                             @"newInfo_type":@"3",//3代表 谁点赞了我参加的活动
+                             @"newInfo_title":@"bunji likes my activity",
+                             @"head":@"newinfo_head.png",
+                             @"userName":@"bob",
+                             @"activityInfo":@{
+                                     @"activityPic":@[@"activity_pic.png"],
+                                     @"activityContent":@"[Christmas]Chrismas night party, everyone welcomed，DO NOT passby"
+                                     
+                                     }
+                             },
+                         
+                         @{
+                             @"newInfo_type":@"4",//4代表 谁点赞了我的照片
+                             @"newInfo_title":@"benji likes my photos",
+                             @"head":@"newinfo_head.png",
+                             @"userName":@"bob",
+                             @"activityInfo":@{
+                                     @"activityPic":@[@"activity_pic.png",@"activity_pic.png",@"activity_pic.png",@"activity_pic.png"],
+                                     }
                              }
+                         
                          ]mutableCopy];
     
 }
