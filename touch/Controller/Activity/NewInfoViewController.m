@@ -5,6 +5,7 @@
 //  Created by zhu on 2/10/15.
 //  Copyright (c) 2015 cs48. All rights reserved.
 //
+//ViewController for create different kind of layout for different kinds of event, such as like, dislike, text status, status with picture, etc.
 
 #import "NewInfoViewController.h"
 #import "AppDelegate.h"
