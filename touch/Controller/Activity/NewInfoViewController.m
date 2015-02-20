@@ -26,7 +26,7 @@
     
     self.dataSource = [@[
                          @{
-                             @"newInfo_type":@"0",//0代表普通的状态
+                             @"newInfo_type":@"0",//0 reprensent common status
                              @"newInfo_title":@"bunji like my post",
                              @"newInfo_content":@"It is so cold out there. I should wear some more clothes，take care my friends",
                              @"head":@"newinfo_head.png",
@@ -34,13 +34,13 @@
                              },
                          
                          @{
-                             @"newInfo_type":@"1",//1代表通知 谁关注了我，谁和我有30个共同好友
+                             @"newInfo_type":@"1",//1 reprensent notification: who follows me, someone has 30 common friends with me
                              @"newInfo_title":@"bunji follows me",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          @{
-                             @"newInfo_type":@"2",//2代表通知 谁关注了谁
+                             @"newInfo_type":@"2",//2 reprensent notification: who follows somebody I know
                              @"newInfo_title":@"benji follows bob",
                              @"head":@"newinfo_head.png",
                              @"otherHead":@"newinfo_head.png",
@@ -48,7 +48,7 @@
                              },
                          
                          @{
-                             @"newInfo_type":@"3",//3代表 谁点赞了我参加的活动
+                             @"newInfo_type":@"3",//3 represent who likes the activity I joined
                              @"newInfo_title":@"bunji likes my activity",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
@@ -60,7 +60,7 @@
                              },
                          
                          @{
-                             @"newInfo_type":@"4",//4代表 谁点赞了我的照片
+                             @"newInfo_type":@"4",//4 reprensent who likes my photo
                              @"newInfo_title":@"benji likes my photos",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
@@ -69,7 +69,7 @@
                                      }
                              },
                          @{
-                             @"newInfo_type":@"0",//0代表普通的状态
+                             @"newInfo_type":@"0",
                              @"newInfo_title":@"bunji like my post",
                              @"newInfo_content":@"It is so cold out there. I should wear some more clothes，take care my friends",
                              @"head":@"newinfo_head.png",
@@ -77,13 +77,13 @@
                              },
                          
                          @{
-                             @"newInfo_type":@"1",//1代表通知 谁关注了我，谁和我有30个共同好友
+                             @"newInfo_type":@"1",
                              @"newInfo_title":@"bunji follows me",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob"
                              },
                          @{
-                             @"newInfo_type":@"2",//2代表通知 谁关注了谁
+                             @"newInfo_type":@"2",
                              @"newInfo_title":@"benji follows bob",
                              @"head":@"newinfo_head.png",
                              @"otherHead":@"newinfo_head.png",
@@ -91,7 +91,7 @@
                              },
                          
                          @{
-                             @"newInfo_type":@"3",//3代表 谁点赞了我参加的活动
+                             @"newInfo_type":@"3",
                              @"newInfo_title":@"bunji likes my activity",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
@@ -103,7 +103,7 @@
                              },
                          
                          @{
-                             @"newInfo_type":@"4",//4代表 谁点赞了我的照片
+                             @"newInfo_type":@"4",
                              @"newInfo_title":@"benji likes my photos",
                              @"head":@"newinfo_head.png",
                              @"userName":@"bob",
@@ -137,35 +137,35 @@
     CGFloat height = 0.0f;
     
     if ([dic[@"newInfo_type"] isEqualToString:@"0"]) {
-        //0代表普通的状态
-        height  = height + 30;//title 高度
+        //0 reprensent common status
+        height  = height + 30;//title height
         
         NSString *content = dic[@"newInfo_content"];
         height = height + [self calculateViewHeight:content withViewWidth:SCREEN_WIDTH - 70 withFont:[UIFont fontWithName:DEFAULT_FONT_LIGHT size:13]] + 10;
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"1"])
     {
-        //1代表通知 谁关注了我，谁和我有30个共同好友
+        //1 reprensent notification: who follows me, someone has 30 common friends with me
         height = height + 45;
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"2"])
     {
-        //2代表通知 谁关注了谁
+        //2 reprensent notification: who follows somebody I know
         height = height + 45;
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"3"])
     {
-        //3代表 谁点赞了我参加的活动
-        height  = height + 30;//title 高度
+        //3 represent who likes the activity I joined
+        height  = height + 30;//title height
         
-        height = height + 75 + 10;//活动图和描述的高度 以及下边缘 间隙
+        height = height + 75 + 10;//size of the picture, bottom gap
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"4"])
     {
-        //4代表 谁点赞了我的照片
-        height  = height + 30;//title 高度
+        //4 reprensent who likes my photo
+        height  = height + 30;//title height
         
-        height = height + 45 + 10;//图片高度 以及下边缘 间隙
+        height = height + 45 + 10;//the height of the picture, bottom gap
     }
     return height;
 }
@@ -231,7 +231,7 @@
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"1"])
     {
-        //1代表通知 谁关注了我，谁和我有30个共同好友
+        //1 reprensent notification: who follows me, someone has 30 common friends with me
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 0, SCREENWIDTH - 70, 45)];
         contentLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:15];
         contentLabel.text = dic[@"newInfo_title"];
@@ -239,7 +239,7 @@
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"2"])
     {
-        //2代表通知 谁关注了谁
+        //2 reprensent notification: who follows somebody I know
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 0, SCREENWIDTH - 70, 45)];
         contentLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:15];
         contentLabel.text = dic[@"newInfo_title"];
@@ -252,7 +252,7 @@
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"3"])
     {
-        //3代表 谁点赞了我参加的活动
+        //3 represent who likes the activity I joined
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, SCREENWIDTH - 1 - 60, 20)];
         titleLabel.text = dic[@"newInfo_title"];
         titleLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:15];
@@ -273,7 +273,7 @@
     }
     else if ([dic[@"newInfo_type"] isEqualToString:@"4"])
     {
-        //4代表 谁点赞了我的照片
+        //4 reprensent who likes my photo
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, SCREENWIDTH - 1 - 60, 20)];
         titleLabel.text = dic[@"newInfo_title"];
         titleLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:15];

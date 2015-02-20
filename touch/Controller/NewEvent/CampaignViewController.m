@@ -161,11 +161,11 @@ RMDateSelectionViewControllerDelegate>
     //    PlaceListViewController *placeController = [[PlaceListViewController alloc] init];
 }
 
-// 邀请好友
+// invite friend
 - (void)goInviteFriend {
 }
 
-// 创建新活动
+// create new event
 #pragma mark -- Create New Event
 - (void)createNewEvent {
     if ([_titleTextField.text isEqualToString:@""] || [_descTextView.text isEqualToString:@""]) {
@@ -261,7 +261,7 @@ RMDateSelectionViewControllerDelegate>
     [self changeHeaderImage:index];
 }
 
-// 根据活动类型修改活动默认图片
+// change the default picture according to the type of the activity
 - (void)changeHeaderImage:(NSInteger)tag {
     switch (tag) {
         case 0:
