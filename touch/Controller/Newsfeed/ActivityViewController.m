@@ -24,6 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    UIBarButtonItem *share = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
+    
+    [self.navigationItem setRightBarButtonItem:share animated:true];
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
     self.title = @"News Feed";
@@ -32,8 +36,8 @@
     [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
     [self.editButton setTitleColor:RGBACOLOR(169, 134, 75, 1) forState:UIControlStateNormal];
 //    [self.editButton addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.editButton.hidden = YES;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.editButton];
+//    self.editButton.hidden = NO;
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.editButton];
     
     self.activityList = [[ActivityListViewController alloc] init];
     
@@ -63,5 +67,10 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+-(void)refresh
+{
+    [self.activityList refreshData];
+}
 
 @end

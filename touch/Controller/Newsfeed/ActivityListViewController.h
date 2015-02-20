@@ -11,4 +11,5 @@
 
 @interface ActivityListViewController : UIViewController
 -(void)testAddNewsFeed:(newsFeed *)nf;
+-(void)refreshData;
 @end

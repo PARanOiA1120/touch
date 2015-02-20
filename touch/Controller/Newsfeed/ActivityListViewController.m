@@ -51,9 +51,6 @@
 //    [self.headerView refreshLastUpdatedDate];
 //    
 //    [self.headerView forceToRefresh:self.activityTableView];
-    self.dataSource = [[NSMutableArray alloc]init];
-    [self.dataSource addObject:[[newsFeed alloc] initForTest:
-    @"The CS Capstone Series (CS 189A-B) has moved to Fall & Winter quarter starting next year." NT:1 ID:@"TestID" UserName:@"Benji  "]];
     [self requestDataWithPage:0];
 }
 
@@ -77,6 +74,7 @@
 
 - (void)requestDataWithPage:(int)page
 {
+    self.dataSource = [[newsFeedManager sharedManager] getNewsFeedsInBackground];
     NSLog(@"Value of count2 = %lu",(unsigned long)self.dataSource.count);
     self.heightArray = [NSMutableArray arrayWithCapacity:self.dataSource.count];
     [self calculateAndStoreCellHeight];
@@ -307,7 +305,7 @@
     [containerView addSubview:headImageView];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, height + 10, containerWidth - 50 - 5 - 100, 20)];
-    titleLabel.text = [NSString stringWithFormat:@"%@%@",user.username,[self getTitleWithEventType:newsFeed.eventType]];
+    titleLabel.text = [NSString stringWithFormat:@"%@ %@",user.username,[self getTitleWithEventType:newsFeed.eventType]];
     titleLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:13];
     [containerView addSubview:titleLabel];
     

@@ -22,7 +22,7 @@ static NSString *reuseIdentifier = @"typeCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup   loading the view from its nib.
     [_collectionView registerNib:[UINib nibWithNibName:@"ActivityTypeCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     _collectionView.allowsMultipleSelection = NO;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
