@@ -18,8 +18,11 @@
 		7E64D4B71A8B172E002DD5F8 /* PersonalInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4B51A8B172E002DD5F8 /* PersonalInfoViewController.xib */; };
 		7E64D4F01A8D4AF7002DD5F8 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4EE1A8D4AF7002DD5F8 /* PersonInfoCell.m */; };
 		7E64D4F11A8D4AF7002DD5F8 /* PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4EF1A8D4AF7002DD5F8 /* PersonInfoCell.xib */; };
-		7E64D4F81A9017CE002DD5F8 /* TempMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4F61A9017CE002DD5F8 /* TempMineInfoViewController.m */; };
-		7E64D4F91A9017CE002DD5F8 /* TempMineInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4F71A9017CE002DD5F8 /* TempMineInfoViewController.xib */; };
+		A9A7FDD21A96E70F00030928 /* activity_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDCD1A96E70F00030928 /* activity_head@2x.png */; };
+		A9A7FDD31A96E70F00030928 /* activity_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDCE1A96E70F00030928 /* activity_pic@2x.png */; };
+		A9A7FDD41A96E70F00030928 /* activity_visit_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDCF1A96E70F00030928 /* activity_visit_head@2x.png */; };
+		A9A7FDD51A96E70F00030928 /* newinfo_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDD01A96E70F00030928 /* newinfo_head@2x.png */; };
+		A9A7FDD61A96E70F00030928 /* newinfo_host@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDD11A96E70F00030928 /* newinfo_host@2x.png */; };
 		B029F1A31A8BF3D100E60771 /* NewInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029F1A11A8BF3D100E60771 /* NewInfoViewController.m */; };
 		B029F1A41A8BF3D100E60771 /* NewInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B029F1A21A8BF3D100E60771 /* NewInfoViewController.xib */; };
 		B032820A1A74B5AC001BAA34 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = B03282091A74B5AC001BAA34 /* Comment.m */; };
@@ -97,6 +100,13 @@
 		B0BE54731A63C0CD000DF8FE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54721A63C0CD000DF8FE /* StoreKit.framework */; };
 		B0BE54751A63C0D5000DF8FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54741A63C0D5000DF8FE /* SystemConfiguration.framework */; };
 		B0BE54771A63C0DE000DF8FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE54761A63C0DE000DF8FE /* libz.dylib */; };
+		B0E59A0C1A96F9D900C3CAB6 /* MineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E59A071A96F9D900C3CAB6 /* MineInfoViewController.m */; };
+		B0E59A0D1A96F9D900C3CAB6 /* MineInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E59A081A96F9D900C3CAB6 /* MineInfoViewController.xib */; };
+		B0E59A0E1A96F9D900C3CAB6 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E59A0A1A96F9D900C3CAB6 /* SettingViewController.m */; };
+		B0E59A0F1A96F9D900C3CAB6 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E59A0B1A96F9D900C3CAB6 /* SettingViewController.xib */; };
+		B0E59A131A96F9FC00C3CAB6 /* mine_chevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0E59A101A96F9FC00C3CAB6 /* mine_chevron@2x.png */; };
+		B0E59A141A96F9FC00C3CAB6 /* mine_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0E59A111A96F9FC00C3CAB6 /* mine_head@2x.png */; };
+		B0E59A151A96F9FC00C3CAB6 /* mine_set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0E59A121A96F9FC00C3CAB6 /* mine_set@2x.png */; };
 		B0E62A491A71E0860067A244 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E629E31A71E0860067A244 /* ProgressHUD.bundle */; };
 		B0E62A4A1A71E0860067A244 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E629E51A71E0860067A244 /* ProgressHUD.m */; };
 		B0E62A661A71E0F70067A244 /* fb_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0E62A5E1A71E0F70067A244 /* fb_icon.png */; };
@@ -136,6 +146,8 @@
 		B0E911AB1A63D0FC00AA8B7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911AA1A63D0FC00AA8B7E /* Foundation.framework */; };
 		B0E911AD1A63D11000AA8B7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911AC1A63D11000AA8B7E /* UIKit.framework */; };
 		B0E911B11A63D14800AA8B7E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911B01A63D14800AA8B7E /* libsqlite3.dylib */; };
+		B0F453B81A95BE1E00045CA4 /* UserTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F453B71A95BE1E00045CA4 /* UserTestCase.m */; };
+		B0F453BA1A95C20100045CA4 /* StepOneViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F453B91A95C20100045CA4 /* StepOneViewControllerTestCase.m */; };
 		D4A7D56F5090AE2A2C1CDE20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C68310DD432B01D2C3A6E56C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -170,10 +182,12 @@
 		7E64D4ED1A8D4AF7002DD5F8 /* PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonInfoCell.h; path = Controller/MineInfo/PersonInfoCell.h; sourceTree = "<group>"; };
 		7E64D4EE1A8D4AF7002DD5F8 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonInfoCell.m; path = Controller/MineInfo/PersonInfoCell.m; sourceTree = "<group>"; };
 		7E64D4EF1A8D4AF7002DD5F8 /* PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonInfoCell.xib; path = Controller/MineInfo/PersonInfoCell.xib; sourceTree = "<group>"; };
-		7E64D4F51A9017CE002DD5F8 /* TempMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempMineInfoViewController.h; path = Controller/MineInfo/TempMineInfoViewController.h; sourceTree = "<group>"; };
-		7E64D4F61A9017CE002DD5F8 /* TempMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TempMineInfoViewController.m; path = Controller/MineInfo/TempMineInfoViewController.m; sourceTree = "<group>"; };
-		7E64D4F71A9017CE002DD5F8 /* TempMineInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TempMineInfoViewController.xib; path = Controller/MineInfo/TempMineInfoViewController.xib; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A7FDCD1A96E70F00030928 /* activity_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_head@2x.png"; sourceTree = "<group>"; };
+		A9A7FDCE1A96E70F00030928 /* activity_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_pic@2x.png"; sourceTree = "<group>"; };
+		A9A7FDCF1A96E70F00030928 /* activity_visit_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_visit_head@2x.png"; sourceTree = "<group>"; };
+		A9A7FDD01A96E70F00030928 /* newinfo_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newinfo_head@2x.png"; sourceTree = "<group>"; };
+		A9A7FDD11A96E70F00030928 /* newinfo_host@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newinfo_host@2x.png"; sourceTree = "<group>"; };
 		B029F1A01A8BF3D100E60771 /* NewInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewInfoViewController.h; sourceTree = "<group>"; };
 		B029F1A11A8BF3D100E60771 /* NewInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewInfoViewController.m; sourceTree = "<group>"; };
 		B029F1A21A8BF3D100E60771 /* NewInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewInfoViewController.xib; sourceTree = "<group>"; };
@@ -275,6 +289,15 @@
 		B0BE54721A63C0CD000DF8FE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B0BE54741A63C0D5000DF8FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B0BE54761A63C0DE000DF8FE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B0E59A061A96F9D900C3CAB6 /* MineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineInfoViewController.h; path = Controller/MineInfo/MineInfoViewController.h; sourceTree = "<group>"; };
+		B0E59A071A96F9D900C3CAB6 /* MineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineInfoViewController.m; path = Controller/MineInfo/MineInfoViewController.m; sourceTree = "<group>"; };
+		B0E59A081A96F9D900C3CAB6 /* MineInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MineInfoViewController.xib; path = Controller/MineInfo/MineInfoViewController.xib; sourceTree = "<group>"; };
+		B0E59A091A96F9D900C3CAB6 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controller/MineInfo/SettingViewController.h; sourceTree = "<group>"; };
+		B0E59A0A1A96F9D900C3CAB6 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controller/MineInfo/SettingViewController.m; sourceTree = "<group>"; };
+		B0E59A0B1A96F9D900C3CAB6 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Controller/MineInfo/SettingViewController.xib; sourceTree = "<group>"; };
+		B0E59A101A96F9FC00C3CAB6 /* mine_chevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_chevron@2x.png"; sourceTree = "<group>"; };
+		B0E59A111A96F9FC00C3CAB6 /* mine_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_head@2x.png"; sourceTree = "<group>"; };
+		B0E59A121A96F9FC00C3CAB6 /* mine_set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_set@2x.png"; sourceTree = "<group>"; };
 		B0E629E31A71E0860067A244 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = touch/Util/ProgressHUD.bundle; sourceTree = "<group>"; };
 		B0E629E41A71E0860067A244 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = touch/Util/ProgressHUD.h; sourceTree = "<group>"; };
 		B0E629E51A71E0860067A244 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = touch/Util/ProgressHUD.m; sourceTree = "<group>"; };
@@ -327,6 +350,8 @@
 		B0E911AA1A63D0FC00AA8B7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0E911AC1A63D11000AA8B7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0E911B01A63D14800AA8B7E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B0F453B71A95BE1E00045CA4 /* UserTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTestCase.m; sourceTree = "<group>"; };
+		B0F453B91A95C20100045CA4 /* StepOneViewControllerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepOneViewControllerTestCase.m; sourceTree = "<group>"; };
 		C68310DD432B01D2C3A6E56C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -422,9 +447,12 @@
 		7E40EA1B1A84D24B00A92E6A /* MineInfo */ = {
 			isa = PBXGroup;
 			children = (
-				7E64D4F51A9017CE002DD5F8 /* TempMineInfoViewController.h */,
-				7E64D4F61A9017CE002DD5F8 /* TempMineInfoViewController.m */,
-				7E64D4F71A9017CE002DD5F8 /* TempMineInfoViewController.xib */,
+				B0E59A061A96F9D900C3CAB6 /* MineInfoViewController.h */,
+				B0E59A071A96F9D900C3CAB6 /* MineInfoViewController.m */,
+				B0E59A081A96F9D900C3CAB6 /* MineInfoViewController.xib */,
+				B0E59A091A96F9D900C3CAB6 /* SettingViewController.h */,
+				B0E59A0A1A96F9D900C3CAB6 /* SettingViewController.m */,
+				B0E59A0B1A96F9D900C3CAB6 /* SettingViewController.xib */,
 				7E40EA421A861A0E00A92E6A /* PersonalHomepageViewController.h */,
 				7E40EA431A861A0E00A92E6A /* PersonalHomepageViewController.m */,
 				7E40EA441A861A0E00A92E6A /* PersonalHomepageViewController.xib */,
@@ -445,6 +473,19 @@
 				091258C1AC96E7FF03934F2B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9A7FDCC1A96E70F00030928 /* ActivityImages */ = {
+			isa = PBXGroup;
+			children = (
+				A9A7FDCD1A96E70F00030928 /* activity_head@2x.png */,
+				A9A7FDCE1A96E70F00030928 /* activity_pic@2x.png */,
+				A9A7FDCF1A96E70F00030928 /* activity_visit_head@2x.png */,
+				A9A7FDD01A96E70F00030928 /* newinfo_head@2x.png */,
+				A9A7FDD11A96E70F00030928 /* newinfo_host@2x.png */,
+			);
+			name = ActivityImages;
+			path = Resources/ActivityImages;
 			sourceTree = "<group>";
 		};
 		B029F19F1A8BF3D100E60771 /* Activity */ = {
@@ -521,6 +562,8 @@
 			children = (
 				B038E2291A62017D00E660ED /* touchTests.m */,
 				B038E2271A62017D00E660ED /* Supporting Files */,
+				B0F453B71A95BE1E00045CA4 /* UserTestCase.m */,
+				B0F453B91A95C20100045CA4 /* StepOneViewControllerTestCase.m */,
 			);
 			path = touchTests;
 			sourceTree = "<group>";
@@ -536,6 +579,7 @@
 		B038E2341A6238AE00E660ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9A7FDCC1A96E70F00030928 /* ActivityImages */,
 				B05A91181A915F2A00A4F536 /* PersonalHomepage */,
 				B043219F1A8018D700E46236 /* +button */,
 				B04321A01A8018D700E46236 /* NewStatus */,
@@ -633,6 +677,9 @@
 		B05A91181A915F2A00A4F536 /* PersonalHomepage */ = {
 			isa = PBXGroup;
 			children = (
+				B0E59A101A96F9FC00C3CAB6 /* mine_chevron@2x.png */,
+				B0E59A111A96F9FC00C3CAB6 /* mine_head@2x.png */,
+				B0E59A121A96F9FC00C3CAB6 /* mine_set@2x.png */,
 				B05A91191A915F2A00A4F536 /* personal_icon_activity_normal@2x.png */,
 				B05A911A1A915F2A00A4F536 /* personal_icon_activity_selected@2x.png */,
 				B05A911B1A915F2A00A4F536 /* personal_icon_head_normal@2x.png */,
@@ -919,13 +966,13 @@
 			files = (
 				B04321C21A80210D00E46236 /* type_other@3x.png in Resources */,
 				B05A91251A915F2A00A4F536 /* personal_icon_map_normal@2x.png in Resources */,
-				7E64D4F91A9017CE002DD5F8 /* TempMineInfoViewController.xib in Resources */,
 				B0E62A6B1A71E0F70067A244 /* picsample@2x.png in Resources */,
 				B04321CD1A80813A00E46236 /* studyGroup@2x.png in Resources */,
 				B0E62A661A71E0F70067A244 /* fb_icon.png in Resources */,
 				B0E62A771A71E10C0067A244 /* study@2x.png in Resources */,
 				B0ACBD671A7DFAF000CBA508 /* ActivityViewController.xib in Resources */,
 				B04321C11A80210D00E46236 /* type_other@2x.png in Resources */,
+				B0E59A131A96F9FC00C3CAB6 /* mine_chevron@2x.png in Resources */,
 				B0ACBD631A7DFAF000CBA508 /* StepTwoViewController.xib in Resources */,
 				B0E62A671A71E0F70067A244 /* instagram.png in Resources */,
 				B08686581A7EC8EF0046CC9D /* ActivityTypeCell.xib in Resources */,
@@ -933,14 +980,19 @@
 				B04321B01A8020F700E46236 /* pop_video@2x.png in Resources */,
 				B04321A21A8018D700E46236 /* btn_yellow@2x.png in Resources */,
 				B04321D41A80838B00E46236 /* partnerRecruiting@2x.png in Resources */,
+				B0E59A0F1A96F9D900C3CAB6 /* SettingViewController.xib in Resources */,
+				B0E59A141A96F9FC00C3CAB6 /* mine_head@2x.png in Resources */,
 				B0E62A821A71E1160067A244 /* tab_activity@2x.png in Resources */,
+				A9A7FDD51A96E70F00030928 /* newinfo_head@2x.png in Resources */,
 				B029F1A41A8BF3D100E60771 /* NewInfoViewController.xib in Resources */,
 				B0E62A851A71E1160067A244 /* tab_message_p@2x.png in Resources */,
 				B0E62A861A71E1160067A244 /* tab_square@2x.png in Resources */,
 				B04321BE1A80210D00E46236 /* type_meeting@3x.png in Resources */,
 				B05A91281A915F2A00A4F536 /* personal_icon_new_selected@2x.png in Resources */,
 				7E64D4F11A8D4AF7002DD5F8 /* PersonInfoCell.xib in Resources */,
+				B0E59A0D1A96F9D900C3CAB6 /* MineInfoViewController.xib in Resources */,
 				B04321D51A80838B00E46236 /* reviewSession@2x.png in Resources */,
+				A9A7FDD31A96E70F00030928 /* activity_pic@2x.png in Resources */,
 				B0E62A491A71E0860067A244 /* ProgressHUD.bundle in Resources */,
 				B04321A41A801DD800E46236 /* CampaignViewController.xib in Resources */,
 				B038E2191A62017D00E660ED /* Main.storyboard in Resources */,
@@ -953,6 +1005,7 @@
 				B0E62A691A71E0F70067A244 /* logoTemp@2x.png in Resources */,
 				7E64D4B71A8B172E002DD5F8 /* PersonalInfoViewController.xib in Resources */,
 				B08686501A7EC5240046CC9D /* NewStatusViewController.xib in Resources */,
+				A9A7FDD61A96E70F00030928 /* newinfo_host@2x.png in Resources */,
 				B0E62A6A1A71E0F70067A244 /* personal_icon_back@2x.png in Resources */,
 				B05A91231A915F2A00A4F536 /* personal_icon_head_normal@2x.png in Resources */,
 				B04321BA1A80210D00E46236 /* btn_red@2x.png in Resources */,
@@ -963,6 +1016,7 @@
 				B0E62A781A71E10C0067A244 /* touch@2x.png in Resources */,
 				B0E62A6D1A71E0F70067A244 /* xiaolajiao@2x.png in Resources */,
 				B04321AD1A8020F700E46236 /* pop_photo@2x.png in Resources */,
+				A9A7FDD21A96E70F00030928 /* activity_head@2x.png in Resources */,
 				7E40EA461A861A0E00A92E6A /* PersonalHomepageViewController.xib in Resources */,
 				B0ACBD651A7DFAF000CBA508 /* ActivityListViewController.xib in Resources */,
 				B04321AF1A8020F700E46236 /* pop_state@2x.png in Resources */,
@@ -972,6 +1026,7 @@
 				B05A91271A915F2A00A4F536 /* personal_icon_new_normal@2x.png in Resources */,
 				B0E62A681A71E0F70067A244 /* loginBackground@2x.png in Resources */,
 				B05A91211A915F2A00A4F536 /* personal_icon_activity_normal@2x.png in Resources */,
+				A9A7FDD41A96E70F00030928 /* activity_visit_head@2x.png in Resources */,
 				B04321CB1A807B4D00E46236 /* discloser@2x.png in Resources */,
 				B04321D21A80838B00E46236 /* infoSession@2x.png in Resources */,
 				B086864C1A7EC5240046CC9D /* ActivityTypeViewController.xib in Resources */,
@@ -981,6 +1036,7 @@
 				B0E62A6C1A71E0F70067A244 /* twitter.png in Resources */,
 				B05A91221A915F2A00A4F536 /* personal_icon_activity_selected@2x.png in Resources */,
 				B0ACBD611A7DFAF000CBA508 /* StepOneViewController.xib in Resources */,
+				B0E59A151A96F9FC00C3CAB6 /* mine_set@2x.png in Resources */,
 				B0E62A761A71E10C0067A244 /* review@2x.png in Resources */,
 				B0ACBD5F1A7DFAF000CBA508 /* LoginViewController.xib in Resources */,
 				B0E62A891A71E1160067A244 /* tab_user_p@2x.png in Resources */,
@@ -1044,16 +1100,17 @@
 				B0ACBD5E1A7DFAF000CBA508 /* LoginViewController.m in Sources */,
 				7E40EA451A861A0E00A92E6A /* PersonalHomepageViewController.m in Sources */,
 				B099B5631A91D639005B6D28 /* CustomAnimationView.m in Sources */,
-				7E64D4F81A9017CE002DD5F8 /* TempMineInfoViewController.m in Sources */,
 				B032820A1A74B5AC001BAA34 /* Comment.m in Sources */,
 				B099B5661A91D639005B6D28 /* UIImage+BoxBlur.m in Sources */,
 				B0E62AB31A71E1370067A244 /* CustomTabBar.m in Sources */,
 				B086864B1A7EC5240046CC9D /* ActivityTypeViewController.m in Sources */,
 				B0E62A9C1A71E1270067A244 /* EventManager.m in Sources */,
 				B0ACBD791A7E1BEE00CBA508 /* UIButton+Button.m in Sources */,
+				B0E59A0C1A96F9D900C3CAB6 /* MineInfoViewController.m in Sources */,
 				B0E62AA01A71E1270067A244 /* User.m in Sources */,
 				B038E2101A62017D00E660ED /* main.m in Sources */,
 				B099B5641A91D639005B6D28 /* CustomItem.m in Sources */,
+				B0E59A0E1A96F9D900C3CAB6 /* SettingViewController.m in Sources */,
 				B0E62A9D1A71E1270067A244 /* Image.m in Sources */,
 				B08686511A7EC5240046CC9D /* SZTextView.m in Sources */,
 				566712141A7570E500647D8E /* CustomActionSheet.m in Sources */,
@@ -1085,7 +1142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F453B81A95BE1E00045CA4 /* UserTestCase.m in Sources */,
 				B038E22A1A62017D00E660ED /* touchTests.m in Sources */,
+				B0F453BA1A95C20100045CA4 /* StepOneViewControllerTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

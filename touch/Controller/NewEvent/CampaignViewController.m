@@ -84,11 +84,13 @@ RMDateSelectionViewControllerDelegate>
     [super viewWillAppear:animated];
 }
 
+//added the cancel button on the navigation bar
 - (void)configureNavigationBar {
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonDidClick:)];
     self.navigationItem.rightBarButtonItem = buttonItem;
 }
 
+//cancel button listener
 - (void)cancelButtonDidClick:(UIBarButtonItem *)item {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
@@ -131,6 +133,7 @@ RMDateSelectionViewControllerDelegate>
     return segment;
 }
 
+
 - (UISegmentedControl *)segmentControlWithFrame:(CGRect)frame items:(NSArray *)items {
     UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:items];
     control.frame = frame;
@@ -157,21 +160,13 @@ RMDateSelectionViewControllerDelegate>
     [super didReceiveMemoryWarning];
 }
 
-- (void)placeButtonDidClick:(UIButton *)button {
-    //    PlaceListViewController *placeController = [[PlaceListViewController alloc] init];
-}
 
-// 邀请好友
-- (void)goInviteFriend {
-}
-
-// 创建新活动
+// create new event
 #pragma mark -- Create New Event
 - (void)createNewEvent {
     if ([_titleTextField.text isEqualToString:@""] || [_descTextView.text isEqualToString:@""]) {
         return;
     }
-    
     Event *event = [[Event alloc] init];
     event.title = _titleTextField.text;
     event.eventDescription = _descTextView.text;
@@ -227,6 +222,7 @@ RMDateSelectionViewControllerDelegate>
     }];
 }
 
+//Date picker for event time
 - (IBAction)timeViewDidClick:(UIButton *)sender {
     [self.view endEditing:YES];
     [ActionSheetDatePicker showPickerWithTitle:@""
@@ -241,6 +237,8 @@ RMDateSelectionViewControllerDelegate>
                                   }
                                         origin:sender];
 }
+
+//listener for event type cell
 - (IBAction)typeButtonDidClick:(UIButton *)sender {
     ActivityTypeViewController *typeController = [[ActivityTypeViewController alloc] init];
     [self.navigationController pushViewController:typeController animated:YES];
@@ -261,7 +259,7 @@ RMDateSelectionViewControllerDelegate>
     [self changeHeaderImage:index];
 }
 
-// 根据活动类型修改活动默认图片
+// change the default picture according to the type of the activity
 - (void)changeHeaderImage:(NSInteger)tag {
     switch (tag) {
         case 0:

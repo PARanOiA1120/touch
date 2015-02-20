@@ -39,8 +39,6 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 @property (strong, nonatomic) CustomAnimationView *customAnimationView;
 @property (strong, nonatomic) UIView *backView;
 
-
-
 @end
 
 
@@ -52,6 +50,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     self.slideBg.backgroundColor = [UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f];
     self.slideBg.userInteractionEnabled = YES;
     [self.view addSubview:self.slideBg];
+    [self hideRealTabBar];
     [self customTabBar];
 }
 
@@ -124,6 +123,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     }
 }
 
+//Do custom annimation when ceter + button is tapped
 - (void)centerAddBtnClicked:(UIButton *)button
 {
     NSLog(@"centerAddBtn clicked");
@@ -158,8 +158,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
      }];
 }
 
-- (void)dismissCustomAnimationView
-{
+- (void)dismissCustomAnimationView{
     [self resetTabBar];
     [UIView animateWithDuration:0.7 animations:^{
         self.blurView.alpha = 0.0f;
@@ -171,8 +170,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     }];
 }
 
-- (void)resetTabBar
-{
+- (void)resetTabBar{
     self.centerAddBtn.currentButtonType = buttonAddType;
     self.centerAddBtn.backgroundColor = [UIColor colorWithRed:184/255.0f green:150/255.0f blue:101/255.0f alpha:1.0];
     [self showCustomTabBar];
@@ -204,13 +202,23 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:campaignController];
         [self presentViewController:navController animated:YES completion:^{}];
     }
-    
-
 }
 
-- (void)hideCustomTabBar
-{
+
+//Used in personal homepage
+- (void)hideRealTabBar{
+    for(UIView *view in self.view.subviews){
+        if([view isKindOfClass:[UITabBar class]]){
+            view.hidden = YES;
+            break;
+        }
+    }
+}
+
+- (void)hideCustomTabBar{
     self.slideBg.hidden = YES;
 }
+
+
 
 @end

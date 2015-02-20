@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewInfoViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
             <connections>
-                <outlet property="myTableView" destination="AXn-rh-So5" id="L53-aV-UHa"/>
+                <outlet property="myTableView" destination="mfK-Ev-W7S" id="ltk-2i-hcL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,19 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-rh-So5">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-Ev-W7S">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="AXn-rh-So5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CGE-xH-vjZ"/>
-                <constraint firstAttribute="bottom" secondItem="AXn-rh-So5" secondAttribute="bottom" id="SVi-Nc-GMM"/>
-                <constraint firstItem="AXn-rh-So5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r7q-w8-eV6"/>
-                <constraint firstAttribute="trailing" secondItem="AXn-rh-So5" secondAttribute="trailing" id="vMV-iu-tWr"/>
+                <constraint firstItem="mfK-Ev-W7S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="46a-yT-c6d"/>
+                <constraint firstAttribute="bottom" secondItem="mfK-Ev-W7S" secondAttribute="bottom" id="9rw-ZN-Kyb"/>
+                <constraint firstItem="mfK-Ev-W7S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="au0-mF-4Cv"/>
+                <constraint firstAttribute="trailing" secondItem="mfK-Ev-W7S" secondAttribute="trailing" id="sL0-Iw-D6k"/>
             </constraints>
-            <point key="canvasLocation" x="237" y="238"/>
+            <point key="canvasLocation" x="271" y="216"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -9,6 +9,7 @@
       - [Post Status](https://github.com/PARanOiA1120/touch/blob/touch_yuexin/README.md#post-status)
       - [Check Notification Center](https://github.com/PARanOiA1120/touch/blob/touch_yuexin/README.md#check-notification-center)
       - [Personal Homepage](https://github.com/PARanOiA1120/touch/blob/touch_yuexin/README.md#personal-homepage)
+      - [Logout](https://github.com/PARanOiA1120/touch/blob/touch_yuexin/README.md#personal-Logout)
    - [Source Code](https://github.com/PARanOiA1120/touch/blob/touch_yuexin/README.md#source-code)
 
 
@@ -50,7 +51,14 @@ You can either register a new account and login with that account, or login with
 Tap the second tab of the tab bar. 
 
 ###Personal Homepage
-Tap the last tab of the tab bar.
+ - Tap the last tab of the tab bar. 
+ - Select the first row to go to the profile page.
+ - We haven't done with this part yet.
+
+###Logout
+ - Tap the last tab of the tab bar.
+ - Select the second row with title "Setting".
+ - Tap the "Logout" button and back to the Intro&guiding page.
 
 ##Source Code
  - We installed several open source pods through CocoaPods library. They can be found in the Pods folder in the root directory. There is also a list of pods names in Podfile.

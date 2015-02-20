@@ -11,5 +11,9 @@
 #import "InsetTextField.h"
 
 @interface StepOneViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet InsetTextField *username;
+@property (weak, nonatomic) IBOutlet InsetTextField *password;
+@property (weak, nonatomic) IBOutlet InsetTextField *confirmPW;
+@property (weak, nonatomic) IBOutlet UIButton *next;
+@property (weak, nonatomic) IBOutlet UIButton *cancel;
 @end
