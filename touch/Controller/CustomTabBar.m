@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     self.slideBg.backgroundColor = [UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f];
     self.slideBg.userInteractionEnabled = YES;
     [self.view addSubview:self.slideBg];
+    [self hideRealTabBar];
     [self customTabBar];
 }
 
@@ -208,9 +209,19 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 
 }
 
-- (void)hideCustomTabBar
-{
+- (void)hideRealTabBar{
+    for(UIView *view in self.view.subviews){
+        if([view isKindOfClass:[UITabBar class]]){
+            view.hidden = YES;
+            break;
+        }
+    }
+}
+
+- (void)hideCustomTabBar{
     self.slideBg.hidden = YES;
 }
+
+
 
 @end
