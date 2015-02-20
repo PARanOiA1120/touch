@@ -14,7 +14,7 @@
 #import "LoginViewController.h"
 #import "User.h"
 #import "ActivityViewController.h"
-#import "TempMineInfoViewController.h"
+#import "MineInfoViewController.h"
 #import "NewInfoViewController.h"
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
@@ -89,7 +89,7 @@
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
 
     //Navigate to personal homepage
-    TempMineInfoViewController *mineInfo = [[TempMineInfoViewController alloc] initWithNibName:@"TempMineInfoViewController" bundle:nil]; //Mark for deletion
+    MineInfoViewController *mineInfo = [[MineInfoViewController alloc] initWithNibName:@"MineInfoViewController" bundle:nil]; //Mark for deletion
     UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
 
     NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activityNav, newInfoNav, chatNav, mineInfoNav, nil];

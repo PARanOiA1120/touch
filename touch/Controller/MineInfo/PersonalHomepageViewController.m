@@ -43,7 +43,7 @@
 @property (nonatomic) NSInteger selectedIndex;
 //store personal information, when selecting information
 @property (strong, nonatomic) NSMutableArray *userInfoArray;
-//store array of news feed, when selecting news feed
+//store array of news feed, when selectingfeed
 @property (strong, nonatomic) NSArray *newsArray;
 //store array of activity, when selecting activity
 @property (strong, nonatomic) NSArray *activityArray;
