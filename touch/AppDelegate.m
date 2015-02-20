@@ -42,11 +42,11 @@
    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:247/255.0f green:240/255.0f blue:225/255.0f alpha:1.0f]];
     
     //If user haven't logged in, open the app with intro pages
-    //if(![[User currentUser] isLogined])
+    if(![[User currentUser] isLogined])
         [self goToIntro];
     //If user already logged in, go to the main page directly
-   // else
-        //[self createTabBar];
+    else
+        [self createTabBar];
     
     [self.window makeKeyAndVisible];
     return YES;
