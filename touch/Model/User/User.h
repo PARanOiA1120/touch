@@ -26,42 +26,22 @@ typedef void (^PFUserBlock)(NSArray *userArray,NSError *error);
 @property (strong, nonatomic) NSString* gender;
 @property (strong, nonatomic) NSString* classlevel;
 
-//other info
-@property (strong, nonatomic) UIImage* squareImage;
-@property (strong, nonatomic) UIImage* largeImage;
 
-//pic URL
-@property (copy, nonatomic) NSString *thumbPath;
-@property (copy, nonatomic) NSString *avatarPath;
-
+//get current user
 + (instancetype) currentUser;
-
 //transfer from PFObject to PFUser
 + (instancetype) userWithPFObject:(PFObject *)object;
-
+//return user based on user ID
 + (instancetype) userWithUserId:(NSString *)userId;
-
+//Return PFObject based on user ID
 - (PFObject *) getUserObject;
-
+//check with database if the username/password pair is valid
 - (void)logInWithUsernameInBackground: (NSString*)username password:(NSString*) password block:(PFBlock)block;
-
+//database keep a record of user entered information
 - (void)signUpInBackgroundWithBlock: (PFBlock)block;
-- (void)getSmallUserAvatarWithUserID:(NSString *)userID andWidth:(int)width andHeight:(int)height andBlock:(ImageBlock)block;
-
-- (void)getNameAndUserAvatar:(PFBlock)block;
-
-- (void)updateUserInfo: (PFBlock)block percentDone:(PercentBlock)percent squarePercent:(PercentBlock)squarePercent;
-
-- (void)updateUserInfoWithoutImage:(PFBlock)block ;
-
-- (void)getFullInformation:(PFBlock)block;
-
-- (void)getTextInformation:(PFBlock)block;
-
 - (BOOL)isLogined;
-
 - (void)logOut;
-
-+ (NSArray *)getPFUserArrayFromPFUserArray:(NSArray *)aUserArray;
+//get access to other user's profile
++ (User *)getPFUserFromPFUser:(PFObject *)aUser;
 
 @end
