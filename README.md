@@ -38,13 +38,15 @@ You can either register a new account and login with that account, or login with
   - Tap the first bubble "Event"
   - Fill in "Title" and "Description" fields(no length restriction)
   - Tap the "Post" button
-  - The event will appear in the news feed
+  - Tap the refresh button at the upper right corner
+  - The event will appear in the news feed [This feature is coming soon]
 
 ###Post Status
   - Click the "+" button at the center of the tab bar
   - Tap the fourth bubble "Status"
   - Type some words(no length restriction)
   - Tap the "Send" button
+  - Tap the refresh button at the upper right corner
   - The status will appear in the news feed
 
 ###Check Notification Center

@@ -13,8 +13,8 @@
 #import "NewStatusViewController.h"
 #import "CampaignViewController.h"
 #import "CustomItem.h"
-#import "PersonalHomepageViewController.h" //Mark for deletion
-#import "NewInfoViewController.h" //Mark for deletion2
+#import "PersonalHomepageViewController.h"
+#import "NewInfoViewController.h"
 
 typedef NS_ENUM(NSInteger, TabBarButtonTag)
 {
@@ -111,7 +111,8 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
 
 //set up all the buttons with their icons, and
 //find the one that's being selected and replace its icon with a selected-version one
-- (void)setSelectedTag:(NSInteger)tag{
+//go to the page that was selected (4 main buttons)
+- (void)setSelectedTag:(NSInteger)tag {
     for (int i = 0; i < self.buttons.count; i++) {
         UIButton *btn = self.buttons[i];
         [btn setImage:[UIImage imageNamed:CustomTabBar_buttonNormalImages[i]] forState:UIControlStateNormal];
@@ -123,7 +124,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     }
 }
 
-//Do custom annimation when ceter + button is tapped
+//Do custom annimation when center + button is tapped
 - (void)centerAddBtnClicked:(UIButton *)button
 {
     NSLog(@"centerAddBtn clicked");
@@ -176,7 +177,7 @@ typedef NS_ENUM(NSInteger, TabBarButtonTag)
     [self showCustomTabBar];
 }
 
-
+//activate the events when an item in "+" is pressed
 - (void)itemClicked:(CustomItem *)item
 {
     [self resetTabBar];

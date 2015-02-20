@@ -17,7 +17,7 @@
 #import "CommonDefine.h"
 
 #define ORIGINAL_MAX_WIDTH 640.0f
-#define PersonalInfoTitle @[@[@"昵称",@"性别",@"生日"],@[@"职业",@"公司",@"学校",@"邮箱"]]
+#define PersonalInfoTitle @[@[@"nickname",@"gender",@"birthday"],@[@"occupation",@"company",@"school",@"email"]]
 
 @interface PersonalInfoViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;

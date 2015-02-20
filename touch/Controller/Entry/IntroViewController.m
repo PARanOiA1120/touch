@@ -32,7 +32,7 @@
                                                          pictureName:@"review@2x.png"
                                                             duration:3.5];
     ICETutorialPage *layer4 = [[ICETutorialPage alloc] initWithTitle:@"Partners recruiting?"
-                                                            subTitle:@"Ask who is intrested!"
+                                                            subTitle:@"Ask who is interested!"
                                                          pictureName:@"partner@2x.png"
                                                             duration:3.5];
     ICETutorialPage *layer5 = [[ICETutorialPage alloc] initWithTitle:@"Touch"
