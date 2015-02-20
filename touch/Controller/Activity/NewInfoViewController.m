@@ -318,8 +318,7 @@
     else
     {
         self.parentViewController.navigationController.navigationBarHidden = NO;
-        [[AppDelegate delegate] showTabBar];
-        self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 44 - 49);
+        self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
     }
     self.translationY = translation.y;
     NSLog(@"%f",translation.y);
