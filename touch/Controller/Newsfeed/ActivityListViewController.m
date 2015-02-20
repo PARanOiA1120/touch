@@ -88,7 +88,7 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UIActivityCircleNeedRefreshDataNotification object:nil];
 }
 
-//刷新数据源
+//refresh data
 - (void)refreshData
 {
     [self requestDataWithPage:self.currentPage];
@@ -97,7 +97,7 @@
 
 
 
-//更多操作按钮 点击事件
+//Button action
 - (void)moreButtonAction:(UIButton *)button
 {
     if (!_actionSheet) {
@@ -110,7 +110,7 @@
     }
 }
 
-//actionSheet中取消按钮的点击事件
+//actionSheet cancel event
 
 - (IBAction)actionSheetCancel:(id)sender {
     [_actionSheet hide];
@@ -123,7 +123,7 @@
 - (IBAction)actionSheetCollect:(id)sender {
 }
 
-//根据EventType 返回标题
+//go back to title according to eventype
 - (NSString *)getTitleWithEventType:(NSInteger)eventType
 {
     NSString *title;
@@ -159,7 +159,7 @@
 }
 
 
-//根据字符串  计算视图的高度
+//calculate the cell hight
 - (CGFloat)calculateViewHeight:(NSString *)text withViewWidth:(CGFloat)width withFont:(UIFont *)font
 {
     CGSize size;
@@ -172,30 +172,30 @@
 
 - (CGFloat)calculateCellHeight:(newsFeed *)newsFeed
 {
-    CGFloat height = 5.0;//cell 边框距离上边缘高度
-    height = height + 5 + 40 + 5; //头像以及 title time 高度 间隙10
+    CGFloat height = 5.0;//cell distance to top edge
+    height = height + 5 + 40 + 5; //avator and title time height gap 10
 
     if (newsFeed.eventType == 0 || newsFeed.eventType == 2){
-        //发表活动
-        height = height + 75 + 10; //间距 10
+        //create activity
+        height = height + 75 + 10; //gap 10
     }
     
-    //对发布内容的描述
+    //description to created event
     NSString *content = newsFeed.content;
     if (![content isEqualToString:@""]) {
         height = height + [self calculateViewHeight:content withViewWidth:SCREENWIDTH - 6 - 20 - 45 withFont:[UIFont systemFontOfSize:13]] + 5;
     }
     
-    //活动标签以及地理位置
+    //activity tag and location
     height = height + 20 + 5;
     
-    //点赞
+    //thump up
     NSArray *like = [NSArray arrayWithArray:newsFeed.likeUsers];
     if (like.count > 0) {
         height = height + 25 + 5;
     }
     
-    //评论
+    //comment
     NSArray *comment = [NSArray arrayWithArray:newsFeed.comments];
     if (comment.count > 0 && comment.count <= 6) {
         for (int i = 0; i < comment.count; i++) {
@@ -217,7 +217,7 @@
         height = height + 20 + 5;
     }
     
-    //like comment  按钮
+    //like comment button
     height = height + 25 + 5;
     
     height = height + 5; //cell边框 距离下边缘高度
@@ -319,10 +319,10 @@
     timeLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:13];
     [containerView addSubview:timeLabel];
     
-    height = height + 40 + 5; // title time Label 高度
+    height = height + 40 + 5; // title time Label height
      if (newsFeed.eventType == 0 || newsFeed.eventType == 2)
     {
-        //发布活动
+        //create activity
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary:newsFeed.eventDic];
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45, height, 75, 75)];
@@ -342,7 +342,7 @@
         height = height + 85;
     }
     
-    //对发布内容的描述
+    //description to created activity
     NSString *content = newsFeed.content;
     if (![content isEqualToString:@""]) {
         
@@ -359,7 +359,7 @@
         [containerView addSubview:line];
     }
     
-    //地理标签
+    //location tage
     UIImageView *tagImageView = [[UIImageView alloc] initWithFrame:CGRectMake(19, height + 2, 13, 15)];
     tagImageView.image = [UIImage imageNamed:@"activity_icon_tag.png"];
     [containerView addSubview:tagImageView];
@@ -373,10 +373,10 @@
     height = height + 20 + 5;
     
     
-    //展示点赞的人
+    //show people giving thumb up
     NSArray *like = [NSArray arrayWithArray:newsFeed.likeUsers];
     if (like.count > 0) {
-        //赞标签
+        //thumb up tage
         UIImageView *likeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(19, height + 6, 13, 12)];
         likeImageView.image = [UIImage imageNamed:@"activity_btn_praise_selected.png"];
         [containerView addSubview:likeImageView];
@@ -412,10 +412,10 @@
         height = height + 25 + 5;
     }
     
-    //评论
+    //comment
     NSArray *comment = [NSArray arrayWithArray:newsFeed.comments];
     if (comment.count > 0) {
-        //评论的标签
+        //comment tag
         UIImageView *commentImageView = [[UIImageView alloc] initWithFrame:CGRectMake(19, height + 6, 13, 12)];
         commentImageView.image = [UIImage imageNamed:@"activity_icon_comment.png"];
         [containerView addSubview:commentImageView];
@@ -453,7 +453,7 @@
         
     }
     
-    // 点赞按钮  评论按钮  更多 按钮
+    // thumb up button comment button  more button
     UIButton *likeBtn = [[UIButton alloc] initWithFrame:CGRectMake(45, height, 95, 25)];
     likeBtn.backgroundColor = RGBACOLOR(238, 238, 238, 1);
     if (newsFeed.hasBeenPraised) {

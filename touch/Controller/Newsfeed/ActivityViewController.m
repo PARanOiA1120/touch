@@ -65,6 +65,7 @@
  }
  */
 
+//call activityList to refresh its data
 -(void)refresh
 {
     [self.activityList refreshData];
