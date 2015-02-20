@@ -18,6 +18,8 @@
 		7E64D4B71A8B172E002DD5F8 /* PersonalInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4B51A8B172E002DD5F8 /* PersonalInfoViewController.xib */; };
 		7E64D4F01A8D4AF7002DD5F8 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D4EE1A8D4AF7002DD5F8 /* PersonInfoCell.m */; };
 		7E64D4F11A8D4AF7002DD5F8 /* PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D4EF1A8D4AF7002DD5F8 /* PersonInfoCell.xib */; };
+		7E64D50F1A97B8DF002DD5F8 /* chatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E64D50D1A97B8DF002DD5F8 /* chatViewController.m */; };
+		7E64D5101A97B8DF002DD5F8 /* chatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64D50E1A97B8DF002DD5F8 /* chatViewController.xib */; };
 		A9A7FDD21A96E70F00030928 /* activity_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDCD1A96E70F00030928 /* activity_head@2x.png */; };
 		A9A7FDD31A96E70F00030928 /* activity_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDCE1A96E70F00030928 /* activity_pic@2x.png */; };
 		A9A7FDD41A96E70F00030928 /* activity_visit_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A7FDCF1A96E70F00030928 /* activity_visit_head@2x.png */; };
@@ -182,6 +184,9 @@
 		7E64D4ED1A8D4AF7002DD5F8 /* PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonInfoCell.h; path = Controller/MineInfo/PersonInfoCell.h; sourceTree = "<group>"; };
 		7E64D4EE1A8D4AF7002DD5F8 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonInfoCell.m; path = Controller/MineInfo/PersonInfoCell.m; sourceTree = "<group>"; };
 		7E64D4EF1A8D4AF7002DD5F8 /* PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonInfoCell.xib; path = Controller/MineInfo/PersonInfoCell.xib; sourceTree = "<group>"; };
+		7E64D50C1A97B8DF002DD5F8 /* chatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chatViewController.h; path = Controller/chat/chatViewController.h; sourceTree = "<group>"; };
+		7E64D50D1A97B8DF002DD5F8 /* chatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = chatViewController.m; path = Controller/chat/chatViewController.m; sourceTree = "<group>"; };
+		7E64D50E1A97B8DF002DD5F8 /* chatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = chatViewController.xib; path = Controller/chat/chatViewController.xib; sourceTree = "<group>"; };
 		8320CE4774A8B8F676888D9D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A9A7FDCD1A96E70F00030928 /* activity_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_head@2x.png"; sourceTree = "<group>"; };
 		A9A7FDCE1A96E70F00030928 /* activity_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_pic@2x.png"; sourceTree = "<group>"; };
@@ -466,6 +471,16 @@
 			name = MineInfo;
 			sourceTree = "<group>";
 		};
+		7E64D5111A97BBED002DD5F8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7E64D50C1A97B8DF002DD5F8 /* chatViewController.h */,
+				7E64D50D1A97B8DF002DD5F8 /* chatViewController.m */,
+				7E64D50E1A97B8DF002DD5F8 /* chatViewController.xib */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		90D82FEB2D6CA1ACF734558D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +621,7 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7E64D5111A97BBED002DD5F8 /* Chat */,
 				B029F19F1A8BF3D100E60771 /* Activity */,
 				7E40EA1B1A84D24B00A92E6A /* MineInfo */,
 				B086863E1A7EC5240046CC9D /* NewEvent */,
@@ -970,6 +986,7 @@
 				B04321CD1A80813A00E46236 /* studyGroup@2x.png in Resources */,
 				B0E62A661A71E0F70067A244 /* fb_icon.png in Resources */,
 				B0E62A771A71E10C0067A244 /* study@2x.png in Resources */,
+				7E64D5101A97B8DF002DD5F8 /* chatViewController.xib in Resources */,
 				B0ACBD671A7DFAF000CBA508 /* ActivityViewController.xib in Resources */,
 				B04321C11A80210D00E46236 /* type_other@2x.png in Resources */,
 				B0E59A131A96F9FC00C3CAB6 /* mine_chevron@2x.png in Resources */,
@@ -1119,6 +1136,7 @@
 				B0E62A9B1A71E1270067A244 /* Event.m in Sources */,
 				B086864F1A7EC5240046CC9D /* NewStatusViewController.m in Sources */,
 				B0E62A9F1A71E1270067A244 /* newsFeedManager.m in Sources */,
+				7E64D50F1A97B8DF002DD5F8 /* chatViewController.m in Sources */,
 				B0E62A9E1A71E1270067A244 /* newsFeed.m in Sources */,
 				566712151A7570E500647D8E /* JCAlertView.m in Sources */,
 				B0E62ACE1A71E20C0067A244 /* VBFDoubleSegment.m in Sources */,
