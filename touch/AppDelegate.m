@@ -119,7 +119,6 @@
     [self.window makeKeyAndVisible];
 }
 
-
 - (void)showTabBar{
     if (self.tabBarController) {
         [self.tabBarController showCustomTabBar];

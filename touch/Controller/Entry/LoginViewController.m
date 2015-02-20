@@ -11,6 +11,7 @@
 #import "CommonDefine.h"
 #import "ProgressHUD.h"
 #import "User.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -54,7 +55,8 @@
 - (IBAction)backToIntro:(id)sender {
     [self.userNameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [[AppDelegate delegate] goToIntro];
 }
 
 //We haven't implemented the following four methods
