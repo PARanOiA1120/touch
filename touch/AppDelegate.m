@@ -82,15 +82,14 @@
     UINavigationController *activityNav=[[UINavigationController alloc] initWithRootViewController:activity];
     
     //Navigate to notification center
-    NewInfoViewController *newInfo = [[NewInfoViewController alloc] initWithNibName:@"NewInfoViewController" bundle:nil]; //Mark for deletion
-    UINavigationController *newInfoNav=[[UINavigationController alloc] initWithRootViewController:newInfo];
+    NewInfoViewController *newInfo = [[NewInfoViewController alloc] initWithNibName:@"NewInfoViewController" bundle:nil];    UINavigationController *newInfoNav=[[UINavigationController alloc] initWithRootViewController:newInfo];
     
     //Navigate to chatting list, we don't plan to implement this part this quarter
     chatViewController *chatController = [[chatViewController alloc] init];
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
 
     //Navigate to personal homepage
-    MineInfoViewController *mineInfo = [[MineInfoViewController alloc] initWithNibName:@"MineInfoViewController" bundle:nil]; //Mark for deletion
+    MineInfoViewController *mineInfo = [[MineInfoViewController alloc] initWithNibName:@"MineInfoViewController" bundle:nil];
     UINavigationController *mineInfoNav=[[UINavigationController alloc] initWithRootViewController:mineInfo];
 
     NSArray *tabbarArray = [[NSArray alloc] initWithObjects:activityNav, newInfoNav, chatNav, mineInfoNav, nil];

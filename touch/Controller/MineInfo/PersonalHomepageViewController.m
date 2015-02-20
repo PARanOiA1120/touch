@@ -220,7 +220,6 @@
 
 - (IBAction)backBtn:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [[AppDelegate delegate] showTabBar];
 }
 
 

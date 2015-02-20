@@ -13,8 +13,8 @@
 #import "NewStatusViewController.h"
 #import "CampaignViewController.h"
 #import "CustomItem.h"
-#import "PersonalHomepageViewController.h" //Mark for deletion
-#import "NewInfoViewController.h" //Mark for deletion2
+#import "PersonalHomepageViewController.h"
+#import "NewInfoViewController.h"
 
 typedef NS_ENUM(NSInteger, TabBarButtonTag)
 {
