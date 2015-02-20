@@ -23,20 +23,39 @@
     return sharedManager;
 }
 
-- (void)createNewsFeed:(newsFeed *)newsFeed InBackgroundWithBlock:(PFBooleanResultBlock)block {
+- (void)createNewsFeed:(newsFeed *)newsFeed{
     PFObject *object = [newsFeed PFObjectValue];
-    [object setObject:[User currentUser] forKey:NewsFeedCreator];
+    object[NewsFeedCreator] = [PFUser currentUser];
+//    [object setObject:[User currentUser] forKey:NewsFeedCreator];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            block(succeeded, error);
+            NSLog(@"createNewsFeed Error");
         }
+        
     }];
 }
 
 
-- (void)getNewsFeedsInBackgroundwithParameters:(NSDictionary *)parameters WithBlock:(NewsFeedBlock)block
+- (NSMutableArray *)getNewsFeedsInBackground
 {
-
+    PFQuery *query = [PFQuery queryWithClassName:@"NewsFeed"];
+    NSArray *array= [query findObjects];
+    NSMutableArray *returnArray = [[NSMutableArray alloc] init];
+    for(int i=array.count-1; i>-1; i--)
+    {
+        newsFeed* nf = [[newsFeed alloc] init];
+        PFObject *object = array[i];
+        nf.creator = [User userWithPFObject:object[@"creator"]];
+//        NSLog(@"begin");
+//        NSLog(@"%@",object[@"creator"]);
+//        NSLog(@"end");
+        
+        nf.content = object[@"content"];
+        nf.eventType = [object[@"event_type"] integerValue];
+        [returnArray addObject:nf];
+    }
+    NSLog(@"do you see me??");
+    return returnArray;
 }
 
 //点赞

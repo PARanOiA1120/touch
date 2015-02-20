@@ -112,8 +112,12 @@
     if ([_inputView.text isEqualToString:@""]) {
         return;
     }
-    newsFeed *nf = [[newsFeed alloc] initForTest:_inputView.text NT:1 ID:@"TestID" UserName:@"Me  "];/////////////
-    [self.delegate didSend:nf];
+    NSLog(@"reach?");
+    newsFeed *nf = [[newsFeed alloc] init];
+    nf.eventType = 1;
+    nf.content = _inputView.text;
+    [[newsFeedManager sharedManager] createNewsFeed:nf];
+
    /* [ProgressHUD show:nil];
     [[newsFeedManager sharedManager] createNewsFeed:newsFeed InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         [ProgressHUD dismiss];

@@ -16,9 +16,9 @@ typedef void (^NewsFeedBlock)(NSArray *array, NSError *error);
 
 @interface newsFeedManager : NSObject
 + (instancetype)sharedManager;
-- (void)createNewsFeed:(newsFeed *)newsFeed InBackgroundWithBlock:(PFBooleanResultBlock)block;
+- (void)createNewsFeed:(newsFeed *)newsFeed;
 
-- (void)getNewsFeedsInBackgroundwithParameters:(NSDictionary *)parameters WithBlock:(NewsFeedBlock)block;
+- (NSMutableArray *)getNewsFeedsInBackground;
 
 - (void)likeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block;
 

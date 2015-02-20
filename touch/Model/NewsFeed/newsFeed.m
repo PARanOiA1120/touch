@@ -48,8 +48,10 @@ NSString * const NewsFeedComments = @"comments";
 
 - (PFObject *)PFObjectValue {
     PFObject *object = [[PFObject alloc] initWithClassName:NewsFeedClassName];
-    [object setObject:_content forKey:NewsFeedContent];
-    [object setObject:[NSNumber numberWithInteger:_eventType] forKey:NewsFeedEventType];
+    object[NewsFeedContent] = _content;
+//    [object setObject:_content forKey:NewsFeedContent];
+    object[NewsFeedEventType] = [NSNumber numberWithInteger:_eventType];
+//    [object setObject:[NSNumber numberWithInteger:_eventType] forKey:NewsFeedEventType];
     return object;
 }
 
