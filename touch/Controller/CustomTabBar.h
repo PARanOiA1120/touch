@@ -14,10 +14,12 @@
 @property (nonatomic,strong) NSMutableArray *buttons;
 @property (nonatomic,strong) UIImageView *slideBg;
 
+//Initialize custom tab bar
 - (void)customTabBar;
 - (void)setSelectedTag:(NSInteger)tag;
 - (void)showCustomTabBar;
 - (void)resetTabBar;
+//hide tab bar when needed
 - (void)hideCustomTabBar;
 
 @end

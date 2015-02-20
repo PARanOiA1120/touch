@@ -4,7 +4,7 @@
 //
 //  Created by CharlesYJP on 2/7/15.
 //  Copyright (c) 2015 cs48. All rights reserved.
-//
+//  This class is based on PersonalHomepageViewController.m by Jack Zeng
 
 
 #import "PersonalHomepageViewController.h"
@@ -102,30 +102,6 @@
     [self.view addSubview:self.myTableView];
     
     [self setExtraCellLineHidden:self.myTableView];
-    [self configure];
-}
-
-
-- (void)configure{
-       /* __weak __typeof(User) *wUser = self.user;
-       [wUser getFullInformation:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [ProgressHUD dismiss];
-            [UIView transitionWithView:self.view
-                              duration:1.0f
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:^{
-                                self.largeImageView.image = wUser.largeImage;
-                            } completion:nil];
-            //self.userHeadImageView.image = wUser.squareImage;
-            self.userNameLabel.text = wUser.username;
-            if ([wUser.gender isEqualToString:@"male"])
-                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_male"];
-            else
-                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_female"];
-            self.userInfoArray = [@[SAFEPARAMETER(wUser.username),SAFEPARAMETER(wUser.gender),SAFEPARAMETER(wUser.major),SAFEPARAMETER(wUser.classlevel),SAFEPARAMETER(wUser.description) ,@"",@[]]mutableCopy];
-        }
-    }];*/
 }
 
 - (void)layoutTableHeaderView{
@@ -146,7 +122,6 @@
     
     CGFloat superViewHeight = CGRectGetHeight(blurView.frame);
     
-    //name friends etc
     self.userInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, superViewHeight * kPersonalHomeViewSeprator)];
     self.userInfoView.backgroundColor = [UIColor clearColor];
     [blurView addSubview:self.userInfoView];
@@ -242,6 +217,11 @@
     [blurView addSubview:self.mapButton];
 }
 
+- (IBAction)backBtn:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [[AppDelegate delegate] showTabBar];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -253,15 +233,13 @@
     
     if ([self.user.recordID isEqualToString:[User currentUser].recordID]) {
         self.userType = UserTypeSelf;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFullInfo) name:@"updatedFullInfo" object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTextInfo) name:@"updatedTextInfo" object:nil];
     }
     else{
         self.userType = UserTypeOther;
     }
     
     //doing this when it's not the current user
-
+    //fake data
     self.newsArray = @[@{@"time":@"Feb 11",
                          @"news":@[@{@"image":@"personal_activity_head.png",@"content":@"ViewController",@"title":@"CS48Project",@"location":@"CSIL"}]},
                        @{@"time":@"Feb 11",
@@ -293,70 +271,6 @@
     //NSLog(@"I got called");
     [super viewDidAppear:animated];
     self.navigationController.navigationBarHidden = NO;
-}
-
-- (void)updateFullInfo
-{/*
-    __weak __typeof(JCUser) *wUser = self.user;
-    [wUser getFullInformation:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [UIView transitionWithView:self.view
-                              duration:1.0f
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:^{
-                                self.largeImageView.image = wUser.largeImage;
-                            } completion:^(BOOL complete)
-             {
-                 [ProgressHUD dismiss];
-             }];
-            
-            self.userHeadImageView.image = wUser.squareImage;
-            self.userNameLabel.text = wUser.name;
-            self.vipImageView.image = [UIImage imageNamed:@"personal_icon_nonvip.png"];
-            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-            formatter.dateFormat = @"yyyy-MM-dd";
-            NSDate *bDay = [formatter dateFromString:wUser.birthday];
-            //计算生日
-            NSDate *today = [NSDate date];
-            NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
-                                               components:NSYearCalendarUnit
-                                               fromDate:bDay
-                                               toDate:today
-                                               options:0];
-            self.ageLabel.text = [NSString stringWithFormat:@"%ld 岁",(long)ageComponents.year];
-            if ([wUser.sex isEqualToString:@"male"])
-            {
-                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_male"];
-            }
-            else
-            {
-                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_female"];
-            }
-            self.userInfoArray = [@[wUser.name,wUser.school,wUser.workPlace,wUser.job,wUser.birthday,@"",@[]]mutableCopy];
-        }
-    }];*/
-}
-
-- (void)updateTextInfo
-{/*
-    __weak __typeof(JCUser) *wUser = self.user;
-    [ProgressHUD show:@"正在更新" Interaction:NO];
-    [wUser getTextInformation:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            self.userNameLabel.text = wUser.name;
-            if ([wUser.sex isEqualToString:@"male"])
-            {
-                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_male"];
-            }
-            else
-            {
-                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_female"];
-            }
-            self.userInfoArray = [@[wUser.name,wUser.school,wUser.workPlace,wUser.job,wUser.birthday,@"",@[]]mutableCopy];
-            [ProgressHUD dismiss];
-        }
-    }];
-    */
 }
 
 - (void)setExtraCellLineHidden: (UITableView *)tableView{
@@ -394,7 +308,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//最下方四个按钮的点击事件，信息、新鲜事、活动、地图
+
 - (void)buttonClicked:(id)sender {
     
     self.myTableView.tag = ((UIButton *)sender).tag;
@@ -404,18 +318,14 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.tableHeaderView.frame = CGRectMake(0, -(SCREENHEIGHT * kPersonalHomeViewSeprator), self.tableHeaderView.frame.size.width, self.tableHeaderView.frame.size.height);
         self.myTableView.frame = CGRectMake(0, SCREENHEIGHT *(1 - kPersonalHomeViewSeprator), self.myTableView.frame.size.width, self.myTableView.frame.size.height);
-        //self.mapView.frame = CGRectMake(0, SCREENHEIGHT *(1 - kPersonalHomeViewSeprator), self.myTableView.frame.size.width, self.myTableView.frame.size.height);
         self.backButton.alpha = 1.0;
         self.editButton.alpha = 0;
         self.userInfoView.hidden = YES;
         self.userHeadView.hidden = NO;
         if (((UIButton *)sender).tag == 3) {
-            //self.mapView.hidden = NO;
             self.myTableView.hidden = YES;
         }
-        else
-        {
-            //self.mapView.hidden = YES;
+        else{
             self.myTableView.hidden = NO;
         }
     } completion:^(BOOL finished) {
@@ -424,13 +334,12 @@
     }];
 }
 
-//tableHeaderView 响应手势事件
+//tableHeaderView
 - (void)responseToGesture:(UIGestureRecognizer *)gestureRecognizer
 {
     [UIView animateWithDuration:0.5 animations:^{
         self.tableHeaderView.frame = CGRectMake(0, 0, self.tableHeaderView.frame.size.width, self.tableHeaderView.frame.size.height);
         self.myTableView.frame = CGRectMake(0, SCREENHEIGHT, self.myTableView.frame.size.width, self.myTableView.frame.size.height);
-        //self.mapView.frame = CGRectMake(0, SCREENHEIGHT, self.myTableView.frame.size.width, self.myTableView.frame.size.height);
         self.backButton.alpha = 1.0;
         self.editButton.alpha = 1.0;
         self.userInfoView.hidden = NO;
@@ -442,14 +351,14 @@
 }
 
 
-//根据图片或者视频的个数  计算cell的高度
+//calculate cell height
 - (CGFloat)calculateCellHeightForPic:(NSInteger)count
 {
     CGFloat height = ceil(count/3.0) * 80;
     return height;
 }
 
-//根据活动个数  计算cell的高度
+//calculate cell height
 - (CGFloat)calculateCellHeightForActivity:(NSInteger)count
 {
     CGFloat height = 85 *count;
@@ -465,7 +374,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView.tag == TableViewDataSourceType_Info) {
-        NSLog(@"个人信息 数组的count %ld",self.userInfoArray.count);
         return (self.userType == UserTypeSelf ? (self.userInfoArray.count - 1) : self.userInfoArray.count);
     }
     else if (tableView.tag == TableViewDataSourceType_News)
@@ -546,31 +454,6 @@
             textLabel.textAlignment = NSTextAlignmentRight;
             textLabel.text = Personal_Info[indexPath.row];
             [cell.contentView addSubview:textLabel];
-            
-            NSArray *userIdArray = self.userInfoArray[indexPath.row];
-            
-            CGFloat x_padding = (SCREENWIDTH - 100 - 40 - 25)/5;
-            CGFloat y_padding = 25 + 7;
-            //近期来访头像宽 25 高 25 每行 6个
-            int row = 0,col = 0;
-            
-            for (int i = 0; i < userIdArray.count; i++) {
-                if (i % 6 == 0 && i != 0) {
-                    row++;
-                    col = 0;
-                }
-                UIImageView *headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(100 + col * x_padding , 10 + row * y_padding, 25, 25)];
-                //JCUser *user = (JCUser *)[JCUser userWithUserId:userIdArray[i]];
-                /*[user getSmallUserAvatarWithUserID:user.recordID andWidth:25 andHeight:25 andBlock:^(UIImage *image, NSError *error) {
-                    if (image) {
-                        headImageView.image = image;
-                    }
-                }];*/
-                headImageView.layer.masksToBounds = YES;
-                headImageView.layer.cornerRadius = 12.5;
-                [cell.contentView addSubview:headImageView];
-                col++;
-            }
         }
         else
         {
@@ -658,7 +541,6 @@
         
         
         for (int i = 0; i < activityArray.count; i++) {
-            
             NSDictionary *activityDic = activityArray[i];
             UIImageView *headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(80, i*85, 75, 75)];
             headImageView.image = [UIImage imageNamed:activityDic[@"image"]];

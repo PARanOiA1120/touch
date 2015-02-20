@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalHomepageViewController">
             <connections>
+                <outlet property="backButton" destination="P4M-3E-cUW" id="LBu-OX-Mrs"/>
+                <outlet property="editButton" destination="sgS-aa-BAN" id="dVc-8y-S6M"/>
                 <outlet property="view" destination="m2o-El-8Lg" id="XBB-qv-A4a"/>
             </connections>
         </placeholder>
@@ -26,6 +28,9 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="backBtn:" destination="-1" eventType="touchDown" id="AHh-4Z-q4P"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-aa-BAN">
                     <rect key="frame" x="540" y="25" width="52" height="31"/>

@@ -84,11 +84,13 @@ RMDateSelectionViewControllerDelegate>
     [super viewWillAppear:animated];
 }
 
+//added the cancel button on the navigation bar
 - (void)configureNavigationBar {
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonDidClick:)];
     self.navigationItem.rightBarButtonItem = buttonItem;
 }
 
+//cancel button listener
 - (void)cancelButtonDidClick:(UIBarButtonItem *)item {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
@@ -131,6 +133,7 @@ RMDateSelectionViewControllerDelegate>
     return segment;
 }
 
+
 - (UISegmentedControl *)segmentControlWithFrame:(CGRect)frame items:(NSArray *)items {
     UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:items];
     control.frame = frame;
@@ -157,13 +160,6 @@ RMDateSelectionViewControllerDelegate>
     [super didReceiveMemoryWarning];
 }
 
-- (void)placeButtonDidClick:(UIButton *)button {
-    //    PlaceListViewController *placeController = [[PlaceListViewController alloc] init];
-}
-
-// invite friend
-- (void)goInviteFriend {
-}
 
 // create new event
 #pragma mark -- Create New Event
@@ -171,7 +167,6 @@ RMDateSelectionViewControllerDelegate>
     if ([_titleTextField.text isEqualToString:@""] || [_descTextView.text isEqualToString:@""]) {
         return;
     }
-    
     Event *event = [[Event alloc] init];
     event.title = _titleTextField.text;
     event.eventDescription = _descTextView.text;
@@ -227,6 +222,7 @@ RMDateSelectionViewControllerDelegate>
     }];
 }
 
+//Date picker for event time
 - (IBAction)timeViewDidClick:(UIButton *)sender {
     [self.view endEditing:YES];
     [ActionSheetDatePicker showPickerWithTitle:@""
@@ -241,6 +237,8 @@ RMDateSelectionViewControllerDelegate>
                                   }
                                         origin:sender];
 }
+
+//listener for event type cell
 - (IBAction)typeButtonDidClick:(UIButton *)sender {
     ActivityTypeViewController *typeController = [[ActivityTypeViewController alloc] init];
     [self.navigationController pushViewController:typeController animated:YES];

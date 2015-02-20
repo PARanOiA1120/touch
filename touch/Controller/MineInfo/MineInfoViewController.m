@@ -41,10 +41,12 @@
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate
+//Define number of sections in the table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
 
+//Define number of rows in each section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
@@ -55,7 +57,7 @@
     return 0;
 }
 
-
+//Define height of each section
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return 112;
@@ -65,6 +67,7 @@
     }
     return 0;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 0) {
@@ -76,7 +79,7 @@
     return 0;
 }
 
-
+//Add context to each row
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -86,6 +89,7 @@
     for (UIView *subview in [cell.contentView subviews]) {
         [subview removeFromSuperview];
     }
+    //The first section in the table view is the entrance for User Profile page
     if (indexPath.section == 0) {
         UIImageView *headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 16, 80, 80)];
         headImageView.image = [UIImage imageNamed:@"mine_head.png"];
@@ -110,6 +114,7 @@
         bottomLine.backgroundColor = [UIColor colorWithRed:213.0f/255.0f green:213.0f/255.0f blue:213.0f/255.0f alpha:1];
         [cell.contentView addSubview:bottomLine];
     }
+    //Second section is an entrance to setting page, which include a "logout" button
     else if (indexPath.section == 1){
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(7, 4, 35, 35)];
         imageView.image = [UIImage imageNamed:@"mine_set.png"];
@@ -152,6 +157,7 @@
     return headView;
 }
 
+//Navigation
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0 && indexPath.row == 0) {
