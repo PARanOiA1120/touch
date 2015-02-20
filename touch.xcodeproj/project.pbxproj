@@ -931,11 +931,11 @@
 				TargetAttributes = {
 					B038E2091A62017D00E660ED = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = AQNTGEWRNX;
+						DevelopmentTeam = WHN3G9ECZ6;
 					};
 					B038E2221A62017D00E660ED = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = AQNTGEWRNX;
+						DevelopmentTeam = WHN3G9ECZ6;
 						TestTargetID = B038E2091A62017D00E660ED;
 					};
 				};

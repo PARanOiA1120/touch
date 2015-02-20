@@ -10,6 +10,5 @@
 #import "newsFeed.h"
 
 @interface ActivityListViewController : UIViewController
--(void)testAddNewsFeed:(newsFeed *)nf;
 -(void)refreshData;
 @end

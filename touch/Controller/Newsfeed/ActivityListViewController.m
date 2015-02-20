@@ -497,15 +497,6 @@
     return cell;
 }
 
-//for testing local data
--(void)testAddNewsFeed:(newsFeed *)nf
-{
-    NSLog(@"testAddNewsFeed Reached!!!!!!!!!!!!");
-    [self.dataSource addObject:nf];
-    [self requestDataWithPage:0];
-    
-}
-
 
 
 

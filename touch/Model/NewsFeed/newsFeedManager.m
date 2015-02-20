@@ -54,7 +54,6 @@
         nf.eventType = [object[@"event_type"] integerValue];
         [returnArray addObject:nf];
     }
-    NSLog(@"do you see me??");
     return returnArray;
 }
 

@@ -53,10 +53,7 @@
 }
 
 
--(void)didSend:(newsFeed *)nf
-{
-    [self.activityList testAddNewsFeed:nf];
-}
+
 
 /*
  #pragma mark - Navigation
