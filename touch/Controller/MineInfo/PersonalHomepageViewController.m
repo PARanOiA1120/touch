@@ -57,6 +57,7 @@
 
 @implementation PersonalHomepageViewController
 
+//set up the all the elements in this page and ready to
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
