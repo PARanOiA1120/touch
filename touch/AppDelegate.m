@@ -16,6 +16,7 @@
 #import "ActivityViewController.h"
 #import "MineInfoViewController.h"
 #import "NewInfoViewController.h"
+#import "chatViewController.h"
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
 @property (strong, nonatomic) ICETutorialController *introController;
@@ -85,7 +86,7 @@
     UINavigationController *newInfoNav=[[UINavigationController alloc] initWithRootViewController:newInfo];
     
     //Navigate to chatting list, we don't plan to implement this part this quarter
-    UIViewController *chatController = [[UIViewController alloc] init];
+    chatViewController *chatController = [[chatViewController alloc] init];
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chatController];
 
     //Navigate to personal homepage
