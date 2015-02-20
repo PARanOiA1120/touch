@@ -15,6 +15,7 @@
 
 BOOL fullInfoReturned=NO;
 
+//get current user
 + (User *)currentUser {
     static User *instance = nil;
     static dispatch_once_t onceToken;
@@ -24,9 +25,8 @@ BOOL fullInfoReturned=NO;
     return instance;
 }
 
-
-+ (instancetype) userWithPFObject:(PFObject *)object
-{
+//transfer from PFObject to PFUser
++ (instancetype) userWithPFObject:(PFObject *)object{
     User *user = [[User alloc] init];
     user.recordID = object.objectId;
     user.username=[object objectForKey:@"username"];
@@ -37,23 +37,22 @@ BOOL fullInfoReturned=NO;
     return user;
 }
 
-//根据 userid 返回对应的用户实例
-+ (instancetype) userWithUserId:(NSString *)userId
-{
+//return user based on user ID
++ (instancetype) userWithUserId:(NSString *)userId{
     PFQuery *query=[PFUser query];
     PFObject *object = [query getObjectWithId:userId];
     return [User userWithPFObject:object];
 }
 
 
-//Return PFObject using based on user
-- (PFObject *) getUserObject
-{
+//Return PFObject based on user ID
+- (PFObject *) getUserObject{
     PFQuery *query=[PFUser query];
     PFObject *object = [query getObjectWithId:self.recordID];
     return object;
 }
 
+//check with database if the username/password pair is valid
 - (void) logInWithUsernameInBackground: (NSString*)username password:(NSString*) password block:(PFBlock)block {
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
@@ -64,20 +63,16 @@ BOOL fullInfoReturned=NO;
             self.password=user.password;
             
             CGFloat length = 0.0;
-            if (IS_IPHONE_6P)
-            {
+            if (IS_IPHONE_6P){
                 length = 90;
             }
-            if (IS_IPHONE_6)
-            {
+            if (IS_IPHONE_6){
                 length = 80;
             }
-            if (IS_IPHONE_5)
-            {
+            if (IS_IPHONE_5){
                 length = 75;
             }
-            if (IS_IPHONE_4_OR_LESS)
-            {
+            if (IS_IPHONE_4_OR_LESS){
                 length = 65;
             }
             block(YES,error);
@@ -87,8 +82,8 @@ BOOL fullInfoReturned=NO;
     }];
 }
 
-- (void)signUpInBackgroundWithBlock: (PFBlock)block
-{
+//database keep a record of user entered information
+- (void)signUpInBackgroundWithBlock: (PFBlock)block{
     PFUser * user = [PFUser user];
     user.username = self.username;
     user.password =  self.password;
@@ -100,85 +95,6 @@ BOOL fullInfoReturned=NO;
         block(succeeded,error);
     }];
     
-}
-
-- (void) getFullInformation:(PFBlock)block {
-    [ProgressHUD show:@"正在获取" Interaction:NO];
-    PFQuery *query=[PFUser query];
-    [query getObjectInBackgroundWithId:self.recordID block:^(PFObject *object, NSError *error) {
-        if (!error) {
-            self.recordID = object.objectId;
-            self.username=[object objectForKey:@"userName"];
-            self.gender = [object objectForKey:@"gender"];
-            self.classlevel = [object objectForKey:@"classlevel"];
-            self.major=[object objectForKey:@"major"];
-        }
-           }];
-}
-
-- (void)getTextInformation:(PFBlock)block
-{
-    PFQuery *query = [PFUser query];
-    [query getObjectInBackgroundWithId:self.recordID block:^(PFObject *object, NSError *error) {
-        if (object)
-        {
-            self.recordID = object.objectId;
-            self.gender = [object objectForKey:@"gender"];
-            self.classlevel = [object objectForKey:@"classlevel"];
-            self.major=[object objectForKey:@"major"];
-            block(YES,error);
-        }
-        else
-        {
-            block(NO,error);
-        }
-    }];
-}
-
-
-- (void)getNameAndUserAvatar:(PFBlock)block
-{
-    PFQuery *userQuery = [PFUser query];
-    [userQuery getObjectInBackgroundWithId:self.recordID block:^(PFObject *object, NSError *error) {
-        if (object)
-        {
-            self.username = [object objectForKey:@"username"];
-
-        }
-    }];
-}
-
-//更新用户的个人信息
-- (void)updateUserInfo: (PFBlock)block percentDone:(PercentBlock)percent squarePercent:(PercentBlock)squarePercent
-{
-    PFUser *currentUser = [PFUser currentUser];
-    [currentUser setObject:self.gender forKey:@"gender"];
-    [currentUser setObject:self.major forKey:@"major"];
-    [currentUser setObject:self.classlevel forKey:@"classlevel"];
-
-    
-}
-
-- (void)updateUserInfoWithoutImage:(PFBlock)block
-{
-    [ProgressHUD show:@"Updating" Interaction:NO];
-    PFUser *currentUser = [PFUser currentUser];
-    [currentUser setObject:self.gender forKey:@"gender"];
-    [currentUser setObject:self.major forKey:@"major"];
-    [currentUser setObject:self.classlevel forKey:@"classlevel"];
-    
-    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded)
-        {
-            [ProgressHUD showSuccess:@"Update successful！"];
-            self.recordID = currentUser.objectId;
-            block(YES,error);
-        }
-        else
-        {
-            block(NO,error);
-        }
-    }];
 }
 
 
@@ -201,9 +117,8 @@ BOOL fullInfoReturned=NO;
     fullInfoReturned=NO;
 }
 
-
-+ (User *)getPFUserFromPFUser:(PFObject *)aUser
-{
+//get access to other user's profile
++ (User *)getPFUserFromPFUser:(PFObject *)aUser{
     User *user = [[User alloc] init];
     user.recordID = aUser.objectId;
     user.username=[aUser objectForKey:@"username"];
@@ -212,20 +127,6 @@ BOOL fullInfoReturned=NO;
     user.major=[aUser objectForKey:@"major"];
     return user;
 }
-
-+ (NSArray *)getPFUserIdArrayFromPFUserArray:(NSArray *)aUserArray
-{
-    NSMutableArray *jUserArray = [NSMutableArray arrayWithCapacity:aUserArray.count];
-    if (aUserArray.count > 0) {
-        for (PFObject *object in aUserArray) {
-            if (![object isKindOfClass:[NSNull class]]) {
-                [jUserArray addObject:object.objectId];
-            }
-        }
-    }
-    return jUserArray;
-}
-
 
 @end
 

@@ -50,13 +50,12 @@
 }
 
 //back to the IntroViewController if "back" button tapped
-- (IBAction)back:(id)sender {
-    NSLog(@"back clicked");
+
+- (IBAction)backToIntro:(id)sender {
     [self.userNameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 //We haven't implemented the following four methods
 - (IBAction)forgotPassword:(id)sender {
