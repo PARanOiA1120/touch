@@ -5,6 +5,7 @@
 //  Created by Ariel Xin on 2/1/15.
 //  Copyright (c) 2015 cs48. All rights reserved.
 //
+//This implement the feature that if you click one of the activity type, it will show a different color of the picture to let the user know which one is selected. 
 
 #import "ActivityTypeCell.h"
 

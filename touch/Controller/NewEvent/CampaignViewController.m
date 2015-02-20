@@ -5,6 +5,7 @@
 //  Created by zhu on 1/26/15.
 //  Copyright (c) 2015 cs48. All rights reserved.
 //
+//This controller specifies the UI in post new status page, it can create and post new event to the news feed. Access to this view controller by clicking the first bubble “event” which will show up after user click “+” button at the center of the tab bar.
 
 #import "CampaignViewController.h"
 #import "SZTextView.h"
@@ -28,6 +29,7 @@
 UITableViewDelegate,
 UIActionSheetDelegate,
 RMDateSelectionViewControllerDelegate>
+
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UISegmentedControl *typeControl;
