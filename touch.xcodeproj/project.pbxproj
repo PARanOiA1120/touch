@@ -481,6 +481,15 @@
 			name = Chat;
 			sourceTree = "<group>";
 		};
+		7E64D5121A97F258002DD5F8 /* Plus */ = {
+			isa = PBXGroup;
+			children = (
+				B08686451A7EC5240046CC9D /* NewStatus */,
+				B086863E1A7EC5240046CC9D /* NewEvent */,
+			);
+			name = Plus;
+			sourceTree = "<group>";
+		};
 		90D82FEB2D6CA1ACF734558D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,14 +512,14 @@
 			path = Resources/ActivityImages;
 			sourceTree = "<group>";
 		};
-		B029F19F1A8BF3D100E60771 /* Activity */ = {
+		B029F19F1A8BF3D100E60771 /* Status */ = {
 			isa = PBXGroup;
 			children = (
 				B029F1A01A8BF3D100E60771 /* NewInfoViewController.h */,
 				B029F1A11A8BF3D100E60771 /* NewInfoViewController.m */,
 				B029F1A21A8BF3D100E60771 /* NewInfoViewController.xib */,
 			);
-			name = Activity;
+			name = Status;
 			path = Controller/Activity;
 			sourceTree = "<group>";
 		};
@@ -621,13 +630,12 @@
 		B038E2381A6238D000E660ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7E64D5111A97BBED002DD5F8 /* Chat */,
-				B029F19F1A8BF3D100E60771 /* Activity */,
-				7E40EA1B1A84D24B00A92E6A /* MineInfo */,
-				B086863E1A7EC5240046CC9D /* NewEvent */,
-				B08686451A7EC5240046CC9D /* NewStatus */,
-				B0ACBD481A7DFAEF00CBA508 /* Entry */,
 				B0ACBD541A7DFAEF00CBA508 /* Newsfeed */,
+				B029F19F1A8BF3D100E60771 /* Status */,
+				7E64D5121A97F258002DD5F8 /* Plus */,
+				7E64D5111A97BBED002DD5F8 /* Chat */,
+				7E40EA1B1A84D24B00A92E6A /* MineInfo */,
+				B0ACBD481A7DFAEF00CBA508 /* Entry */,
 				B0E62AA11A71E1370067A244 /* CustomTabBar.h */,
 				B0E62AA21A71E1370067A244 /* CustomTabBar.m */,
 				B0E62AA31A71E1370067A244 /* InsetTextField.h */,

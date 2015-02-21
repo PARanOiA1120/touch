@@ -55,7 +55,6 @@
 - (IBAction)backToIntro:(id)sender {
     [self.userNameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
-    //[self dismissViewControllerAnimated:YES completion:nil];
     [[AppDelegate delegate] goToIntro];
 }
 

@@ -19,7 +19,6 @@
 #import "chatViewController.h"
 
 @interface AppDelegate () <ICETutorialControllerDelegate>
-@property (strong, nonatomic) ICETutorialController *introController;
 @end
 
 @implementation AppDelegate
