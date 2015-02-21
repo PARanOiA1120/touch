@@ -53,10 +53,7 @@
 }
 
 
--(void)didSend:(newsFeed *)nf
-{
-    [self.activityList testAddNewsFeed:nf];
-}
+
 
 /*
  #pragma mark - Navigation
@@ -68,6 +65,7 @@
  }
  */
 
+//call activityList to refresh its data
 -(void)refresh
 {
     [self.activityList refreshData];

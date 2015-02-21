@@ -33,7 +33,6 @@ BOOL fullInfoReturned=NO;
     user.gender= [object objectForKey:@"gender"];
     user.major= [object objectForKey:@"major"];
     user.classlevel = [object objectForKey:@"classlevel"];
-    
     return user;
 }
 
