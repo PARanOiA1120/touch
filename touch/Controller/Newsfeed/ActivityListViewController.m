@@ -52,6 +52,7 @@
 //    
 //    [self.headerView forceToRefresh:self.activityTableView];
     [self requestDataWithPage:0];
+    [self refreshData];
 }
 
 - (void)didReceiveMemoryWarning {
