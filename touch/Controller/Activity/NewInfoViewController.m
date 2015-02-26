@@ -311,15 +311,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGPoint translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview];
-    if (translation.y < self.translationY) {
-        self.parentViewController.navigationController.navigationBarHidden = YES;
-        self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
-    }
-    else
-    {
-        self.parentViewController.navigationController.navigationBarHidden = NO;
-        self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
-    }
+    self.parentViewController.navigationController.navigationBarHidden = YES;
+    self.parentViewController.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
     self.translationY = translation.y;
     NSLog(@"%f",translation.y);
 }

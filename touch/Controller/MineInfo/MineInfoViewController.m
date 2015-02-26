@@ -29,6 +29,7 @@
     self.myTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, CGRectGetHeight(self.tabBarController.tabBar.frame), 0.0f);
 }
 
+//show navigation bar and custom tab bar
 - (void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = NO;
     [[AppDelegate delegate] showTabBar];
