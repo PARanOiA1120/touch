@@ -298,7 +298,6 @@
 //    [user getSmallUserAvatarWithUserID:user.recordID andWidth:40 andHeight:40 andBlock:^(UIImage *image, NSError *error) {
 //        headImageView.image = image;
 //    }];
-        NSLog(@"Can you see me?");
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userHeadViewTap:)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;

@@ -33,6 +33,7 @@ typedef NS_OPTIONS(NSInteger, NewsType) {
 @property (copy, nonatomic) NSString *content;
 @property (strong, nonatomic) NSDate *createTime;
 @property (strong ,nonatomic) CLLocation *location;
+@property (strong, nonatomic) UIImage *photo;
 
 @property (strong, nonatomic) NSDictionary *eventDic;
 @property (assign, nonatomic) BOOL hasBeenPraised;

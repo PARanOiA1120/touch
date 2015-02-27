@@ -164,6 +164,7 @@ RMDateSelectionViewControllerDelegate>
 // create new event
 #pragma mark -- Create New Event
 - (void)createNewEvent {
+    NSLog(@"Reach2 createNewEvent?");
     if ([_titleTextField.text isEqualToString:@""] || [_descTextView.text isEqualToString:@""]) {
         return;
     }
@@ -204,22 +205,22 @@ RMDateSelectionViewControllerDelegate>
         default:
             break;
     }
-    
-   /* [ProgressHUD show:nil];
+    [ProgressHUD show:nil];
     [[EventManager sharedManager] createEvent:event InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {*/
+        if (succeeded) {
             NSLog(@"create event success");
             [self.navigationController dismissViewControllerAnimated:YES completion:^{
                 
-           /* }];
+            }];
         } else {
             NSLog(@"create event failed");
         }
-        [ProgressHUD dismiss];*/
+        [ProgressHUD dismiss];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"CreateNewEvent" object:nil];
         [self.navigationController dismissViewControllerAnimated:YES completion:^{
         }];
     }];
+     NSLog(@"Done?");
 }
 
 //Date picker for event time

@@ -40,19 +40,28 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"NewsFeed"];
     NSArray *array= [query findObjects];
+    query = [PFQuery queryWithClassName:PFEVENT];
+    NSArray *array2 = [query findObjects];
+    array = [array arrayByAddingObjectsFromArray:array2];
     NSMutableArray *returnArray = [[NSMutableArray alloc] init];
     for(int i=array.count-1; i>-1; i--)
     {
         newsFeed* nf = [[newsFeed alloc] init];
         PFObject *object = array[i];
         nf.creator = [User userWithPFObject:object[@"creator"]];
-//        NSLog(@"begin");
-//        NSLog(@"%@",object[@"creator"]);
-//        NSLog(@"end");
-        
-        nf.content = object[@"content"];
         nf.eventType = [object[@"event_type"] integerValue];
+        if(object[BACKGROUND_IMAGE]!=nil)
+        {
+            nf.photo = object[BACKGROUND_IMAGE];
+        }
         [returnArray addObject:nf];
+        
+        if(nf.eventType == 0)
+        {
+            nf.content = object[EVENT_DESCRIPTION];
+        }
+        else{nf.content = object[@"content"];}
+        
     }
     return returnArray;
 }

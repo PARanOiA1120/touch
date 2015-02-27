@@ -34,9 +34,9 @@ static const NSInteger DefaultPageSize = 10;
     [newDict setObject:event.eventTime forKey:startTime];
     [newDict setObject:event.locationName forKey:location];
     [newDict setObject:event.eventDescription forKey:EVENT_DESCRIPTION];
-    if (event.background) {
-        [newDict setObject:event.background forKey:BACKGROUND_IMAGE];
-    }
+//    if (event.background) {
+//        [newDict setObject:event.background forKey:BACKGROUND_IMAGE];
+//    }
     if (event.likedUsers) {
         [newDict setObject:event.likedUsers forKey:LIKED_USERS];
     }
