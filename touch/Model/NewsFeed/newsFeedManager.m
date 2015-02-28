@@ -59,8 +59,13 @@
         if(nf.eventType == 0)
         {
             nf.content = object[EVENT_DESCRIPTION];
+            nf.creator = [User userWithPFObject:object[EVENT_OWNER]];
         }
-        else{nf.content = object[@"content"];}
+        else
+        {
+            nf.content = object[@"content"];
+            nf.creator = [User userWithPFObject:object[@"creator"]];
+        }
         
     }
     return returnArray;
