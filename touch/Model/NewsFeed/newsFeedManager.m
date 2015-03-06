@@ -60,6 +60,7 @@
         {
             nf.content = object[EVENT_DESCRIPTION];
             nf.creator = [User userWithPFObject:object[EVENT_OWNER]];
+            nf.eventtitle = object[EVENT_TITLE];
         }
         else
         {
