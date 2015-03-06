@@ -323,20 +323,22 @@
      if (newsFeed.eventType == 0 || newsFeed.eventType == 2)
     {
         //create activity
-        NSDictionary *dic = [NSDictionary dictionaryWithDictionary:newsFeed.eventDic];
+//        NSDictionary *dic = [NSDictionary dictionaryWithDictionary:newsFeed.eventDic];
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45, height, 75, 75)];
+//        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45, height, 75, 75)];
 
-        [containerView addSubview:imageView];
+//        [containerView addSubview:imageView];
         
-        UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, height, containerWidth - 5 - 120, 75)];
+//        UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, height, containerWidth - 5 - 120, 75)];
+         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, height, containerWidth, 75)];
         contentLabel.numberOfLines = 0;
-        contentLabel.backgroundColor = [UIColor colorWithRed:207/255.0f green:207/255.0f blue:207/255.0f alpha:1.0f];
+        [self customizeBackground:newsFeed.subjecttype labelGiven:contentLabel];
         contentLabel.layer.borderColor = [UIColor colorWithRed:191/255.0f green:191/255.0f blue:191/255.0f alpha:1.0f].CGColor;
         contentLabel.layer.borderWidth = 0.5;
-        contentLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:13];
+        contentLabel.font = [UIFont fontWithName:DEFAULT_FONT_LIGHT size:17];
         contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        contentLabel.text = dic[@"desc"];
+        [contentLabel setTextAlignment:UITextAlignmentCenter];
+        contentLabel.text = newsFeed.eventtitle;
         [containerView addSubview:contentLabel];
         
         height = height + 85;
@@ -362,13 +364,13 @@
     //location tage
     UIImageView *tagImageView = [[UIImageView alloc] initWithFrame:CGRectMake(19, height + 2, 13, 15)];
     tagImageView.image = [UIImage imageNamed:@"activity_icon_tag.png"];
-    [containerView addSubview:tagImageView];
+//    [containerView addSubview:tagImageView];
     
     UILabel *tagLabel = [[UILabel alloc] initWithFrame:CGRectMake(45, height, containerWidth - 5 - 45, 20)];
     tagLabel.text = [NSString stringWithFormat:@"%@",@"▽ Location"];
     tagLabel.font = [UIFont systemFontOfSize:13];
     tagLabel.textColor = RGBACOLOR(136, 157, 181, 1);
-    [containerView addSubview:tagLabel];
+//    [containerView addSubview:tagLabel];
     
     height = height + 20 + 5;
     
@@ -497,7 +499,36 @@
     return cell;
 }
 
+-(void)likeAction:(UIButton*) button
+{
+    button.backgroundColor = RGBACOLOR(123, 238, 238, 1);
+}
 
+-(void)customizeBackground: (NSInteger) i labelGiven: (UILabel*) label
+{
+    switch(i)
+    {
+        case 0:
+            label.backgroundColor = [UIColor colorWithRed:207/255.0f green:207/255.0f blue:100/255.0f alpha:1.0f];
+        break;
+            
+        case 1:
+            label.backgroundColor = [UIColor colorWithRed:100/255.0f green:207/255.0f blue:207/255.0f alpha:1.0f];
+        break;
+        
+        case 2:
+            label.backgroundColor = [UIColor colorWithRed:207/255.0f green:207/255.0f blue:100/255.0f alpha:1.0f];
+            break;
+        
+        case 3:
+            label.backgroundColor = [UIColor colorWithRed:50/255.0f green:207/255.0f blue:100/255.0f alpha:1.0f];
+            break;
+        
+        default:
+            label.backgroundColor = [UIColor colorWithRed:207/255.0f green:207/255.0f blue:207/255.0f alpha:1.0f];
+            break;
+    }
+}
 
 
 #pragma mark - UIScrollViewDelegate
