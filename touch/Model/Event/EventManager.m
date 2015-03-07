@@ -11,6 +11,7 @@
 #import "User.h"
 #import "newsFeed.h"
 #import "Image.h"
+#import "ProgressHUD.h"
 
 NSString * const FetchHotFunctionName = @"fetchHotEvent";
 
@@ -217,5 +218,35 @@ static const NSInteger DefaultPageSize = 10;
         
     }];
 }
+
+- (void)likeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
+{
+    NSLog(@"reach1????????????????????");
+    [ProgressHUD show:@"In progress" Interaction:NO];
+    PFObject *object = [Event getEventObject:newsId];
+    PFRelation *relation = [object relationForKey:@"likeUsers"];
+    [relation addObject:[user getUserObject]];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [ProgressHUD dismiss];
+        block(succeeded, error);
+    }];
+    
+}
+
+- (void)unlikeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
+{
+    NSLog(@"reach2????????????????????");
+    [ProgressHUD show:@"In progress" Interaction:NO];
+    PFObject *object = [Event getEventObject:newsId];
+    PFRelation *relation = [object relationForKey:@"likeUsers"];
+    [relation removeObject:[user getUserObject]];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [ProgressHUD dismiss];
+        block(succeeded, error);
+    }];
+    
+}
+
+
 
 @end

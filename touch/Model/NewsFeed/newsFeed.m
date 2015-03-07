@@ -15,6 +15,7 @@ NSString * const NewsFeedEventType = @"event_type";
 NSString * const NewsFeedContent = @"content";
 NSString * const NewsFeedLikeUsers = @"likeUsers";
 NSString * const NewsFeedComments = @"comments";
+NSString * const NewsFeedLikeCount = @"likeUsersCount";
 
 @implementation newsFeed
 
@@ -51,7 +52,7 @@ NSString * const NewsFeedComments = @"comments";
     object[NewsFeedContent] = _content;
 //    [object setObject:_content forKey:NewsFeedContent];
     object[NewsFeedEventType] = [NSNumber numberWithInteger:_eventType];
-//    [object setObject:[NSNumber numberWithInteger:_eventType] forKey:NewsFeedEventType];
+   //    [object setObject:[NSNumber numberWithInteger:_eventType] forKey:NewsFeedEventType];
     return object;
 }
 

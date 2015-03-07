@@ -161,5 +161,12 @@ NSString * const comments = @"comments";
     return event;
 }
 
++(PFObject *)getEventObject:(NSString *) newsId
+{
+    PFQuery *query=[PFQuery queryWithClassName:PFEVENT];
+    PFObject *object = [query getObjectWithId:newsId];
+    return object;
+}
+
 
 @end

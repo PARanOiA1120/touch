@@ -50,6 +50,17 @@
         PFObject *object = array[i];
         nf.creator = [User userWithPFObject:object[@"creator"]];
         nf.eventType = [object[@"event_type"] integerValue];
+        nf.newsId = object.objectId;
+        PFRelation *relation = [object relationForKey:@"likeUsers"];
+        PFQuery *query = [relation query];
+        nf.likeUserCount = [query countObjects];
+//        [query whereKey:@"objectId" equalTo:[[User currentUser] getUserObject][@"objectId"]];
+        [query whereKey:@"objectId" equalTo:[User currentUser].recordID];
+        if([query countObjects])
+        {
+            nf.hasBeenPraised = true;
+        }
+         NSLog(@"%@ %d ", nf.newsId, nf.hasBeenPraised);
         if(object[BACKGROUND_IMAGE]!=nil)
         {
             nf.photo = object[BACKGROUND_IMAGE];
@@ -69,14 +80,22 @@
             nf.creator = [User userWithPFObject:object[@"creator"]];
         }
         
+        
     }
     return returnArray;
 }
 
 //点赞
-- (void)likeNewsFeed:(NSString *)newsId ByUser:(PFUser *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
+- (void)likeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
 {
     [ProgressHUD show:@"In progress" Interaction:NO];
+    PFObject *object = [newsFeed getNewsFeedObject:newsId];
+    PFRelation *relation = [object relationForKey:NewsFeedLikeUsers];
+    [relation addObject:[user getUserObject]];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [ProgressHUD dismiss];
+        block(succeeded, error);
+    }];
 
 }
 
@@ -85,7 +104,7 @@
 {
     [ProgressHUD show:@"In progress" Interaction:NO];
     PFObject *object = [newsFeed getNewsFeedObject:newsId];
-    PFRelation *relation = [object relationforKey:NewsFeedLikeUsers];
+    PFRelation *relation = [object relationForKey:NewsFeedLikeUsers];
     [relation removeObject:[user getUserObject]];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         [ProgressHUD dismiss];

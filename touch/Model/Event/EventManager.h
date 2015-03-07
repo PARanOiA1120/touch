@@ -52,4 +52,8 @@ typedef NS_ENUM(NSUInteger, EventFetchType) {
 - (void)cloud_fetchEventWithType:(EventFetchType)type page:(NSInteger)page complete:(PFDataResultBlock)block;
 - (void)cloud_fetchEventDetail:(NSString *)eventId complete:(PFIdResultBlock)block;
 
+- (void)likeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block;
+
+- (void)unlikeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block;
+
 @end

@@ -79,6 +79,6 @@ typedef NS_OPTIONS(NSUInteger, eventType) {
 
 + (instancetype)eventWithPFObject:(PFObject *)object;
 + (instancetype)eventWithDictionary:(NSDictionary *)dic;
-
++(PFObject *)getEventObject:(NSString *) newsId;
 
 @end
