@@ -536,6 +536,7 @@ RMDateSelectionViewControllerDelegate>
     }
     return 0.0;
 }
+-(void)placeButtonDidClick:(UIButton *) Button{}
 
 #pragma mark - RMDateSelectionViewController Delegates
 - (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate {

@@ -173,8 +173,6 @@
     horizonalLine.backgroundColor = RGBACOLOR(215, 215, 215, 1);
     [self.userInfoView addSubview:horizonalLine];
     
-    int buttonWidth = floorf(SCREENWIDTH/3);
-    
     //small head image
     self.userHeadView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, superViewHeight * kPersonalHomeViewSeprator)];
     self.userHeadView.backgroundColor = [UIColor clearColor];

@@ -42,6 +42,8 @@ typedef NS_OPTIONS(NSInteger, NewsType) {
 @property (strong, nonatomic) NSArray *comments;
 @property (assign, nonatomic) NSInteger commentCount;
 @property (strong ,nonatomic) NSArray *taggedUsers;
+@property (strong, nonatomic)NSString *eventtitle;
+@property (assign, nonatomic)NSInteger subjecttype;
 
 -(id)initForTest:(NSString *)s NT:(NewsType)i ID:(NSString *)nid UserName:(NSString *)name;
 

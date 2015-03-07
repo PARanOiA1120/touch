@@ -74,6 +74,8 @@
     buttonItem.tintColor = [UIColor redColor];
 }
 
+-(void)addButtonDidClick:(UIButton *)Button{}
+
 - (void)tapBackground:(UITapGestureRecognizer *)recognizer {
     [self.view endEditing:YES];
 }
@@ -118,10 +120,7 @@
     nf.content = _inputView.text;
     [[newsFeedManager sharedManager] createNewsFeed:nf];
 
-   /* [ProgressHUD show:nil];
-    [[newsFeedManager sharedManager] createNewsFeed:newsFeed InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        [ProgressHUD dismiss];
-        if (succeeded) {*/
+
             NSLog(@"create news feed success");
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter]postNotificationName:UIActivityCircleNeedRefreshDataNotification object:nil];
@@ -129,13 +128,7 @@
                     [[AppDelegate delegate] selectTab:0];
                 }];
             });
-      /*  }
-    else {
-            [ProgressHUD show:@"create news feed failed"];
-            NSLog(@"create news feed failed");
-        }
-    }];
-    }];*/
+
     [self.navigationController dismissViewControllerAnimated:YES completion:^{}];
 }
 

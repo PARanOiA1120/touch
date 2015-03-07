@@ -11,6 +11,7 @@
 #import "User.h"
 #import "newsFeed.h"
 #import "Image.h"
+#import "ProgressHUD.h"
 
 NSString * const FetchHotFunctionName = @"fetchHotEvent";
 
@@ -144,7 +145,7 @@ static const NSInteger DefaultPageSize = 10;
 - (void)joinEvent:(Event *)event complete:(PFBooleanResultBlock)block {
     PFObject *eventObject = [PFObject objectWithoutDataWithClassName:className objectId:event.eventId];
     [eventObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        PFRelation *relation = [object relationforKey:joinedUsers];
+        PFRelation *relation = [object relationForKey:joinedUsers];
         if (!error) {
             [relation addObject:[PFUser currentUser]];
             [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -158,7 +159,7 @@ static const NSInteger DefaultPageSize = 10;
     PFObject *eventObject = [PFObject objectWithoutDataWithClassName:className objectId:event.eventId];
     [eventObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!error) {
-            PFRelation *relation = [object relationforKey:joinedUsers];
+            PFRelation *relation = [object relationForKey:joinedUsers];
             [relation removeObject:[PFUser currentUser]];
             [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 block(succeeded, error);
@@ -169,7 +170,7 @@ static const NSInteger DefaultPageSize = 10;
 
 - (void)fetchJoinedUsersOfEvent:(Event *)event complete:(PFArrayResultBlock)block {
     PFObject *eventObject = [PFObject objectWithoutDataWithObjectId:event.eventId];
-    PFQuery *query = [[eventObject relationforKey:joinedUsers] query];
+    PFQuery *query = [[eventObject relationForKey:joinedUsers] query];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         block(objects, error);
     }];
@@ -217,5 +218,35 @@ static const NSInteger DefaultPageSize = 10;
         
     }];
 }
+
+- (void)likeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
+{
+    NSLog(@"reach1????????????????????");
+    [ProgressHUD show:@"In progress" Interaction:NO];
+    PFObject *object = [Event getEventObject:newsId];
+    PFRelation *relation = [object relationForKey:@"likeUsers"];
+    [relation addObject:[user getUserObject]];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [ProgressHUD dismiss];
+        block(succeeded, error);
+    }];
+    
+}
+
+- (void)unlikeNewsFeed:(NSString *)newsId ByUser:(User *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
+{
+    NSLog(@"reach2????????????????????");
+    [ProgressHUD show:@"In progress" Interaction:NO];
+    PFObject *object = [Event getEventObject:newsId];
+    PFRelation *relation = [object relationForKey:@"likeUsers"];
+    [relation removeObject:[user getUserObject]];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [ProgressHUD dismiss];
+        block(succeeded, error);
+    }];
+    
+}
+
+
 
 @end
