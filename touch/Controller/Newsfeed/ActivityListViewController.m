@@ -15,6 +15,7 @@
 #import "newsFeed.h"
 #import "newsFeedManager.h"
 #import "NewStatusViewController.h"
+#import "EventManager.h"
 
 
 @interface ActivityListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -51,7 +52,7 @@
 //    [self.headerView refreshLastUpdatedDate];
 //    
 //    [self.headerView forceToRefresh:self.activityTableView];
-    [self requestDataWithPage:0];
+//    [self requestDataWithPage:0];
     [self refreshData];
 }
 
@@ -76,12 +77,10 @@
 - (void)requestDataWithPage:(int)page
 {
     self.dataSource = [[newsFeedManager sharedManager] getNewsFeedsInBackground];
-    NSLog(@"Value of count2 = %lu",(unsigned long)self.dataSource.count);
     self.heightArray = [NSMutableArray arrayWithCapacity:self.dataSource.count];
     [self calculateAndStoreCellHeight];
     self.isInit = YES;
     [_activityTableView reloadData];
-    NSLog(@"requestWithPage");
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -458,19 +457,25 @@
     // thumb up button comment button  more button
     UIButton *likeBtn = [[UIButton alloc] initWithFrame:CGRectMake(45, height, 95, 25)];
     likeBtn.backgroundColor = RGBACOLOR(238, 238, 238, 1);
+    NSLog(@"%@ %hhd ", newsFeed.newsId, newsFeed.hasBeenPraised);
     if (newsFeed.hasBeenPraised) {
-        [likeBtn setImage:[UIImage imageNamed:@"activity_btn_praise_selected.png"] forState:UIControlStateNormal];
+        likeBtn.backgroundColor = RGBACOLOR(123, 238, 238, 1);
         likeBtn.selected = YES;
     }
     else
     {
-        [likeBtn setImage:[UIImage imageNamed:@"activity_btn_praise_normal.png"] forState:UIControlStateNormal];
         likeBtn.selected = NO;
     }
     [likeBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -25, 0, 0)];
     [likeBtn setTitleColor:RGBACOLOR(146, 146, 146, 1) forState:UIControlStateNormal];
     [likeBtn.titleLabel setFont:[UIFont systemFontOfSize:13]];
-    [likeBtn setTitle:@"Interested" forState:UIControlStateNormal];
+    NSString* s;
+    if(newsFeed.likeUserCount)
+    {
+        s = [NSString stringWithFormat:@"Interested(%ld)",(long)newsFeed.likeUserCount];
+    }
+    else{s = @"Interested";}
+    [likeBtn setTitle:s forState:UIControlStateNormal];
     likeBtn.tag = indexPath.row;
     [likeBtn addTarget:self action:@selector(likeAction:) forControlEvents:UIControlEventTouchUpInside];
     [containerView addSubview:likeBtn];
@@ -501,7 +506,63 @@
 
 -(void)likeAction:(UIButton*) button
 {
-    button.backgroundColor = RGBACOLOR(123, 238, 238, 1);
+    newsFeed* nf = self.dataSource[button.tag];
+    if (button.selected) {
+        button.backgroundColor = RGBACOLOR(238, 238, 238, 1);
+        button.selected = NO;
+        [self removeLikeUserToNewsFeed:nf.eventType nid:nf.newsId];
+}
+    else{
+        button.backgroundColor = RGBACOLOR(123, 238, 238, 1);
+        button.selected = YES;
+        [self addLikeUserToNewsFeed:nf.eventType nid:nf.newsId];
+    }
+}
+
+-(void)removeLikeUserToNewsFeed:(NSInteger) i  nid:(NSString*) nfid
+{
+    if( i ==1 )
+    {
+        [[newsFeedManager sharedManager]unlikeNewsFeed:nfid ByUser:[User currentUser] InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(succeeded ? @"Cancel Succeed" : @"Cancel Fail");
+            if (succeeded) {
+                [self requestDataWithPage:self.currentPage];
+            }
+        }];
+    }
+    
+    else
+    {
+        [[EventManager sharedManager]unlikeNewsFeed:nfid ByUser:[User currentUser] InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(succeeded ? @"Cancel Succeed" : @"Cancel Fail");
+            if (succeeded) {
+                [self requestDataWithPage:self.currentPage];
+            }
+        }];
+    }
+}
+
+-(void)addLikeUserToNewsFeed:(NSInteger) i  nid:(NSString*) nfid
+{
+    if( i ==1 )
+    {
+        [[newsFeedManager sharedManager]likeNewsFeed:nfid ByUser:[User currentUser] InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(succeeded ? @"Cancel Succeed" : @"Cancel Fail");
+            if (succeeded) {
+                [self requestDataWithPage:self.currentPage];
+            }
+        }];
+    }
+    
+    else
+    {
+        [[EventManager sharedManager]likeNewsFeed:nfid ByUser:[User currentUser] InBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(succeeded ? @"Cancel Succeed" : @"Cancel Fail");
+            if (succeeded) {
+                [self requestDataWithPage:self.currentPage];
+            }
+        }];
+    }
 }
 
 -(void)customizeBackground: (NSInteger) i labelGiven: (UILabel*) label
