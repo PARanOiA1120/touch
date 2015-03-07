@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalHomepageViewController">
             <connections>
                 <outlet property="backButton" destination="P4M-3E-cUW" id="LBu-OX-Mrs"/>
-                <outlet property="editButton" destination="sgS-aa-BAN" id="dVc-8y-S6M"/>
+                <outlet property="editButton" destination="sgS-aa-BAN" id="l0c-xH-3yd"/>
                 <outlet property="view" destination="m2o-El-8Lg" id="XBB-qv-A4a"/>
             </connections>
         </placeholder>
@@ -43,6 +43,9 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="navigationBtnClicked:" destination="-1" eventType="touchUpInside" id="lWc-Ys-Gsv"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>

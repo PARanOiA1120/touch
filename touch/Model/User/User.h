@@ -26,7 +26,6 @@ typedef void (^PFUserBlock)(NSArray *userArray,NSError *error);
 @property (strong, nonatomic) NSString* gender;
 @property (strong, nonatomic) NSString* classlevel;
 
-
 //get current user
 + (instancetype) currentUser;
 //transfer from PFObject to PFUser
@@ -43,5 +42,7 @@ typedef void (^PFUserBlock)(NSArray *userArray,NSError *error);
 - (void)logOut;
 //get access to other user's profile
 + (User *)getPFUserFromPFUser:(PFObject *)aUser;
+//get full information for personal information
+- (void) getFullInformation:(PFBlock)block;
 
 @end

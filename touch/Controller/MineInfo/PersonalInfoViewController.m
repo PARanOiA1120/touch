@@ -83,6 +83,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)finishEdition:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updatedFullInfo" object:self];
+    NSLog(@"going back now");
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 #pragma mark - UITableViewDelegate & UItableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

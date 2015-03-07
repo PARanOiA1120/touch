@@ -21,5 +21,6 @@
 - (void)resetTabBar;
 //hide tab bar when needed
 - (void)hideCustomTabBar;
+- (void)hideRealTabBar;
 
 @end

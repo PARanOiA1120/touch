@@ -71,7 +71,7 @@
     return returnArray;
 }
 
-//点赞
+//interested
 - (void)likeNewsFeed:(NSString *)newsId ByUser:(PFUser *)user InBackgroundWithBlock:(PFBooleanResultBlock)block
 {
     [ProgressHUD show:@"In progress" Interaction:NO];

@@ -127,5 +127,53 @@ BOOL fullInfoReturned=NO;
     return user;
 }
 
+- (void) getFullInformation:(PFBlock)block {
+    
+    //[ProgressHUD show:@"pulling information" Interaction:NO];
+    PFQuery *query=[PFUser query];
+    [query getObjectInBackgroundWithId:self.recordID block:^(PFObject *object, NSError *error) {
+        if (!error) {
+            self.recordID = object.objectId;
+            self.username=[object objectForKey:@"username"];
+            self.gender = [object objectForKey:@"gender"];
+            self.classlevel = [object objectForKey:@"classlevel"];
+            self.major=[object objectForKey:@"major"];
+            PFFile *imageFile=[object objectForKey:@"squareimage"];
+            PFFile *largeFile = [object objectForKey:@"largeimage"];
+//            [largeFile getThumbnail:YES width:SCREEN_WIDTH*2 height:SCREEN_HEIGHT*2 withBlock:^(UIImage *image, NSError *error) {
+//                if (image)
+//                {
+//                    self.largeImage = image;
+//                    CGFloat length = 0.0;
+//                    if (IS_IPHONE_6P)
+//                        length = 90;
+//                    else if (IS_IPHONE_6)
+//                        length = 80;
+//                    else if (IS_IPHONE_5)
+//                        length = 75;
+//                    else if (IS_IPHONE_4_OR_LESS)
+//                        length = 65;
+//                    [imageFile getThumbnail:YES width:length*2 height:length*2 withBlock:^(UIImage *smallimage, NSError *error) {
+//                        if (image) {
+//                            self.squareImage = smallimage;
+//                        }
+//                        block(YES,error);
+//                    }];
+//                }
+//                else
+//                {
+//                    block(NO,error);
+//                }
+//            }];
+            
+            fullInfoReturned=YES;
+            
+        } else {
+            block(NO,error);
+            NSLog(@"wrong");
+        }
+    }];
+}
+
 @end
 

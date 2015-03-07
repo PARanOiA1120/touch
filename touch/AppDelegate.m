@@ -129,8 +129,9 @@
 }
 
 - (void)hideTabBar{
-    if (self.tabBarController)
+    //if (self.tabBarController)
         [self.tabBarController hideCustomTabBar];
+        [self.tabBarController hideRealTabBar];
 }
 
 @end

@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_ActionSheetPicker_3_0
 #define COCOAPODS_VERSION_MAJOR_ActionSheetPicker_3_0 1
 #define COCOAPODS_VERSION_MINOR_ActionSheetPicker_3_0 3
-#define COCOAPODS_VERSION_PATCH_ActionSheetPicker_3_0 11
+#define COCOAPODS_VERSION_PATCH_ActionSheetPicker_3_0 12
 
 // FontAwesome+iOS
 #define COCOAPODS_POD_AVAILABLE_FontAwesome_iOS

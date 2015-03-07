@@ -103,7 +103,36 @@
     [self.view addSubview:self.myTableView];
     
     [self setExtraCellLineHidden:self.myTableView];
+    [self configure];
 }
+
+//20150303
+- (void)configure
+{
+    __weak __typeof(User) *wUser = self.user;
+    [wUser getFullInformation:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [ProgressHUD dismiss];
+            [UIView transitionWithView:self.view
+                              duration:1.0f
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:^{
+                            } completion:nil];
+            if ([wUser.gender isEqualToString:@"male"])
+            {
+                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_male"];
+            }
+            else
+            {
+                self.sexImageView.image = [UIImage imageNamed:@"personal_icon_female"];
+            }
+
+            self.userInfoArray = [@[SAFEPARAMETER(wUser.username),SAFEPARAMETER(wUser.gender),SAFEPARAMETER(wUser.major),SAFEPARAMETER(wUser.classlevel) ,@"",@[]]mutableCopy];
+        }
+    }];
+    
+}
+
 
 - (void)layoutTableHeaderView{
     self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
@@ -313,6 +342,7 @@
     
     self.myTableView.tag = ((UIButton *)sender).tag;
     self.selectedIndex = ((UIButton *)sender).tag;
+    
     [self configButtonBackgroundColor:((UIButton *)sender).tag];
     [self.myTableView reloadData];
     [UIView animateWithDuration:0.5 animations:^{
@@ -565,6 +595,13 @@
     }
     return nil;
     
+}
+
+
+- (IBAction)navigationBtnClicked:(id)sender {
+            //current user's personal info
+            PersonalInfoViewController *personalInfo = [[PersonalInfoViewController alloc] init];
+            [self.navigationController pushViewController:personalInfo animated:YES];
 }
 
 @end
