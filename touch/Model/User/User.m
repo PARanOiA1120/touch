@@ -28,7 +28,10 @@ BOOL fullInfoReturned=NO;
 //transfer from PFObject to PFUser
 + (instancetype) userWithPFObject:(PFObject *)object{
     User *user = [[User alloc] init];
+    [object fetchIfNeeded];
     user.recordID = object.objectId;
+    NSLog(@"reach??????????????????");
+    NSLog(@" %@  inner", object.objectId);
     user.username=[object objectForKey:@"username"];
     user.gender= [object objectForKey:@"gender"];
     user.major= [object objectForKey:@"major"];
