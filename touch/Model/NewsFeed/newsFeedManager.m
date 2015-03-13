@@ -48,7 +48,7 @@
     {
         newsFeed* nf = [[newsFeed alloc] init];
         PFObject *object = array[i];
-        nf.creator = [User userWithPFObject:object[@"creator"]];
+//        nf.creator = [User userWithPFObject:object[@"creator"]];
         nf.eventType = [object[@"event_type"] integerValue];
         nf.newsId = object.objectId;
         PFRelation *relation = [object relationForKey:@"likeUsers"];
@@ -60,7 +60,7 @@
         {
             nf.hasBeenPraised = true;
         }
-         NSLog(@"%@ %d ", nf.newsId, nf.hasBeenPraised);
+         NSLog(@"%@ outer ", nf.newsId);
         if(object[BACKGROUND_IMAGE]!=nil)
         {
             nf.photo = object[BACKGROUND_IMAGE];
