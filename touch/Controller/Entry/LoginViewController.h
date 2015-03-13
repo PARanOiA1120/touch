@@ -11,6 +11,13 @@
 #import "InsetTextField.h"
 
 @interface LoginViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIView *avoidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet InsetTextField *userNameField;
+@property (weak, nonatomic) IBOutlet InsetTextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookLogin;
 
 @end

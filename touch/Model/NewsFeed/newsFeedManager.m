@@ -26,7 +26,6 @@
 - (void)createNewsFeed:(newsFeed *)newsFeed{
     PFObject *object = [newsFeed PFObjectValue];
     object[NewsFeedCreator] = [PFUser currentUser];
-//    [object setObject:[User currentUser] forKey:NewsFeedCreator];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             NSLog(@"createNewsFeed Error");
@@ -48,13 +47,11 @@
     {
         newsFeed* nf = [[newsFeed alloc] init];
         PFObject *object = array[i];
-//        nf.creator = [User userWithPFObject:object[@"creator"]];
         nf.eventType = [object[@"event_type"] integerValue];
         nf.newsId = object.objectId;
         PFRelation *relation = [object relationForKey:@"likeUsers"];
         PFQuery *query = [relation query];
         nf.likeUserCount = [query countObjects];
-//        [query whereKey:@"objectId" equalTo:[[User currentUser] getUserObject][@"objectId"]];
         [query whereKey:@"objectId" equalTo:[User currentUser].recordID];
         if([query countObjects])
         {

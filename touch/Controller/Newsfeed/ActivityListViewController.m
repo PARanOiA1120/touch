@@ -20,7 +20,6 @@
 
 @interface ActivityListViewController () <UITableViewDataSource,UITableViewDelegate>
 
-
 @property (strong, nonatomic) IBOutlet UIView *customView;
 @property (strong, nonatomic) CustomActionSheet *actionSheet;
 
@@ -43,16 +42,6 @@
     self.activityTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.activityTableView];
     
-//    if (!self.headerView) {
-//        EGORefreshTableHeaderView *head = [[EGORefreshTableHeaderView alloc]initWithFrame:CGRectMake(0, 0 - self.activityTableView.bounds.size.height, self.activityTableView.frame.size.width, self.activityTableView.bounds.size.height)];
-//        head.delegate = self;
-//        [self.activityTableView addSubview:head];
-//        self.headerView = head;
-//    }
-//    [self.headerView refreshLastUpdatedDate];
-//    
-//    [self.headerView forceToRefresh:self.activityTableView];
-//    [self requestDataWithPage:0];
     [self refreshData];
 }
 
@@ -93,8 +82,6 @@
 {
     [self requestDataWithPage:self.currentPage];
 }
-
-
 
 
 //Button action
@@ -294,9 +281,6 @@
     headImageView.userInteractionEnabled = YES;
     User *user = newsFeed.creator;
     headImageView.userId = user.recordID;
-//    [user getSmallUserAvatarWithUserID:user.recordID andWidth:40 andHeight:40 andBlock:^(UIImage *image, NSError *error) {
-//        headImageView.image = image;
-//    }];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userHeadViewTap:)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
@@ -322,13 +306,6 @@
      if (newsFeed.eventType == 0 || newsFeed.eventType == 2)
     {
         //create activity
-//        NSDictionary *dic = [NSDictionary dictionaryWithDictionary:newsFeed.eventDic];
-        
-//        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(45, height, 75, 75)];
-
-//        [containerView addSubview:imageView];
-        
-//        UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, height, containerWidth - 5 - 120, 75)];
          UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, height, containerWidth, 75)];
         contentLabel.numberOfLines = 0;
         [self customizeBackground:newsFeed.subjecttype labelGiven:contentLabel];
@@ -594,15 +571,5 @@
 
 #pragma mark - UIScrollViewDelegate
 
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

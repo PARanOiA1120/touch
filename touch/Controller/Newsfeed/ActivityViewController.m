@@ -35,10 +35,6 @@
     self.editButton.frame = CGRectMake(0, 0, 50, 50);
     [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
     [self.editButton setTitleColor:RGBACOLOR(169, 134, 75, 1) forState:UIControlStateNormal];
-//    [self.editButton addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
-//    self.editButton.hidden = NO;
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.editButton];
-    
     self.activityList = [[ActivityListViewController alloc] init];
     
     
@@ -51,19 +47,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 //call activityList to refresh its data
 -(void)refresh

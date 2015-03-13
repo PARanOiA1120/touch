@@ -148,6 +148,8 @@
 		B0E911AB1A63D0FC00AA8B7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911AA1A63D0FC00AA8B7E /* Foundation.framework */; };
 		B0E911AD1A63D11000AA8B7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911AC1A63D11000AA8B7E /* UIKit.framework */; };
 		B0E911B11A63D14800AA8B7E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E911B01A63D14800AA8B7E /* libsqlite3.dylib */; };
+		B0EA4F3A1AB2B7EA000C7F37 /* LoginViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EA4F391AB2B7EA000C7F37 /* LoginViewControllerTest.m */; };
+		B0EA4F3C1AB2BC89000C7F37 /* IntroViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EA4F3B1AB2BC89000C7F37 /* IntroViewTest.m */; };
 		B0F453B81A95BE1E00045CA4 /* UserTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F453B71A95BE1E00045CA4 /* UserTestCase.m */; };
 		B0F453BA1A95C20100045CA4 /* StepOneViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F453B91A95C20100045CA4 /* StepOneViewControllerTestCase.m */; };
 		D4A7D56F5090AE2A2C1CDE20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C68310DD432B01D2C3A6E56C /* libPods.a */; };
@@ -355,6 +357,8 @@
 		B0E911AA1A63D0FC00AA8B7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0E911AC1A63D11000AA8B7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0E911B01A63D14800AA8B7E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B0EA4F391AB2B7EA000C7F37 /* LoginViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerTest.m; sourceTree = "<group>"; };
+		B0EA4F3B1AB2BC89000C7F37 /* IntroViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewTest.m; sourceTree = "<group>"; };
 		B0F453B71A95BE1E00045CA4 /* UserTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTestCase.m; sourceTree = "<group>"; };
 		B0F453B91A95C20100045CA4 /* StepOneViewControllerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepOneViewControllerTestCase.m; sourceTree = "<group>"; };
 		C68310DD432B01D2C3A6E56C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -588,6 +592,8 @@
 				B038E2271A62017D00E660ED /* Supporting Files */,
 				B0F453B71A95BE1E00045CA4 /* UserTestCase.m */,
 				B0F453B91A95C20100045CA4 /* StepOneViewControllerTestCase.m */,
+				B0EA4F391AB2B7EA000C7F37 /* LoginViewControllerTest.m */,
+				B0EA4F3B1AB2BC89000C7F37 /* IntroViewTest.m */,
 			);
 			path = touchTests;
 			sourceTree = "<group>";
@@ -1168,6 +1174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EA4F3A1AB2B7EA000C7F37 /* LoginViewControllerTest.m in Sources */,
+				B0EA4F3C1AB2BC89000C7F37 /* IntroViewTest.m in Sources */,
 				B0F453B81A95BE1E00045CA4 /* UserTestCase.m in Sources */,
 				B038E22A1A62017D00E660ED /* touchTests.m in Sources */,
 				B0F453BA1A95C20100045CA4 /* StepOneViewControllerTestCase.m in Sources */,
