@@ -36,10 +36,11 @@ You can either register a new account and login with that account, or login with
 ###Create Event
   - Click the "+" button at the center of the tab bar
   - Tap the first bubble "Event"
-  - Fill in "Title" and "Description" fields(no length restriction)
+  - Fill in "Title" and "Description" fields
+    (feel free to change subject type and date, but please don't change the event type) 
   - Tap the "Post" button
   - Tap the refresh button at the upper right corner
-  - The event will appear in the news feed [This feature is coming soon]
+  - The event will appear in the news feed 
 
 ###Post Status
   - Click the "+" button at the center of the tab bar
